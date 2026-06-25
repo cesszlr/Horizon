@@ -77,12 +77,6 @@
         "category": "Open Source"
       },
       {
-        "name": "虎嗅",
-        "url": "https://rss.huxiu.com/",
-        "enabled": true,
-        "category": "Social Hot Topics"
-      },
-      {
         "name": "Buzzing China",
         "url": "https://china.buzzing.cc/feed.xml",
         "enabled": true,
