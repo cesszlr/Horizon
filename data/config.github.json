@@ -105,6 +105,12 @@
         "url": "https://www.tmtpost.com/rss.xml",
         "enabled": true,
         "category": "Social Hot Topics"
+      },
+      {
+        "name": "DoNews",
+        "url": "https://rss.donews.com/rss/rss.xml",
+        "enabled": true,
+        "category": "Social Hot Topics"
       }
     ],
     "reddit": {
