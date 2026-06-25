@@ -5,401 +5,423 @@ date: 2026-06-25
 lang: zh
 ---
 
-> 从 294 条内容中筛选出 18 条重要资讯。
+> 从 341 条内容中筛选出 20 条重要资讯。
 
 ---
 
-1. [OpenAI 携手 Broadcom 发布首款自研 AI 芯片 'Jalapeno'](#item-1) ⭐️ 9.0/10
-2. [高通以 40 亿美元收购 AI 初创公司 Modular](#item-2) ⭐️ 9.0/10
-3. [TRM 思考奖励模型：量化大模型推理质量](#item-3) ⭐️ 9.0/10
-4. [电子器件可直接打印到活体组织上](#item-4) ⭐️ 9.0/10
-5. [Anthropic 指控阿里巴巴对 Claude 发动大规模蒸馏攻击](#item-5) ⭐️ 9.0/10
-6. [Databricks 领导者呼吁为 Agent Cloud 构建开放生态系统](#item-6) ⭐️ 8.0/10
-7. [Claude Slackbot 升级：多人、主动、持久化智能体](#item-7) ⭐️ 8.0/10
-8. [微信豪赌小程序范式变革](#item-8) ⭐️ 8.0/10
-9. [OpenAI Codex 漏洞导致过度日志写入，可能损坏 SSD](#item-9) ⭐️ 8.0/10
-10. [国产存储登顶 IO500 生产榜单](#item-10) ⭐️ 8.0/10
-11. [硅谷应向它鄙视的电子表格分析师学习](#item-11) ⭐️ 7.0/10
-12. [美国必须避免的量子计算供应链陷阱](#item-12) ⭐️ 7.0/10
-13. [大型 AI 实验室为何大量招聘哲学家](#item-13) ⭐️ 7.0/10
-14. [AI 投资挤压企业预算](#item-14) ⭐️ 7.0/10
-15. [人机即兴：AI 协作的新范式](#item-15) ⭐️ 7.0/10
-16. [中国的“千帆星座”：星链的新对手？](#item-16) ⭐️ 7.0/10
-17. [警惕伪装成官方页面的恶意 curl 脚本](#item-17) ⭐️ 7.0/10
-18. [OpenTag：在 GitHub 和 Slack 中 @ AI 智能体的开源协议](#item-18) ⭐️ 7.0/10
+#### 技术 (Technology)
+1. [OpenAI 发布首款定制 AI 推理芯片 Jalapeno](#item-1) ⭐️ 9.0/10 [技术]
+2. [电子电路可直接打印在活体组织上](#item-2) ⭐️ 9.0/10 [技术]
+9. [Anthropic 指控阿里巴巴非法提取 Claude AI 能力](#item-9) ⭐️ 8.0/10 [技术]
+10. [LuaJIT 3.0 语法扩展引发语言身份辩论](#item-10) ⭐️ 8.0/10 [技术]
+11. [高通以 40 亿美元收购 AI 初创公司 Modular](#item-11) ⭐️ 8.0/10 [技术]
+12. [NVIDIA 45°C 液冷设计大幅降低数据中心用水](#item-12) ⭐️ 8.0/10 [技术]
+13. [5 亿美元基金旨在终结呼吸道感染](#item-13) ⭐️ 8.0/10 [技术]
+14. [Nub：无需替换运行时即可为 Node.js 提供类似 Bun 的工具包](#item-14) ⭐️ 8.0/10 [技术]
+15. [Meta 提出 AI 工程中的‘元框架’概念](#item-15) ⭐️ 8.0/10 [技术]
+
+#### 时政 (Politics)
+3. [叙利亚战后蜜月期因逮捕事件告终](#item-3) ⭐️ 9.0/10 [时政]
+5. [中国以美国朱姆沃尔特级驱逐舰为导弹试验目标](#item-5) ⭐️ 9.0/10 [时政]
+6. [委内瑞拉接连发生地震，造成数十人死亡、数百人受伤](#item-6) ⭐️ 9.0/10 [时政]
+7. [普京现在提议与乌克兰进行和平谈判](#item-7) ⭐️ 9.0/10 [时政]
+8. [联合国委员会指控以色列蓄意攻击加沙儿童](#item-8) ⭐️ 9.0/10 [时政]
+20. [中方制裁引发日本产业崩溃](#item-20) ⭐️ 8.0/10 [时政]
+
+#### 社会热点 (Social Hotspots)
+4. [影子账号利用大病患儿家属在短视频平台骗捐](#item-4) ⭐️ 9.0/10 [社会热点]
+16. [印度考试泄题：228 万成绩作废，暴露底层青年绝望](#item-16) ⭐️ 8.0/10 [社会热点]
+17. [央视曝光高考报考骗局：免费 AI 工具千问被高价倒卖](#item-17) ⭐️ 8.0/10 [社会热点]
+18. [2026 年一万个中国版 Codex AI 模型大乱斗](#item-18) ⭐️ 8.0/10 [社会热点]
+19. [微信在金矿上孵化豆包](#item-19) ⭐️ 8.0/10 [社会热点]
 
 ---
+
+## 技术 (Technology)
 
 <a id="item-1"></a>
-## [OpenAI 携手 Broadcom 发布首款自研 AI 芯片 'Jalapeno'](https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/) ⭐️ 9.0/10
+### [OpenAI 发布首款定制 AI 推理芯片 Jalapeno](https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/) ⭐️ 9.0/10 [技术]
 
-OpenAI 与 Broadcom 联合发布了专为大语言模型推理设计的自研芯片 Jalapeno，由台积电制造。该芯片从设计到量产仅用九个月，部分流程借助 OpenAI 自身模型加速完成。 这标志着 OpenAI 首次涉足自研芯片领域，减少了对 NVIDIA GPU 在推理任务上的依赖，有望大幅降低成本。这也反映了行业趋势：领先的 AI 公司正通过定制硬件来优化自身模型的性能与效率。 Jalapeno 是一款纯推理芯片，专为运行已训练好的模型而优化，而非用于训练。社区讨论中提到的权重固化在 ROM 中的架构理念，可能通过将乘法运算简化为加法来实现极高的吞吐量。
+OpenAI 宣布推出其首款定制 AI 推理芯片，名为“Jalapeno”，由 Broadcom 合作开发、台积电（TSMC）制造。该芯片从设计到生产仅用时九个月，部分设计流程借助 OpenAI 自身模型加速完成。 此举降低了 OpenAI 在推理任务上对昂贵且功耗高的 NVIDIA GPU 的依赖，有望减少运营成本和能源消耗。这也标志着 AI 公司为优化特定工作负载的性能和效率而设计定制芯片的行业趋势。 Jalapeno 芯片是一款专用集成电路（ASIC），仅针对 AI 推理优化，不用于训练。OpenAI 使用自身模型加速了芯片设计与优化，但具体效果尚不明确。社区消息确认该芯片由台积电（TSMC）制造。
 
 hackernews · jamdesk · 6月24日 17:47 · [社区讨论](https://news.ycombinator.com/item?id=48663324)
 
-**背景**: AI 推理芯片是专门用于高效运行已训练模型的处理器，与 NVIDIA H100 等兼顾训练与推理的芯片不同。谷歌等公司早已使用自研 TPU 进行推理，而 OpenAI 此前完全依赖 NVIDIA 和 Azure 的 GPU。这一自研芯片的推出反映了 AI 推理工作负载的快速增长——在生产系统中，推理已占据大部分计算资源。
+**背景**: AI 推理芯片是一种专门用于运行已训练好的 AI 模型（如图像识别或自然语言处理）的处理器，与处理计算密集型模型构建阶段的训练芯片不同。定制芯片（ASIC）在特定推理任务上比通用 GPU 能效高得多，因此谷歌（TPU）和 AWS（Inferentia）等公司都开发了自有芯片。此前 OpenAI 在训练和推理上主要依赖 NVIDIA GPU。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI and Broadcom unveil LLM-optimized inference chip | OpenAI</a></li>
-<li><a href="https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html">OpenAI and Broadcom reveal Jalapeno, first AI chip in partnership</a></li>
-<li><a href="https://interestingengineering.com/ai-robotics/openai-jalapeno-ai-inference-chip-broadcom">OpenAI unveils Jalapeño chip for large-scale inference workloads</a></li>
+<li><a href="https://www.linkedin.com/pulse/ai-inference-chip-market-demand-size-segmentation-2026-2033-srgqf">AI Inference Chip Market Demand, Size & Segmentation 2026-2033</a></li>
+<li><a href="https://hashrateindex.com/blog/what-is-an-ai-asic-guide-ai-chips/">What Is an AI ASIC? The Complete Guide</a></li>
+<li><a href="https://www.brownstoneresearch.com/bleeding-edge/training-vs-inference/">Training vs. Inference - Brownstone Research</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者对 OpenAI 声称其模型加速了芯片设计表示怀疑，认为这可能是模糊的营销话术。也有人讨论了权重固化在 ROM 中的架构优势，指出虽然这种设计能带来巨大吞吐量，但会导致芯片体积极大。部分评论将其与谷歌 TPU 以及 Taalas 等将模型权重直接烧录进硅片的初创公司进行了比较。
+**社区讨论**: 部分评论者对 OpenAI 声称其模型加速了芯片设计表示怀疑，认为这可能是模糊的营销话术。其他人确认了台积电为制造商，并讨论了定制推理芯片的广阔前景，包括谷歌的 TPU 以及将模型直接烧录到硅片上的初创公司 Taalas。总体而言，社区对能效提升感到兴奋，但对 OpenAI 的设计加速细节存疑。
 
-**标签**: `#AI hardware`, `#OpenAI`, `#semiconductors`, `#inference chips`, `#Broadcom`
+**标签**: `#OpenAI`, `#custom chip`, `#Broadcom`, `#AI hardware`, `#inference chip`, `#TSMC`
 
 ---
 
 <a id="item-2"></a>
-## [高通以 40 亿美元收购 AI 初创公司 Modular](https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/) ⭐️ 9.0/10
+### [电子电路可直接打印在活体组织上](https://www.economist.com/science-and-technology/2026/06/24/electronics-can-now-be-printed-onto-living-tissues) ⭐️ 9.0/10 [技术]
 
-高通宣布以约 40 亿美元收购 AI 初创公司 Modular，该公司专注于编译器技术和 Mojo 编程语言。此次收购旨在增强高通的 AI 推理能力和编译器堆栈。 此次收购巩固了高通在 AI 推理市场的地位，为基于 ARM 的芯片提供了 NVIDIA CUDA 生态系统的替代方案。它可能加速 ARMv9 在 AI 工作负载中的采用，并挑战 NVIDIA 在 AI 计算领域的主导地位。 据路透社报道，该交易价值 40 亿美元。Modular 的技术包括 MAX 编译器堆栈和 Mojo 编程语言，后者设计为类似 Python 但具有高性能，适用于 AI 和机器学习工作负载。
-
-hackernews · timmyd · 6月24日 13:49 · [社区讨论](https://news.ycombinator.com/item?id=48659798)
-
-**背景**: Modular 由 Chris Lattner 创立，他是 LLVM 和 Swift 的原始创建者。该公司开发了 Mojo 编程语言，它结合了 Python 的易用性和类似 C 的性能，以及用于跨多种硬件优化 AI 推理的 MAX 编译器堆栈。高通是 ARM 芯片的领先设计商，此次收购符合其从移动领域扩展到 AI 和数据中心市场的战略。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://news.aibase.com/news/828">AI startup Modular raises $100 million in funding to simplify AI ...</a></li>
-<li><a href="https://mlc.ai/">MLC - A Community of Machine Learning Compilers</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区对此次收购表达了复杂情绪。一些人注意到时机问题，并对 Mojo 的发展方向提出质疑，而另一些人则强调了与 ARMv9 的战略契合以及挑战 NVIDIA CUDA 堆栈的潜力。也有人持怀疑态度，因为创始人 Chris Lattner 过去曾评论硬件公司未能打造出好的 AI 堆栈。
-
-**标签**: `#Qualcomm`, `#Modular`, `#AI`, `#acquisition`, `#compiler`
-
----
-
-<a id="item-3"></a>
-## [TRM 思考奖励模型：量化大模型推理质量](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247899199&idx=3&sn=b0d6764e50d881295fd85b75f8f9434a) ⭐️ 9.0/10
-
-这项工作首次提供了评估推理过程本身（而不仅仅是最终答案）的可靠指标，对于提高强化学习训练的稳定性和模型对齐至关重要。它使得对大模型推理能力进行更有针对性的优化成为可能，并为评估思维链质量树立了新标准。 TRM 基于 ME²原则构建，并使用有向无环图（DAG）抽象复杂推理结构。它通过句子级思考监督进行训练，可应用于测试时扩展（Test-Time Scaling）和强化学习，在 STEM 和数学任务上提升模型性能。
-
-rss · 量子位 · 6月24日 04:00
-
-**背景**: 奖励模型在强化学习中用于向语言模型提供反馈，但传统模型通常只评估最终结果（结果奖励模型），而非推理过程。过程奖励模型尝试对每一步评分，但缺乏细粒度监督。TRM 通过引入句子级思考监督解决了这一问题，从而能够更准确地评估推理质量。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://36kr.com/p/3866659734279170">TRM 思 考 奖 励 模 型 上线，大 模 型 推理质量终于能量化了-36氪</a></li>
-<li><a href="https://www.aitntnews.com/newDetail.html?newId=26520">TRM 思 考 奖 励 模 型 上线，大 模 型 推理质量终于能量化了 | ICML‘26 Oral</a></li>
-<li><a href="https://arxiv.org/abs/2509.25409">From Faithfulness to Correctness: Generative Reward Models that ...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#大模型`, `#推理质量`, `#奖励模型`, `#ICML`, `#开源`
-
----
-
-<a id="item-4"></a>
-## [电子器件可直接打印到活体组织上](https://www.economist.com/science-and-technology/2026/06/24/electronics-can-now-be-printed-onto-living-tissues) ⭐️ 9.0/10
-
-莱斯大学的研究人员开发出一种方法，利用聚焦微波束将电子电路直接 3D 打印到包括活体组织在内的脆弱材料上。这一突破使得电子器件可以打印到牛股骨、人工髋关节甚至活体叶片等表面上。 这项技术通过将电子器件与活体组织无缝集成，可能彻底改变医疗植入物和生物混合设备，为脑植入物、生物传感器和先进假肢带来新的可能性。它代表了生物电子学和组织工程领域的重大范式转变，有望带来更有效、创伤更小的医疗手段。 该打印过程使用聚焦微波束沉积导电材料，而不会损伤下方的活体组织。该技术已在多种基底上得到验证，包括骨骼、合成植入物和植物叶片，展示了其在不同生物医学应用中的多功能性。
+研究人员开发出一种方法，利用超声引导的 3D 打印技术，将导电聚合物直接打印在活体组织上，甚至可以在不透明生物组织内部进行打印。 这一突破实现了电子器件与活体组织的无缝集成，为先进医疗植入物、生物集成设备以及无需传统刚性电子器件的实时健康监测铺平了道路。 该技术利用超声引导打印过程，无需侵入性手术即可在体内深处精确制造生物电子结构。导电聚合物具有生物相容性，可以打印出复杂的图案。
 
 rss · The Economist · 6月24日 16:33
 
-**背景**: 生物混合系统将生物材料（如细胞或组织）与人工组件（如电子器件或机械结构）相结合，融合了生物体的能力与人造技术的精确性。传统上，将电子器件与活体组织集成的方法通常涉及刚性组件或侵入性操作，可能导致损伤或排异反应。这种新方法通过将电路直接打印到组织上，提供了一种更温和、更直接的生物混合设备制造方式。
+**背景**: 传统的生物电子器件通常使用刚性植入物，可能导致组织损伤或排异反应。这项新方法基于 3D 生物打印和导电聚合物的进展，旨在制造与身体和谐集成的设备。斯坦福团队的工作代表了十五年来对无缝电子-组织接口的研究。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.economist.com/science-and-technology/2026/06/24/electronics-can-now-be-printed-onto-living-tissues">Electronics can now be printed onto living tissues</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Biohybrid_system">Biohybrid system - Wikipedia</a></li>
-<li><a href="https://singularityumexico.com/en/scientists-merge-biology-and-technology-by-3d-printing-electronics-inside-living-worms/">Scientists Merge Biology and Technology by 3D Printing Electronics ...</a></li>
+<li><a href="https://techfinder.stanford.edu/technology/ultrasound-guided-3d-printing-conductive-polymers-bioelectronics-tissue">Ultrasound-guided 3D Printing of Conductive Polymers for...</a></li>
+<li><a href="https://www.azosensors.com/news.aspx?newsID=15863">Seamless Integration of Electronics with Living Tissue</a></li>
 
 </ul>
 </details>
 
-**标签**: `#bioelectronics`, `#medical devices`, `#tissue engineering`, `#printed electronics`, `#biotechnology`
-
----
-
-<a id="item-5"></a>
-## [Anthropic 指控阿里巴巴对 Claude 发动大规模蒸馏攻击](https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html) ⭐️ 9.0/10
-
-Anthropic 于 2026 年 6 月 10 日致信美国参议院银行委员会，指控阿里巴巴通过近 2.5 万个欺诈账户，在 2026 年 4 月 22 日至 6 月 5 日期间与 Claude 进行了超过 2880 万次交互，非法提取其 Claude AI 模型的能力。 这一事件凸显了中美之间围绕 AI 知识产权盗窃的紧张局势升级，并对专有 AI 模型的安全性提出了关键质疑。如果指控成立，可能为针对模型蒸馏攻击的法律和监管行动树立先例，影响 AI 公司保护其模型的方式。 此次攻击针对 Anthropic 的先进模型 Mythos Preview，信件在国会 AI 听证会前夕发出。阿里巴巴尚未回应指控，且该公司近期被列入五角大楼的'中国军事公司'清单。
-
-telegram · zaihuapd · 6月25日 01:36
-
-**背景**: 模型蒸馏是一种合法的机器学习技术，其中较小的'学生'模型通过从较大的'教师'模型的输出中学习，以较低的计算成本实现相似的性能。然而，当未经授权对专有模型使用时，就变成了蒸馏攻击，一种知识产权盗窃形式。美国政府此前曾指责中国大规模窃取 AI 知识产权，并于 2026 年 6 月以国家安全为由限制 Anthropic 的 Mythos 和 Fable 模型出口。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.freebuf.com/articles/471439.html">大 模 型 中的 蒸 馏 攻 击 技术原理 - FreeBuf网络安全行业门户</a></li>
-<li><a href="https://jangwook.net/zh/blog/zh/ai-distillation-attacks-enterprise-defense/">AI 模 型 蒸 馏 攻 击 实态——CTO必知的IP保护策略</a></li>
-<li><a href="https://www.amazonaws.cn/en/knowledge/what-is-model-distillation/">what-is-model-distillation - 什么是模型蒸馏 - 亚马逊云科技</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 许多评论者表示怀疑，认为 Anthropic 本身在未经许可的情况下使用大量人类生成内容训练 Claude，因此这一指控显得虚伪。一些人指出，这种竞争情报收集是行业标准做法，而另一些人则提供了技术背景，说明中国转售商如何通过汇集账户和转售输出来压低官方 API 价格。
-
-**标签**: `#AI安全`, `#模型蒸馏`, `#知识产权`, `#地缘政治`, `#Anthropic`
-
----
-
-<a id="item-6"></a>
-## [Databricks 领导者呼吁为 Agent Cloud 构建开放生态系统](https://www.latent.space/p/databricks) ⭐️ 8.0/10
-
-在一次罕见的联合采访中，Databricks 联合创始人 Matei Zaharia 和 Reynold Xin 主张，开放生态系统对于每家公司构建自己的 Agent Cloud 至关重要。 这一立场强化了在快速发展的 AI 基础设施领域中开源原则的重要性，可能影响企业大规模采用和部署 AI 代理的方式。 采访未提供具体技术细节，但领导者强调，专有锁定将阻碍基于代理的架构在各行业的广泛采用。
-
-rss · Latent Space · 6月24日 18:53
-
-**背景**: Agent Cloud 是指基于云的平台，用于部署和编排 AI 代理，通常集成大语言模型和检索增强生成（RAG）。Databricks 是领先的数据和 AI 平台，最近将 OpenAI 的前沿模型整合到其生态系统中。AI 中的开放生态系统概念意味着工具、模型和基础设施可互操作，不受单一供应商控制，使公司能够定制并拥有自己的 AI 解决方案。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://blog.mainfra.me/p/agent-clouds">Agent Clouds - by Philippe Page - Mainframe</a></li>
-<li><a href="https://www.databricks.com/">Databricks : Leading Data and AI Platform for Enterprises</a></li>
-<li><a href="https://sacra.com/c/databricks/">Databricks revenue, valuation & funding | Sacra</a></li>
-
-</ul>
-</details>
-
-**标签**: `#open source`, `#AI ecosystem`, `#agent clouds`, `#Databricks`, `#machine learning`
-
----
-
-<a id="item-7"></a>
-## [Claude Slackbot 升级：多人、主动、持久化智能体](https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive) ⭐️ 8.0/10
-
-Anthropic 发布了 Claude Slackbot 的重大升级，引入了多人协作、主动行动和持久化记忆的智能体能力，允许多个 AI 智能体协作、无需提示即可主动行动，并在多次会话中保留记忆。 此次升级将 Slack 从简单的聊天机器人界面转变为持久化、协作式 AI 智能体平台，通过让智能体作为持续队友而非孤立助手工作，可能彻底改变工作流自动化和团队生产力。 升级使智能体能够在共享 Slack 频道中协同工作（多人协作），基于上下文主动行动（主动），并在多次交互中保持持久身份和记忆（持久化），这基于 Anthropic 的 Claude 模型和 Slack 现有的 Slackbot 基础设施。
-
-rss · Latent Space · 6月24日 07:14
-
-**背景**: 传统 AI 助手是被动且基于会话的，每次任务后丢失上下文。多智能体系统涉及多个交互智能体解决复杂问题，而主动智能体监控上下文并在被询问前主动参与。持久化智能体跨会话保持身份和记忆。此次升级将这三个概念整合到 Slack 中，将 AI 从私人助手转变为持久队友。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Multi-agent_system">Multi-agent system - Wikipedia</a></li>
-<li><a href="https://slack.com/blog/productivity/proactive-ai-agents-definition-core-components-and-business-value">Proactive AI Agents: Definition, Core Components, and Business Value | Slack</a></li>
-<li><a href="https://gravitydevops.com/ai-news-roundup-2026-06-24-evening-claude-tag-slack-agents/">AI News Roundup: Claude Tag Brings Persistent AI Agents Into Slack</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI`, `#Claude`, `#Slack`, `#agents`, `#product update`
-
----
-
-<a id="item-8"></a>
-## [微信豪赌小程序范式变革](https://www.huxiu.com/article/4869561.html?f=rss) ⭐️ 8.0/10
-
-微信正在从根本上改写其小程序范式和流量分发逻辑，这标志着该平台的一次重大战略赌注。 这一转变将深刻影响微信生态内的数百万开发者和商家，可能重塑流量分配方式以及小程序的构建和发现机制。 虽然具体技术细节尚未披露，但这一变化涉及小程序开发的新范式以及流量分发逻辑的修订，将偏离现有模式。
-
-rss · 虎嗅 · 6月24日 22:50
-
-**背景**: 微信小程序是运行在微信生态系统内的轻量级应用，用户无需离开微信即可使用服务。流量分发逻辑指的是微信如何将用户流量分配给不同的小程序，这历来是商业成功的关键因素。通过改写范式和分发逻辑，微信正试图解决开发者痛点并改善内容发现。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://github.com/beautywe">BeautyWe - GitHub</a></li>
-<li><a href="https://zengzhangkexue.com/?p=70289">浅谈直播间的 流 量 密码和底层 分 发 逻 辑 _增长科学</a></li>
-<li><a href="https://m.okjike.com/originalPosts/627e1fdf3ac80ccc5c07223a?s=ewoidSI6ICI1ZDE1YzEzNmM3ZmUwODAwMTg0YTgwYTMiCn0=">电商向的平台 流 量 分 发 逻 辑 对比：拼多多🆚快手🆚阿里🆚...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#WeChat`, `#mini-programs`, `#traffic distribution`, `#platform strategy`, `#China tech`
+**标签**: `#bioelectronics`, `#medical technology`, `#3D printing`, `#tissue engineering`
 
 ---
 
 <a id="item-9"></a>
-## [OpenAI Codex 漏洞导致过度日志写入，可能损坏 SSD](https://www.v2ex.com/t/1222665#reply13) ⭐️ 8.0/10
+### [Anthropic 指控阿里巴巴非法提取 Claude AI 能力](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/) ⭐️ 8.0/10 [技术]
 
-OpenAI Codex 的一个漏洞导致它以极高频率向本地 SQLite 文件（~/.codex/logs_2.sqlite）写入 TRACE 级别日志，可能在数月内耗尽消费级 SSD 的寿命。社区分享了一个临时解决方案，使用 SQLite 触发器阻止日志插入。 该漏洞可能悄无声息地毁掉重度 Codex 用户的 SSD，导致数据丢失和硬件故障。它暴露了本地持续运行的 AI 工具在日志管理上的严重疏忽。 报告显示 Codex 每年可写入高达 640 TB，有用户在 21 天内记录了 37 TB 的写入量。临时方案使用 SQLite 触发器忽略对 logs 表的所有插入操作，但这并非官方补丁。
+据路透社看到的一封信件，Anthropic 正式指控阿里巴巴非法提取其 Claude AI 模型的能力，称这是该公司已知的最大规模此类攻击。 这一指控凸显了 AI 行业中关于模型蒸馏实践的日益紧张关系，Anthropic 等公司声称其知识产权被盗，而批评者则指出，鉴于许多 AI 模型是在公开抓取的数据上训练的，这具有讽刺意味。 据报道，此次提取涉及中国经销商以低于官方 API 价格 70-90% 的价格提供 Claude 代币，利用共享账户和支付欺诈，然后将模型输出和推理痕迹出售给实验室作为训练数据。
 
-rss · V2EX · 6月25日 00:39
+hackernews · htrp · 6月24日 19:48 · [社区讨论](https://news.ycombinator.com/item?id=48664814)
 
-**背景**: OpenAI Codex 是一个命令行工具，利用 AI 从自然语言生成代码。它维护一个本地 SQLite 数据库用于日志记录。TRACE 是最详细的日志级别，用于调试，但通常不应占据用户端日志的主导地位。对 SSD 的过度写入会因有限的写入寿命而显著缩短其使用寿命。
+**背景**: 模型蒸馏是一种机器学习技术，将大型“教师”模型的知识转移到较小的“学生”模型，通常用于提高效率。虽然合法的蒸馏很常见，但非法提取涉及未经授权复制模型的能力，Anthropic 声称这里发生了这种情况。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://trustpost.org/openai-codex-logging-bug-ssd/">OpenAI Codex Bug Writes 640 TB Per Year and Can Kill Your SSD</a></li>
-<li><a href="https://www.techtimes.com/articles/318876/20260622/openai-codex-cli-bug-silently-writes-640-tb-year-your-ssd-no-patch.htm">OpenAI Codex CLI Bug Silently Writes 640 TB/Year to Your SSD : No...</a></li>
-<li><a href="https://www.sqlite.org/lang_createtrigger.html">CREATE TRIGGER</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Model_distillation">Model distillation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knowledge_distillation">Knowledge distillation - Wikipedia</a></li>
+<li><a href="https://iamhemanth.in/blog/model-distillation-attacks-how-ai-capabilities-are-being-stolen-and-what-we-can-do-about-it">Model Distillation Attacks: How AI Capabilities Are Being Stolen and...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: V2EX 社区讨论（13 条回复）确认了该漏洞，并分享了额外的诊断步骤和临时方案，许多用户报告了类似的 SSD 写入问题，并对缺乏官方修复表示担忧。
+**社区讨论**: 社区评论褒贬不一：一些人认为这种做法类似于微调，而另一些人则指出 Anthropic 在利用抓取的网络数据训练后抱怨的虚伪性。少数评论者详细介绍了中国经销商用于压低价格和提取推理痕迹的技术方法。
 
-**标签**: `#OpenAI`, `#Codex`, `#bug`, `#SSD`, `#logging`
+**标签**: `#AI`, `#model distillation`, `#intellectual property`, `#Anthropic`, `#Alibaba`, `#technology news`
 
 ---
 
 <a id="item-10"></a>
-## [国产存储登顶 IO500 生产榜单](https://www.tmtpost.com/8039798.html) ⭐️ 8.0/10
+### [LuaJIT 3.0 语法扩展引发语言身份辩论](https://github.com/LuaJIT/LuaJIT/issues/1475) ⭐️ 8.0/10 [技术]
 
-国产存储系统在 IO500 生产榜单的带宽和元数据两个类别中均获得第一名，标志着行业的历史性里程碑。 这表明中国存储技术在高性能计算领域已达到世界一流水平，可能重塑全球存储系统的竞争格局。 IO500 生产榜单要求提交的系统满足冗余和实际使用的严格标准，因此这一成就尤其重要，它反映的是可部署的实际性能而非理论基准。
+LuaJIT 3.0 的 GitHub 议题提议添加类似 C 语言的语法，如用 && 表示逻辑与，以及三元运算符 (x ? y : z)，旨在让来自其他语言的开发者更熟悉。 该提案可能对 Lua 生态系统产生重大影响，因为 LuaJIT 是一个关键实现。它引发了关于保持 Lua 独特语法与采用更常见约定以降低新手门槛之间的讨论。 该提案建议添加 &&、|| 和三元运算符作为替代语法，同时保留原始的 Lua 关键字（and、or）。三元运算符尤其有争议，一些人推荐使用 Lua 风格的 if-then-else 表达式。
 
-rss · 钛媒体 · 6月25日 02:58
+hackernews · phreddypharkus · 6月25日 00:41 · [社区讨论](https://news.ycombinator.com/item?id=48667336)
 
-**背景**: IO500 基准测试是评估高性能存储系统的领先标准，测量带宽（IOR）和元数据（mdtest）性能。生产榜单是其中的一个子集，仅包含在实际生产环境中使用的系统，确保结果代表真实世界的能力。
+**背景**: LuaJIT 是 Lua 编程语言的高性能即时编译器，广泛应用于游戏和嵌入式系统。Lua 历史上在主要版本之间不保持严格兼容性，这导致了多种类 Lua 语言的生态系统（如 Luau）。提议的语法变更旨在让熟悉类 C 语言的开发者更容易上手。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://io500.org/">IO500 - ISC26 - Production List</a></li>
-<li><a href="https://io500.org/list/isc23/production">IO500 - ISC23 - Production List</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LuaJIT">LuaJIT - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**标签**: `#storage`, `#high-performance computing`, `#IO500`, `#China`, `#technology milestone`
+**社区讨论**: 社区评论意见不一：一些用户认为添加类 C 语法是表面功夫，削弱了 Lua 的独特风格；另一些人则指出替代语法已在 Luau 等项目中出现。一些评论者还提到了他们自己的项目（如 LJS），这些项目尝试为 Lua VM 使用不同的语法。
+
+**标签**: `#LuaJIT`, `#programming languages`, `#syntax`, `#open source`
 
 ---
 
 <a id="item-11"></a>
-## [硅谷应向它鄙视的电子表格分析师学习](https://www.economist.com/business/2026/06/24/silicon-valley-has-much-to-learn-from-the-spreadsheet-jockeys-it-despises) ⭐️ 7.0/10
+### [高通以 40 亿美元收购 AI 初创公司 Modular](https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/) ⭐️ 8.0/10 [技术]
 
-《经济学人》发表评论文章，认为硅谷对基于电子表格的财务分析的轻视，忽视了传统金融在纪律性和严谨性方面提供的宝贵经验。 这挑战了优先考虑增长和颠覆而非财务基础的主流科技文化，可能影响初创公司和科技企业对待商业战略和问责制的方式。 文章的副标题“即使金融市场不同意”表明，尽管市场持怀疑态度，但采纳财务严谨性的论点仍然有效。
+2026 年 6 月 24 日，高通宣布将以约 40 亿美元收购 AI 初创公司 Modular，该公司是 Mojo 编程语言和 MAX AI 基础设施平台的开发者。 此次收购标志着高通战略性地进军 AI 基础设施和 RISC-V 架构，可能挑战 NVIDIA 的 CUDA 主导地位和 ARM 的处理器生态系统。通过将高通的芯片设计与 Modular 的编译器技术结合，有望重塑 AI 硬件-软件栈。 据路透社报道，该交易估值 40 亿美元。Modular 的 Mojo 语言基于 MLIR 编译器框架，可在 CPU、GPU 和 ASIC 上实现高性能内核，高通计划将该技术集成到其未来芯片中，包括 RISC-V 设计。
 
-rss · The Economist · 6月24日 19:17
+hackernews · timmyd · 6月24日 13:49 · [社区讨论](https://news.ycombinator.com/item?id=48659798)
 
-**背景**: 硅谷长期以来以崇尚快速增长、颠覆和“快速行动，打破常规”的文化为特征，常将传统财务分析视为缓慢和保守。电子表格分析师——构建详细模型的财务分析师——有时被科技创业者视为缺乏远见。这篇文章认为这种轻视是错误的，因为财务纪律可以为不可持续的增长提供关键约束，并帮助公司实现长期成功。
+**背景**: Mojo 是一种专有编程语言，结合了类似 Python 的语法和系统级性能，面向 AI 和高性能计算。它利用 MLIR 编译器框架来支持包括 GPU 和定制加速器在内的多种硬件。RISC-V 是一种开放标准的指令集架构，是专有 ARM 和 x86 设计的替代方案。高通传统上是 ARM 的授权用户，近年来正扩展至 RISC-V 和 AI 领域，以减少对 ARM 的依赖并在 AI 芯片市场展开竞争。
 
-**标签**: `#Silicon Valley`, `#finance`, `#business strategy`, `#tech culture`, `#analysis`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Mojo_(programming_language)">Mojo (programming language)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RISC-V_architecture">RISC-V architecture</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区反应不一：有人对 Mojo 可能永远无法成为真正的跨平台语言表示失望，而另一些人则认为这是高通构建 RISC-V AI 生态系统的大胆战略举措。多位评论者指出，这与高通的 ARMv9 芯片以及中国使用 ARM 的超算崛起存在潜在协同效应，暗示 AI 硬件格局正在发生更广泛的转变。
+
+**标签**: `#acquisition`, `#Qualcomm`, `#Modular`, `#AI`, `#Mojo`, `#Chris Lattner`
 
 ---
 
 <a id="item-12"></a>
-## [美国必须避免的量子计算供应链陷阱](https://www.economist.com/by-invitation/2026/06/24/the-quantum-computing-mistakes-america-must-avoid) ⭐️ 7.0/10
+### [NVIDIA 45°C 液冷设计大幅降低数据中心用水](https://blogs.nvidia.com/blog/liquid-cooling-ai-factories/) ⭐️ 8.0/10 [技术]
 
-《经济学人》的一篇评论文章警告称，美国在减少量子计算供应链依赖方面的努力，如果管理不当，可能会犯下战略错误。 量子计算是一项关键的新兴技术，供应链漏洞可能削弱美国的竞争力和国家安全。文章强调需要采取平衡的方法，避免在忽视全球合作伙伴关系的情况下过度依赖国内生产。 作者 Joshua Zoffer 和 Chris Miller 认为，虽然摆脱依赖很重要，但仓促或目标不明确的政策可能造成新的漏洞。他们警告不要重蹈半导体等其他高科技领域的覆辙。
+NVIDIA 发布了一种用于 AI 数据中心的液冷架构，其冷却液温度可达 45°C，将用水量降至接近零，并使得废热可用于区域供暖。 这一创新解决了 AI 数据中心日益增长的水足迹问题，并通过向区域供暖网络提供低品位热量创造新的收入来源，每年可为当地社区节省数百万美元。 该设计采用直接到芯片的液冷方式，冷却液温度高达 45°C（113°F），远高于典型的液冷温度，从而无需蒸发冷却即可散热，并使废热可用于区域供暖。
 
-rss · The Economist · 6月24日 11:06
+hackernews · nitin_flanker · 6月24日 14:10 · [社区讨论](https://news.ycombinator.com/item?id=48660178)
 
-**背景**: 量子计算依赖于复杂的全球供应链，涉及低温系统、控制电子设备和量子比特材料等专用组件。美国目前在许多此类组件上依赖外国供应商，这引发了对韧性和安全的担忧。半导体行业类似的担忧导致了《芯片法案》的出台，该法案旨在促进国内制造，但也因效率低下而受到批评。
+**背景**: 传统数据中心依赖空气冷却或较低温度的液冷，通常需要耗水量大的蒸发冷却来散热。区域供暖系统将热量从中央热源分配到多个建筑，如果数据中心的废热温度足够高，可以成为有价值的输入。NVIDIA 的 45°C 冷却液温度足够高，可以输入区域供暖回路，将废热转化为资源。
 
-**标签**: `#quantum computing`, `#supply chain`, `#policy`, `#geopolitics`, `#technology strategy`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.techbuzz.ai/articles/nvidia-s-45-c-liquid-cooling-redefines-ai-data-center-energy">NVIDIA's 45 ° C Liquid Cooling Redefines AI Data Center Energy</a></li>
+<li><a href="https://www.guru3d.com/story/nvidia-unveils-liquid-cooling-design-for-ai-data-centers/">NVIDIA Unveils 45 ° C Liquid Cooling Design for AI Data Centers</a></li>
+<li><a href="https://www.araner.com/blog/data-center-and-district-heating-an-outstanding-combination">Data center and district heating: an outstanding combination</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者注意到了区域供暖的协同潜力，有人建议数据中心可以向社区免费提供热量，每年节省数百万美元。其他人质疑这一设计与现有液冷相比的创新之处，并询问外部温度对效率的影响。还有评论者提到了 NASA 类似的高温水冷方案。
+
+**标签**: `#data center cooling`, `#liquid cooling`, `#water conservation`, `#district heating`, `#NVIDIA`
 
 ---
 
 <a id="item-13"></a>
-## [大型 AI 实验室为何大量招聘哲学家](https://www.economist.com/science-and-technology/2026/06/24/why-big-ai-labs-are-hiring-so-many-philosophers) ⭐️ 7.0/10
+### [5 亿美元基金旨在终结呼吸道感染](https://blog.interceptfund.com/p/ending-respiratory-infections) ⭐️ 8.0/10 [技术]
 
-OpenAI、DeepMind 和 Anthropic 等主要 AI 实验室正在大量招聘哲学家，以应对先进 AI 技术带来的复杂伦理和概念挑战，包括对齐问题、意识问题和道德主体性问题。 这一趋势表明，AI 行业认识到纯粹的技术解决方案不足以确保 AI 的安全和有益性，哲学专业知识对于应对 AI 发展带来的深层规范和概念问题至关重要。 AI 实验室中的哲学家致力于解决价值对齐、可解释性、公平性以及智能定义等问题，通常与工程师和研究人员合作，影响 AI 系统的设计和部署。
+一项 5 亿美元的慈善基金已启动，旨在通过投资改进空气净化技术和新型预防措施来消除呼吸道感染，该消息由 Intercept Fund 在一篇博客文章中宣布。 这项举措可能通过解决呼吸道感染的根源来改变公共卫生优先事项，从而减轻感冒、流感和长新冠等疾病对全球数百万人的负担。 该基金专注于资助空气净化技术和预防措施，一次研讨会调查指出，资金不足是进展的主要障碍，其次是技术可行性问题。
 
-rss · The Economist · 6月24日 09:44
+hackernews · EthanFantl · 6月25日 01:14 · [社区讨论](https://news.ycombinator.com/item?id=48667588)
 
-**背景**: 随着 AI 系统变得更加强大和自主，它们引发了一些根本性问题：它们应该追求什么目标？如何确保它们符合人类价值观？它们可能拥有什么权利或道德地位？这些本质上是哲学问题，超出了技术工程的范畴。哲学家在伦理学、逻辑学和概念分析方面受过训练，这有助于 AI 实验室在潜在问题演变成危机之前预见并解决它们。
+**背景**: 呼吸道感染，包括普通感冒和流感，导致健康人每年约有 5%的时间处于生病状态。长新冠已使许多人永久残疾，凸显了改善预防和空气质量措施的必要性。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Ethics_of_artificial_intelligence">Ethics of artificial intelligence - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Artificial general intelligence - Wikipedia</a></li>
+**社区讨论**: 社区评论表达了希望与怀疑的混合情绪：一些人分享了因呼吸道感染导致的个人悲剧，另一些人质疑该基金的规模与 NASA 阿波罗计划等项目的对比，还有少数人对健康人每年 5%时间生病的统计数据表示怀疑。
 
-</ul>
-</details>
-
-**标签**: `#AI ethics`, `#philosophy`, `#AI research`, `#industry trends`, `#technology`
+**标签**: `#respiratory infections`, `#philanthropy`, `#air cleaning`, `#long covid`, `#public health`
 
 ---
 
 <a id="item-14"></a>
-## [AI 投资挤压企业预算](https://www.economist.com/podcasts/2026/06/24/ai-is-squeezing-business-budgets) ⭐️ 7.0/10
+### [Nub：无需替换运行时即可为 Node.js 提供类似 Bun 的工具包](https://github.com/nubjs/nub) ⭐️ 8.0/10 [技术]
 
-《经济学人》报道称，AI 投资正在挤压企业预算，迫使企业重新分配资源，优先考虑 AI 项目而非其他支出。 这一趋势凸显了 AI 对企业战略日益增长的经济影响，因为公司必须在 AI 采用与其他运营需求之间取得平衡，可能重塑行业支出模式。 该分析基于《经济学人》的播客摘要，聚焦企业在为 AI 分配预算时面临的权衡，未提供具体财务数据或案例研究。
+Colin McDonnell 发布了 Nub，这是一个面向 Node.js 的一体化工具包，通过 oxc 驱动的 Node-API 插件添加 TypeScript 编译，并通过 --require 预加载钩子为 Worker 和 Temporal 等 API 注入 polyfill，无需替换 Node 的运行时。 Nub 为 Node.js 用户提供了类似 Bun 的开发体验，可能降低许多项目转向 Bun 的吸引力，其纯附加的方式意味着现有 Node.js 代码和生态系统完全兼容。 编译器由 oxc（The Oxidation Compiler）驱动，这是一个基于 Rust 的高性能工具链，并打包为 Node-API 插件以提高速度。Nub 还注册了模块解析钩子，并为 Node.js 尚未原生支持的 API（如 Worker 和 Temporal）注入 polyfill。
 
-rss · The Economist · 6月24日 09:00
+hackernews · colinmcd · 6月24日 14:14 · [社区讨论](https://news.ycombinator.com/item?id=48660267)
 
-**背景**: AI 在各行业的采用加速，需要在技术、人才和基础设施上进行大量前期投资。这常常迫使公司削减其他领域的成本，如营销或研发，以资助 AI 项目。
+**背景**: Bun 是一个流行的 JavaScript 运行时，集成了编译器、包管理器和测试运行器，提供简化的开发体验。Node.js 虽然广泛使用，但需要单独的工具进行 TypeScript 编译，并且缺少一些现代 API（如 Temporal）。Nub 旨在将这些功能引入 Node.js，而无需用户放弃其运行时。
 
-**标签**: `#AI`, `#economics`, `#business strategy`, `#technology trends`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://github.com/oxc-project/oxc">GitHub - oxc-project/oxc: ⚓ A collection of high-performance JavaScript tools.</a></li>
+<li><a href="https://oxc.rs/docs/guide/what-is-oxc.html">What is Oxc?</a></li>
+<li><a href="https://medium.com/@ankushchavan0411/understanding-javascript-temporal-a-better-way-to-handle-dates-and-time-674195c5708f">Understanding JavaScript Temporal : A Better Way to... | Medium</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区反应积极，用户称赞这一想法并报告成功迁移（例如，一个单体仓库零问题迁移）。一些人提出了关于 ESM 支持以及使用 --require 与 --import 的技术问题，而另一些人则建议包装 pnpm 进行包管理。
+
+**标签**: `#nodejs`, `#typescript`, `#tooling`, `#bun`, `#open-source`
 
 ---
 
 <a id="item-15"></a>
-## [人机即兴：AI 协作的新范式](https://www.huxiu.com/article/4870041.html?f=rss) ⭐️ 7.0/10
+### [Meta 提出 AI 工程中的‘元框架’概念](https://www.latent.space/p/ainews-its-meta-harness-summer) ⭐️ 8.0/10 [技术]
 
-一种新的人机即兴范式被提出，从传统的指令控制协作转向人类与 AI 系统之间的自发、共创互动。这种方法强调实时适应和共同价值创造，而非预定义的工作流程。 这一范式可能改变组织和个体利用 AI 的方式，在动态环境中实现更流畅、更具创造性的问题解决。它挑战了当前以效率为中心的 AI 部署模式，为设计、音乐和商业战略等领域的创新开辟了新可能。 这一概念借鉴了生成式 AI 使用与即兴能力的研究，表明 AI 可以通过技术可供性增强人类的即兴能力。实际案例包括用于共同创作即兴故事的 AI 代理，以及将 AI 视为协作伙伴的音乐即兴系统。
+Meta 提出了一个名为‘元框架’的新概念，这是一个用于协调多个 AI 框架的元级框架，据 Latent Space 的 AINews 报道。 这一发展标志着从单个框架工程向更高层次编排层的转变，可能实现更强大、可扩展的多智能体 AI 系统。 ‘元框架’建立在现有的 AI 框架工程概念之上，后者涉及用上下文、约束、反馈循环和工作流所有权来包装 AI 智能体。
 
-rss · 虎嗅 · 6月24日 22:11
+rss · Latent Space · 6月25日 02:14
 
-**背景**: 传统的人机协作遵循预定义的规则和工作流程，在不可预测的情况下限制了灵活性。即兴创作是表演艺术中的一个概念，涉及在结构化框架内的自发创造。生成式 AI 的最新进展使机器能够参与实时共创，从简单的响应生成转向协作叙事和音乐创作。
+**背景**: AI 框架工程是围绕 AI 智能体构建工程化包装的学科，将原始模型转变为功能系统。一个健壮的框架可以提升即使是平庸的 AI，而一个糟糕的框架可能削弱优秀的模型。‘元框架’进一步提供了协调多个框架的元层，可能用于复杂的多智能体场景。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://humanmachine.live/">Human_Machine_Improv - Improvised comedy with Artificial Intelligence</a></li>
-<li><a href="https://link.springer.com/chapter/10.1007/978-3-031-97254-6_22">Being the Artificial Player: Good Practices in Collective Human-Machine ...</a></li>
-<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0166497226000702">Generative AI usage and improvisation capability</a></li>
+<li><a href="https://dsvgroup.medium.com/what-is-an-ai-harness-and-how-to-build-a-minimal-one-yourself-dc70f1d758f2">What Is An AI Harness And How To Build A Minimal One... | Medium</a></li>
+<li><a href="https://www.forbes.com/sites/lanceeliot/2026/06/19/harness-engineering-becomes-vital-backbone-for-ai-makers-and-happy-users/">Harness Engineering Becomes Vital Backbone For AI Makers And...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#human-machine collaboration`, `#value creation`, `#paradigm shift`
+**标签**: `#AI`, `#Meta`, `#harness engineering`, `#newsletter`
+
+---
+
+## 时政 (Politics)
+
+<a id="item-3"></a>
+### [叙利亚战后蜜月期因逮捕事件告终](https://www.economist.com/middle-east-and-africa/2026/06/24/middle-east-dispatch-newsletter-syrias-honeymoon-is-over) ⭐️ 9.0/10 [时政]
+
+据中东记者 Gareth Browne 报道，叙利亚政府实施的一次逮捕行动损害了其公众形象，标志着战后蜜月期的结束。 这一事件标志着叙利亚战后稳定性的重大转变，可能削弱政府重建合法性和国际关系的努力。 逮捕的具体细节及被捕者身份尚未披露，但该事件被视为政府战后叙事的转折点。
+
+rss · The Economist · 6月24日 15:34
+
+**背景**: 经过多年内战，巴沙尔·阿萨德领导的叙利亚政府进入了一段相对平静和外交重新接触的时期，常被称为“蜜月期”。这一时期的特点是努力与邻国关系正常化并重建基础设施。此次逮捕事件表明，内部异议或安全挑战可能再次浮现，威胁到这种脆弱的稳定。
+
+**标签**: `#Syria`, `#politics`, `#government`, `#arrest`, `#Middle East`
+
+---
+
+<a id="item-5"></a>
+### [中国以美国朱姆沃尔特级驱逐舰为导弹试验目标](https://news.google.com/read/CBMitAFBVV95cUxQaWFHOVdSbm9pRkhiQUNlWXprbEdIbF9IN19SOHFDanI4Q25HYnpwX0lCQXhTbDE2MUJFSkNBcFhyR0xnQ2E1RU9XSXI4ZVRfWlpNNkI2V1RzM0pDc3ZJUVQ3bGE1eTc0Ul96RmcySXducENYLUtmUEhEeXdEUjdkME1KUktseWtJZ2NMOUFnRkU1TEZNUXZsRjlaMGs5dHBvSm5tQzVpdkU0aFhEWFY2RUQ1dXo?hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
+
+近期图片显示，中国将一艘美国海军朱姆沃尔特级驱逐舰作为反舰弹道导弹的试验目标，标志着两国军事对峙的显著升级。 此举展示了中国打击包括隐身驱逐舰在内的先进美国军舰的能力，凸显了美国在太平洋地区海军资产面临的日益增长的威胁，可能改变该地区的战略格局。 朱姆沃尔特级驱逐舰是美国海军最大且最隐身的现役水面战舰，最初设计用于对陆攻击，后改为执行水面作战任务。中国的 DF-21D 反舰弹道导弹被称为‘航母杀手’，射程约 1500 公里，旨在打击海上移动目标。
+
+rss · Buzzing China · 6月24日 07:57
+
+**背景**: 朱姆沃尔特级驱逐舰（DDG-1000）是美国海军的一级三艘导弹驱逐舰，采用隐身内倾船体和综合电力推进系统。最初设计用于对岸火力支援，但因成本超支仅建造了三艘。DF-21D 是中国的一种反舰弹道导弹，能够瞄准航空母舰和大型军舰，约在 2010 年形成初始作战能力。这类导弹由于速度快、末段弹道陡峭，难以拦截。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zumwalt-class_destroyer">Zumwalt-class destroyer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/USS_Zumwalt">USS Zumwalt - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#China`, `#US`, `#military`, `#missile tests`, `#geopolitics`
+
+---
+
+<a id="item-6"></a>
+### [委内瑞拉接连发生地震，造成数十人死亡、数百人受伤](https://news.google.com/rss/articles/CBMikwFBVV95cUxOQ3liWjNhcnpvNXlqdFFrMlREVG1iel9fUEpSb1hFMFVUWks2Zm1aYTZfUkFPYl81Q082MlViNnRkbUxkS09UX1BQQ0NJX0lneUdXMllxbl81ajJfY012YXVJWEE0M2trbHRCd1JKdHltd05zOUdpeVVCVjRPRU9TaXBlZmFWZ1dDeWZsU1NrVmNpaUE?oc=5&hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
+
+委内瑞拉发生一系列接连地震，其中包括一次 7.1 级强震，已造成至少 32 人死亡、数百人受伤，首都加拉加斯数十栋建筑倒塌。 这场重大自然灾害造成了严重的人员伤亡和大范围破坏，需要政府紧急响应和国际关注，同时也凸显了地震活跃地区城市基础设施的脆弱性。 这些地震被报道为接连发生的事件，其中 7.1 级地震最为强烈，临时总统确认至少 32 人死亡，加拉加斯数十栋建筑倒塌。
+
+rss · Buzzing News · 6月25日 06:03
+
+**背景**: 委内瑞拉位于加勒比板块边界附近的地震活跃区，因此容易发生地震。首都加拉加斯人口密集，许多老旧建筑可能不符合现代抗震安全标准，这增加了强震中倒塌的风险。
+
+**标签**: `#Venezuela`, `#earthquake`, `#natural disaster`, `#casualties`, `#breaking news`
+
+---
+
+<a id="item-7"></a>
+### [普京现在提议与乌克兰进行和平谈判](https://news.google.com/rss/articles/CBMirwFBVV95cUxPeFlHZ3ZkcGhiSVgtSUttQnljcUpQT2l1bnVxN0ZJcnFDSnV5d3I4YkdocnM5clUtdGUxTEk3UFljbGc1TU5qdko5SzlfV0tCblEtWlNZWlc5OTg5SFdpRzV6TXBKNUlNYTZBcFhacUNtR3lOaGc4SDZiMnhkTl9vb25abnYxaWlhVGw1Smxob0h4MzNldy0tSHc3ZjFHRVNPcHA1dWdsUVo5RlNzaXBv?oc=5&hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
+
+俄罗斯总统弗拉基米尔·普京最近呼吁俄罗斯与乌克兰之间举行和平谈判，这引发了对其时机和动机的质疑。 这一提议可能标志着俄罗斯战略的转变或对战况变化的回应，对战争进程和全球稳定具有重大影响。 该提议是在军事行动和国际制裁持续的背景下提出的，分析人士正在研究这是否反映了真正的意愿还是战术性姿态。
+
+rss · Buzzing News · 6月25日 04:44
+
+**背景**: 俄乌战争始于 2022 年 2 月，已造成大量伤亡和破坏。此前的和平谈判陷入僵局，双方均坚持强硬立场。
+
+**标签**: `#Russia-Ukraine war`, `#peace talks`, `#Putin`, `#geopolitics`, `#international relations`
+
+---
+
+<a id="item-8"></a>
+### [联合国委员会指控以色列蓄意攻击加沙儿童](https://news.google.com/rss/articles/CBMivwFBVV95cUxPczBoQV8tZlpNM0pwSUdYckxRdmM4a203N3AtZkRVRkpCUkNtYVBwVnQ5VzlxNm9TdWt3REprdnZ5b2NKM1NDZXVUb0EtTWJ1S19TV2JyQzJMLUhhTGdwN2swaVZMcHNSVXJwT1R4aFljU3lYS0Y2ekI5bm9OS09vSTBUOUZzOWhpbXZFbDY5TzY5LTVhbUR0b2V3QXpCSXNadzh4OFlKUzFSUVI1bnpRbGE3UUJocjZHVGZLOUZ1SQ?oc=5&hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
+
+联合国独立委员会发现以色列蓄意将加沙地带的巴勒斯坦儿童作为袭击目标，并指控其犯有种族灭绝和暴行罪。 这一指控具有重大的国际法律和人道主义影响，可能加剧全球对以色列的压力，并影响战争罪调查。 该委员会的调查结果是对冲突持续调查的一部分，强调蓄意针对儿童是指控种族灭绝的关键要素。
+
+rss · Buzzing News · 6月25日 01:48
+
+**背景**: 联合国巴勒斯坦被占领土问题独立国际调查委员会负责调查该地区违反国际法的行为。根据国际人道法，蓄意针对平民（尤其是儿童）被视为战争罪。
+
+**标签**: `#Israel`, `#Gaza`, `#UN`, `#war crimes`, `#children`, `#human rights`
+
+---
+
+<a id="item-20"></a>
+### [中方制裁引发日本产业崩溃](https://www.huxiu.com/article/4868048.html?f=rss) ⭐️ 8.0/10 [时政]
+
+中方对日制裁已开始显现显著效果，导致日本工业领域出现广泛混乱。制裁引发了连锁经济反应，被描述为产业崩溃。 这一事态标志着中日地缘政治紧张局势的重大升级，可能对全球供应链产生长期影响。日本工业领域的混乱可能波及全球依赖日本零部件和技术的行业。 据报道，制裁已导致日本制造业和贸易出现一连串失败，但报告中未详细说明具体措施和受影响的行业。'连锁反应'一词表明影响正在超出最初目标范围。
+
+rss · 虎嗅 · 6月25日 02:30
+
+**背景**: 中日两国经济关系复杂，日本是中国的主要贸易伙伴和投资国。近年来，双方在历史问题、领土争端和技术竞争上的紧张局势加剧。制裁是政府施加压力的工具，通常针对特定行业或实体。当前的制裁似乎范围广泛，足以在日本造成严重的产业混乱。
+
+**标签**: `#China-Japan relations`, `#sanctions`, `#industrial impact`, `#geopolitics`
+
+---
+
+## 社会热点 (Social Hotspots)
+
+<a id="item-4"></a>
+### [影子账号利用大病患儿家属在短视频平台骗捐](https://www.huxiu.com/article/4870120.html?f=rss) ⭐️ 9.0/10 [社会热点]
+
+一篇报道揭露，中国短视频平台上出现大量‘影子账号’，冒充真实大病患儿家属进行骗捐，利用平台流量驱动的生态牟利。 这破坏了公众对在线慈善的信任，将捐款从真正需要的家庭分流，同时揭示了平台推荐算法可能放大虚假内容而非真实求助的问题。 报道指出，真实的大病患儿家属正涌向短视频平台求助，但他们面临影子账号的竞争，这些账号使用编造的故事和情感操控来吸引捐款。
+
+rss · 虎嗅 · 6月25日 03:55
+
+**背景**: 中国的短视频平台（如抖音、快手）因其庞大的用户基础和算法驱动的内容分发，已成为在线筹款的主要渠道。推荐算法优先推送能产生高互动的内容，这可能会无意中助长利用情感叙事的虚假帖子。影子账号是模仿合法慈善案例的虚假个人资料，旨在欺骗观众捐款。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10642507/">An overview of video recommender systems: state-of-the-art and research issues - PMC</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S2772941924001005">The short video platform recommendation mechanism based on the improved neural network algorithm to the mainstream media - ScienceDirect</a></li>
+<li><a href="https://arxiv.org/html/2507.21467v1">Efficient Data Retrieval and Comparative Bias Analysis of Recommendation Algorithms for YouTube Shorts and Long-Form Videos</a></li>
+
+</ul>
+</details>
+
+**标签**: `#social media`, `#donation fraud`, `#short video platforms`, `#charity`, `#children's health`, `#online fundraising`
 
 ---
 
 <a id="item-16"></a>
-## [中国的“千帆星座”：星链的新对手？](https://news.google.com/read/CBMiugFBVV95cUxPOWxQME9aVmRRZkpLTHVUV05wWFB6RncwbFhfTVowUDdoWXNfX00taUcza09ZelpMZ2VwajBmZFpZRFJ4S19VSEw1dmNsOHY4NHQzM29uazlsN1R6SEJnOF83OXlMa2dWSmJpLVprMk9OTWItZjhyVTVQWEd0ZVhzemwtdmRpc2oyc3pIRF9uVEVkNGpLY3lMNmk4blF1R1pleEJST1djbEN3Uk5pWGxkSVB1QTUxbEJxbFE?hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 7.0/10
+### [印度考试泄题：228 万成绩作废，暴露底层青年绝望](https://www.huxiu.com/article/4870139.html?f=rss) ⭐️ 8.0/10 [社会热点]
 
-《卫报》发表文章，探讨中国的“千帆星座”（SpaceSail）卫星互联网项目及其与埃隆·马斯克的“星链”竞争的潜力。该项目由国有背景的上海垣信卫星科技有限公司于 2023 年启动，旨在提供全球高速互联网覆盖。 “千帆星座”标志着中国大举进入卫星互联网竞赛，可能挑战“星链”的主导地位并重塑全球连接格局。这场竞争具有重大的地缘政治和技术影响，因为对天基互联网基础设施的控制已成为战略优先事项。 “千帆星座”计划分三个阶段部署多达 14,000 颗低地球轨道卫星，其中 2024 年预计发射 108 颗。该星座是中国规划的三个“万星星座”之一，旨在提供全球宽带服务。
+印度一场大规模考试泄题丑闻导致 228 万考生的成绩被作废，揭露了该国竞争性考试体系中普遍存在的腐败问题。 这一事件凸显了印度底层青年在社会流动性和教育公平方面的严重缺失——一场考试可能决定他们的一生，而系统性腐败进一步堵死了他们的出路。 泄题事件涉及一场重要的招聘考试，228 万考生的规模使其成为印度历史上最大的考试舞弊案之一，当局为维护公正取消了所有成绩。
 
-rss · Buzzing China · 6月25日 01:02
+rss · 虎嗅 · 6月25日 04:28
 
-**背景**: 卫星互联网星座利用大量低地球轨道卫星网络，为偏远和服务不足的地区提供宽带覆盖。SpaceX 运营的“星链”目前以数千颗在轨卫星领先市场。中国的“千帆星座”项目是一项国有支持的倡议，旨在创建类似的全球网络，反映了天基通信日益增长的战略重要性。
+**背景**: 在印度，政府工作和大学入学的竞争性考试对贫困和农村青年来说极其重要，他们视其为摆脱贫困的唯一途径。然而，频繁的泄题和腐败丑闻侵蚀了人们对系统的信任，使许多合格考生失去机会。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Qianfan">Qianfan - Wikipedia</a></li>
-<li><a href="https://www.theguardian.com/world/2026/jun/25/china-spacesail-rival-elon-musk-starlink-space-satelites-low-earth-orbit">What is China ’s SpaceSail , and could it rival Elon... | The Guardian</a></li>
-<li><a href="http://english.scio.gov.cn/in-depth/2024-08/09/content_117358240.htm">China 's new mega-constellation marks milestone in satellite internet</a></li>
-
-</ul>
-</details>
-
-**标签**: `#SpaceSail`, `#Starlink`, `#satellite internet`, `#China`, `#technology competition`
+**标签**: `#印度`, `#考试泄题`, `#社会公平`, `#底层青年`, `#教育丑闻`
 
 ---
 
 <a id="item-17"></a>
-## [警惕伪装成官方页面的恶意 curl 脚本](https://www.v2ex.com/t/1222709#reply0) ⭐️ 7.0/10
+### [央视曝光高考报考骗局：免费 AI 工具千问被高价倒卖](https://www.huxiu.com/article/4870126.html?f=rss) ⭐️ 8.0/10 [社会热点]
 
-一位开发者在搜索 Claude Code 时，差点执行了一个伪装成 Claude AI 官方页面的恶意 curl 脚本，该脚本包含指向可疑域名的混淆代码。 此事件凸显了一种日益增长的供应链攻击手段：攻击者通过 curl | sh 诱导开发者执行恶意脚本，可能危及系统安全和凭据。 恶意脚本托管在 claude.ai 下的一个分享页面，但实际指向名为 proviewhomeinspections 的域名，并通过对话框要求用户输入密码，从而引起警觉。
+央视揭露，不法咨询机构将阿里巴巴免费开源的 AI 模型千问（Qwen）高价转卖给高考考生，收取数千元费用，而该工具本身完全免费提供建议。 这种行为利用信息不对称，侵害焦虑的家庭，破坏教育公平和消费者权益。它凸显了在蓬勃发展的 AI 辅助教育咨询市场中加强监管的紧迫性。 千问是阿里巴巴以 Apache 2.0 许可证发布的开源大语言模型，可在 Hugging Face 等平台免费获取。骗局涉及将模型输出重新包装成付费咨询服务，且未向消费者披露。
 
-rss · V2EX · 6月25日 03:01
+rss · 虎嗅 · 6月25日 03:52
 
-**背景**: curl | sh 模式是一种常见的软件安装方式（例如 Rust、Homebrew），通过将脚本直接管道传输到 shell 中执行。然而，这种做法本身存在风险，因为它会在未经验证的情况下执行不可信代码，攻击者可以通过混淆技术隐藏恶意负载以逃避检测。
+**背景**: 高考是中国全国性大学入学考试，考生和家长常寻求专业指导来制定申请策略。像千问这样的 AI 工具可以分析数据并提供个性化建议，但其免费可用性并不广为人知。不法中介利用这一信息差，对本质上免费的服务收取高价。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/miaoxworld/OpenClawInstaller/blob/main/install.sh">OpenClawInstaller/install.sh at main - GitHub</a></li>
-<li><a href="https://cloud.tencent.com/developer/article/2416244">前端开发者必备 技 能：JS 混 淆 -腾讯云开发者社区-腾讯云</a></li>
-<li><a href="https://blog.wangyuchao.cn/posts/f1ee5a16.html">代 码 混 淆 123 | 揽星河</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Qwen">Qwen - Wikipedia</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen-7B-Chat">Qwen / Qwen -7B-Chat · Hugging Face</a></li>
 
 </ul>
 </details>
 
-**标签**: `#安全`, `#curl`, `#供应链攻击`, `#Claude Code`, `#恶意脚本`
+**标签**: `#Gaokao`, `#education`, `#consumer rights`, `#AI tools`, `#social issue`
 
 ---
 
 <a id="item-18"></a>
-## [OpenTag：在 GitHub 和 Slack 中 @ AI 智能体的开源协议](https://www.v2ex.com/t/1222692#reply0) ⭐️ 7.0/10
+### [2026 年一万个中国版 Codex AI 模型大乱斗](https://www.huxiu.com/article/4870118.html?f=rss) ⭐️ 8.0/10 [社会热点]
 
-OpenTag 是一个开源协议，允许用户在 GitHub issue、PR 评论或 Slack 线程中 @ 一个 AI 智能体，该智能体在用户本地仓库中执行任务，并将结果写回原线程。它被设计为 Anthropic 的 Claude Tag 的开放替代方案，支持多种智能体执行器，如 Claude Code、Codex 和自定义 runner。 OpenTag 将 AI 智能体调用工作流与特定模型或平台解耦，使团队能够灵活选择自己喜欢的智能体和通信工具。这解决了当前开发者需要将上下文复制到独立聊天界面才能使用 AI 辅助的关键集成痛点。 该项目目前包含 GitHub 和 Slack 适配器、本地优先执行模型（智能体仅在显式绑定的仓库中运行），以及内置的 echo（冒烟测试）、Claude Code 和 Codex 执行器。它仍处于早期阶段（v0），使用 TypeScript 构建。
+据中国科技媒体虎嗅报道，一场包含一万个中国开发的、类似 OpenAI Codex 的 AI 编程智能体的大规模竞赛计划于 2026 年举行。 这一事件凸显了中国在 AI 编程智能体领域的快速进展，可能加速国产 AI 工具的研发与普及，培育出一个挑战 OpenAI Codex 等西方模型的竞争生态。 该竞赛涉及一万个中国版 Codex，暗示这是一场大规模基准测试或大乱斗式的编程能力比拼，但具体规则和组织方尚未披露。
 
-rss · V2EX · 6月25日 02:26
+rss · 虎嗅 · 6月25日 03:34
 
-**背景**: Claude Tag 是 Anthropic 的一项功能，允许用户在 Slack 中 @Claude 来执行任务并发布结果。但它仅限于 Claude 模型和 Slack，并且需要企业版计划。OpenTag 旨在提供类似的交互，但采用开放协议，可与任何智能体执行器和任何通信平台配合使用，位于 OpenClaw 和 Hermes 等实际执行任务的智能体之上。
+**背景**: OpenAI Codex 是一套 AI 驱动的编程智能体，可自动化编写、重构和调试代码等软件工程任务。中国科技公司一直在开发类似的智能体，常被称为“中国版 Codex”，以在 AI 编程领域展开竞争。2026 年如此规模的竞赛将展现中国 AI 开发的广度，并促进社区参与。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Claude_(AI)">Claude (AI)</a></li>
-<li><a href="https://www.anthropic.com/news/introducing-claude-tag">Introducing Claude Tag \ Anthropic</a></li>
-<li><a href="https://hermes-agent.org/">Hermes Agent — Open-Source AI Agent with Persistent Memory</a></li>
+<li><a href="https://grokipedia.com/page/OpenAI_Codex">OpenAI Codex</a></li>
+<li><a href="https://www.reddit.com/r/OpenAI/comments/1n5iqqj/openai_nailed_it_with_codex_for_devs/">openAI nailed it with Codex for devs - Reddit</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI agent`, `#open source`, `#developer tools`, `#workflow automation`, `#GitHub integration`
+**标签**: `#AI`, `#Codex`, `#China`, `#competition`, `#2026`
+
+---
+
+<a id="item-19"></a>
+### [微信在金矿上孵化豆包](https://www.huxiu.com/article/4870111.html?f=rss) ⭐️ 8.0/10 [社会热点]
+
+据报道，微信正在孵化一款名为“豆包”的新产品，利用其庞大的用户生态系统，将 AI 驱动的输入和语音功能直接集成到应用中。 此举可能通过提供先进的 AI 能力显著提升微信内的用户参与度，有可能重塑用户与平台的互动方式，并为社交媒体 AI 集成树立新标准。 豆包以语音输入为核心卖点，并在键盘模式下仅保留拼音，相比微信传统保守的产品理念，这代表了一种更激进的策略。
+
+rss · 虎嗅 · 6月25日 03:19
+
+**背景**: 微信是中国占主导地位的社交媒体平台，拥有超过十亿用户，历史上对添加新功能一直持谨慎态度。豆包似乎是一款 AI 驱动的输入工具，可能与其他科技巨头（如字节跳动）的类似产品竞争。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://min.news/en/tech/acab5e0a87fc30183c53166f7fa5d0ba.html">Doubao is "typed" into WeChat . - iMedia</a></li>
+<li><a href="https://blog.aitoearn.ai/doubao-input-in-wechat/">Doubao “Input” in WeChat</a></li>
+<li><a href="https://eu.36kr.com/en/p/3839575253993985">WeChat AI: A Narrow Door Opened for Smartphone Makers - Focus...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#WeChat`, `#Doubao`, `#social media`, `#product incubation`
 
 ---
