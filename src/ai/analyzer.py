@@ -52,6 +52,7 @@ class ContentAnalyzer:
                     await self._analyze_item(item)
                 except Exception as e:
                     print(f"Error analyzing item {item.id}: {e}")
+                    item.ai_category = None
                     item.ai_score = 0.0
                     item.ai_reason = "Analysis failed"
                     item.ai_summary = item.title
@@ -130,7 +131,9 @@ class ContentAnalyzer:
         discussion_section = "\n".join(discussion_parts) if discussion_parts else ""
 
         # Generate user prompt
+        category_hint = item.metadata.get("category") or ""
         user_prompt = CONTENT_ANALYSIS_USER.format(
+            category_hint=category_hint,
             title=item.title,
             source=f"{item.source_type.value}",
             author=item.author or "Unknown",
@@ -149,6 +152,7 @@ class ContentAnalyzer:
         result = self._parse_json_response(response)
         if result is None:
             print(f"Warning: could not parse analysis response for {item.id}, using defaults")
+            item.ai_category = None
             item.ai_score = 0.0
             item.ai_reason = "Analysis response parse failed"
             item.ai_summary = item.title
@@ -156,7 +160,12 @@ class ContentAnalyzer:
             return
 
         # Update item with analysis results
+        item.ai_category = result.get("category")
         item.ai_score = float(result.get("score", 0))
         item.ai_reason = result.get("reason", "")
         item.ai_summary = result.get("summary", item.title)
         item.ai_tags = result.get("tags", [])
+
+        # If category is not pre-defined, populate it with AI category
+        if item.ai_category and not item.metadata.get("category"):
+            item.metadata["category"] = item.ai_category

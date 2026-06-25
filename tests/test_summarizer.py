@@ -55,7 +55,7 @@ def test_generate_webhook_item_renders_single_item_detail():
     )
 
     assert result.startswith("Item 1/2")
-    assert "## [Important Item 1](https://example.com/items/1)" in result
+    assert "### [Important Item 1](https://example.com/items/1)" in result
     assert "Summary for item 1." in result
     assert "**Tags**: `#AI`, `#News`" in result
 
@@ -138,3 +138,35 @@ def test_generate_empty_summary_zh_uses_localized_analyzed_line():
 
     assert "> 已分析 10 条内容，但没有达到重要性阈值的条目。" in result
     assert "Analyzed 10 items" not in result
+
+
+def test_generate_summary_includes_category():
+    summarizer = DailySummarizer()
+    item_tech = _make_item(1)
+    item_tech.ai_category = "technology"
+    item_politics = _make_item(2)
+    item_politics.ai_category = "politics"
+
+    result_en = _run_async(
+        summarizer.generate_summary(
+            [item_tech, item_politics],
+            date="2026-04-25",
+            total_fetched=10,
+            language="en",
+        )
+    )
+
+    assert "[Tech]" in result_en
+    assert "[Politics]" in result_en
+
+    result_zh = _run_async(
+        summarizer.generate_summary(
+            [item_tech, item_politics],
+            date="2026-04-25",
+            total_fetched=10,
+            language="zh",
+        )
+    )
+
+    assert "[技术]" in result_zh
+    assert "[时政]" in result_zh

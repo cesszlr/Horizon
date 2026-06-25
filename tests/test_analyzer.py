@@ -94,3 +94,49 @@ def test_analyze_batch_concurrent_preserves_order(monkeypatch):
     result = asyncio.run(analyzer.analyze_batch(items))
 
     assert [item.id for item in result] == [item.id for item in items]
+
+
+def test_analyze_item_extracts_category():
+    class FakeClient:
+        def __init__(self):
+            self.last_user_prompt = None
+            self.last_system_prompt = None
+
+        async def complete(self, system, user):
+            self.last_system_prompt = system
+            self.last_user_prompt = user
+            return '{"category": "politics", "score": 8.5, "reason": "important news", "summary": "brief summary", "tags": ["tag1", "tag2"]}'
+
+    fake_client = FakeClient()
+    analyzer = ContentAnalyzer(fake_client)
+
+    item = _make_item("rss:test:1")
+    item.metadata = {"category": "politics-test-hint"}
+ 
+    asyncio.run(analyzer._analyze_item(item))
+ 
+    assert item.ai_category == "politics"
+    assert item.metadata["category"] == "politics-test-hint"  # preserve pre-defined hint
+    assert item.ai_score == 8.5
+    assert item.ai_reason == "important news"
+    assert item.ai_summary == "brief summary"
+    assert item.ai_tags == ["tag1", "tag2"]
+    assert "politics-test-hint" in fake_client.last_user_prompt
+
+
+def test_analyze_item_populates_missing_metadata_category():
+    class FakeClient:
+        async def complete(self, system, user):
+            return '{"category": "social_hotspot", "score": 7.0, "reason": "hot", "summary": "brief summary", "tags": []}'
+
+    fake_client = FakeClient()
+    analyzer = ContentAnalyzer(fake_client)
+
+    item = _make_item("rss:test:1")
+    # metadata starts empty
+    item.metadata = {}
+
+    asyncio.run(analyzer._analyze_item(item))
+
+    assert item.ai_category == "social_hotspot"
+    assert item.metadata["category"] == "social_hotspot"  # populated because it was missing

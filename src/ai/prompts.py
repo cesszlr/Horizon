@@ -20,50 +20,52 @@ Respond with valid JSON only:
 
 If there are no duplicates at all, return: {{"duplicates": []}}"""
 
-CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter important technical and academic information.
+CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter high-value updates across multiple domains: Technology, Politics/Current Affairs (时政), and Social/Social Media Hotspots (社会/社交媒体热点).
 
-Score content on a 0-10 scale based on importance and relevance:
+First, classify the content into one of the following categories:
+- "technology"
+- "politics" (Politics/Current Affairs)
+- "social_hotspot" (Social/Social Media Hotspots)
+- "other"
 
-**9-10: Groundbreaking** - Major breakthroughs, paradigm shifts, or highly significant announcements
-- New major version releases of widely-used technologies
-- Significant research breakthroughs
-- Important industry-changing announcements
+Then, score content on a 0-10 scale based on importance and relevance for that specific category:
 
-**7-8: High Value** - Important developments worth immediate attention
-- Interesting technical deep-dives
-- Novel approaches to known problems
-- Insightful analysis or commentary
-- Valuable tools or libraries
+### 1. Technology (技术)
+- **9-10: Groundbreaking** - Major breakthroughs, paradigm shifts, new major version releases of widely-used technologies, or significant research breakthroughs.
+- **7-8: High Value** - Interesting technical deep-dives, novel approaches to known problems, insightful technical commentary, or valuable tools/libraries.
+- **5-6: Interesting** - Incremental improvements, useful tutorials, or moderate community interest.
+- **3-4: Low Priority** - Generic/routine content, minor updates, common knowledge, or overly promotional content.
+- **0-2: Noise** - Spam, off-topic, or trivial updates.
 
-**5-6: Interesting** - Worth knowing but not urgent
-- Incremental improvements
-- Useful tutorials
-- Moderate community interest
+### 2. Politics / Current Affairs (时政)
+- **9-10: Groundbreaking** - Major geopolitical events, major international conflicts, significant changes in national laws/regulations, or major national elections.
+- **7-8: High Value** - Important local policy shifts, deep political/economic analysis, notable government appointments, or key bilateral agreements.
+- **5-6: Interesting** - Standard legislative discussions, notable political debates, or opinions of prominent leaders.
+- **3-4: Low Priority** - Routine administrative news, general statements, or standard bureaucratic announcements.
+- **0-2: Noise** - Gossip, trivial political statements, or irrelevant local affairs.
 
-**3-4: Low Priority** - Generic or routine content
-- Minor updates
-- Common knowledge
-- Overly promotional content
+### 3. Social / Social Media Hotspots (社会/社交媒体热点)
+- **9-10: Groundbreaking** - Viral phenomena with massive societal resonance, major public safety/health incidents, or global cultural events.
+- **7-8: High Value** - Important social trends, major public debates, or high-impact localized social news with significant discussion/controversy.
+- **5-6: Interesting** - Common trending topics, interesting cultural stories, or notable local news.
+- **3-4: Low Priority** - Temporary viral trends (memes), personal stories with low broader impact.
+- **0-2: Noise** - Personal drama, spam, celebrity gossip, or trivial social media posts.
 
-**0-2: Noise** - Not relevant or low quality
-- Spam or purely promotional
-- Off-topic content
-- Trivial updates
+### 4. Other (其他)
+- Score 0-10 based on general relevance and importance.
 
 Consider:
-- Technical depth and novelty
-- Potential impact on the field
-- Quality of writing/presentation
-- Relevance to software engineering, AI/ML, and systems research
-- Community discussion quality: insightful comments, diverse viewpoints, and debates increase value
-- Engagement signals: high upvotes/favorites with substantive discussion indicate community-validated importance
+- Depth, novelty, and societal/geopolitical/technical impact.
+- Quality of writing/presentation.
+- Community discussion quality: insightful comments, diverse viewpoints, and debates increase value.
+- Engagement signals: high upvotes/favorites with substantive discussion indicate community-validated importance.
 """
 
-CONTENT_ANALYSIS_USER = """Analyze the following content and provide a JSON response with:
-- score (0-10): Importance score
-- reason: Brief explanation for the score (mention discussion quality if comments are provided)
-- summary: One-sentence summary of the content
-- tags: Relevant topic tags (3-5 tags)
+CONTENT_ANALYSIS_USER = """Analyze the following content and provide a JSON response. 
+
+If a Category Hint is provided below, prioritize classifying it as that category unless the content clearly contradicts it.
+
+Category Hint: {category_hint}
 
 Content:
 Title: {title}
@@ -75,6 +77,7 @@ URL: {url}
 
 Respond with valid JSON only:
 {{
+  "category": "technology" | "politics" | "social_hotspot" | "other",
   "score": <number>,
   "reason": "<explanation>",
   "summary": "<one-sentence-summary>",

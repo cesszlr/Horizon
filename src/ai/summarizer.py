@@ -37,6 +37,12 @@ LABELS = {
             "2. Adding more diverse information sources\n"
             "3. Checking if the AI model is working correctly\n"
         ),
+        "category_sections": {
+            "technology": "Technology",
+            "politics": "Politics & Current Affairs",
+            "social_hotspot": "Social & Social Media Hotspots",
+            "other": "Other",
+        },
     },
     "zh": {
         "header": "Horizon 每日速递",
@@ -57,6 +63,12 @@ LABELS = {
             "2. 添加更多多样化的信息源\n"
             "3. 检查 AI 模型是否正常工作\n"
         ),
+        "category_sections": {
+            "technology": "技术 (Technology)",
+            "politics": "时政 (Politics)",
+            "social_hotspot": "社会热点 (Social Hotspots)",
+            "other": "其他 (Other)",
+        },
     },
 }
 
@@ -66,6 +78,50 @@ class DailySummarizer:
 
     def __init__(self):
         pass
+
+    def _get_category_label(self, item: ContentItem, language: str) -> str:
+        """Get a localized category label for the item."""
+        cat = item.ai_category
+        if not cat:
+            cat = item.metadata.get("category")
+            if not cat:
+                return ""
+            return str(cat)
+
+        mapping = {
+            "zh": {
+                "technology": "技术",
+                "politics": "时政",
+                "social_hotspot": "社会热点",
+                "other": "其他",
+            },
+            "en": {
+                "technology": "Tech",
+                "politics": "Politics",
+                "social_hotspot": "Social",
+                "other": "Other",
+            }
+        }
+        lang_map = mapping.get(language, mapping["en"])
+        return lang_map.get(cat.lower(), cat)
+
+    def _normalize_category_key(self, item: ContentItem) -> str:
+        """Normalize category value to one of: technology, politics, social_hotspot, other."""
+        cat = item.ai_category
+        if not cat:
+            cat = item.metadata.get("category")
+        if not cat:
+            return "other"
+        
+        cat_lower = str(cat).lower()
+        if cat_lower in ("technology", "tech", "ai", "programming languages", "cloud native", "open source"):
+            return "technology"
+        elif cat_lower in ("politics", "politics / current affairs"):
+            return "politics"
+        elif cat_lower in ("social_hotspot", "social hot topics", "social network hot topics"):
+            return "social_hotspot"
+        
+        return "other"
 
     async def generate_summary(
         self,
@@ -98,20 +154,52 @@ class DailySummarizer:
             "---\n\n"
         )
 
-        # TOC
-        toc_entries = []
+        # Group items by category (preserving global index for anchor compatibility)
+        grouped_items = {
+            "technology": [],
+            "politics": [],
+            "social_hotspot": [],
+            "other": []
+        }
         for i, item in enumerate(items):
-            _t = item.metadata.get(f"title_{language}") or item.title
-            t = str(_t).replace("[", "(").replace("]", ")")
-            if language == "zh":
-                t = _pangu(t)
-            score = item.ai_score or "?"
-            toc_entries.append(f"{i + 1}. [{t}](#item-{i + 1}) \u2b50\ufe0f {score}/10")
-        toc = "\n".join(toc_entries) + "\n\n---\n\n"
+            cat_key = self._normalize_category_key(item)
+            grouped_items[cat_key].append((i + 1, item))
 
-        parts = [self._format_item(item, labels, language, i + 1) for i, item in enumerate(items)]
+        section_labels = labels.get("category_sections", {})
 
-        return header + toc + "".join(parts)
+        # TOC grouped by category
+        toc_parts = []
+        for cat_key in ["technology", "politics", "social_hotspot", "other"]:
+            cat_items = grouped_items[cat_key]
+            if not cat_items:
+                continue
+            cat_name = section_labels.get(cat_key, cat_key.capitalize())
+            toc_parts.append(f"#### {cat_name}")
+            for idx, item in cat_items:
+                _t = item.metadata.get(f"title_{language}") or item.title
+                t = str(_t).replace("[", "(").replace("]", ")")
+                if language == "zh":
+                    t = _pangu(t)
+                score = item.ai_score or "?"
+                category = self._get_category_label(item, language)
+                cat_suffix = f" [{category}]" if category else ""
+                toc_parts.append(f"{idx}. [{t}](#item-{idx}) \u2b50\ufe0f {score}/10{cat_suffix}")
+            toc_parts.append("")  # Empty line between sections
+
+        toc = "\n".join(toc_parts).strip() + "\n\n---\n\n"
+
+        # Content Details grouped by category
+        detail_parts = []
+        for cat_key in ["technology", "politics", "social_hotspot", "other"]:
+            cat_items = grouped_items[cat_key]
+            if not cat_items:
+                continue
+            cat_name = section_labels.get(cat_key, cat_key.capitalize())
+            detail_parts.append(f"## {cat_name}\n\n")
+            for idx, item in cat_items:
+                detail_parts.append(self._format_item(item, labels, language, idx))
+
+        return header + toc + "".join(detail_parts)
 
     def generate_webhook_overview(
         self,
@@ -138,15 +226,36 @@ class DailySummarizer:
                 "Details will be sent item by item so you can read only the topics you care about.\n\n"
             )
 
-        entries = []
-        for i, item in enumerate(items, start=1):
-            title = str(item.metadata.get(f"title_{language}") or item.title).replace("[", "(").replace("]", ")")
-            if language == "zh":
-                title = _pangu(title)
-            score = item.ai_score or "?"
-            entries.append(f"{i}. [{title}]({item.url}) \u2b50\ufe0f {score}/10")
+        # Group items by category (preserving global index)
+        grouped_items = {
+            "technology": [],
+            "politics": [],
+            "social_hotspot": [],
+            "other": []
+        }
+        for i, item in enumerate(items):
+            cat_key = self._normalize_category_key(item)
+            grouped_items[cat_key].append((i + 1, item))
 
-        return header + "\n".join(entries)
+        section_labels = labels.get("category_sections", {})
+
+        entries = []
+        for cat_key in ["technology", "politics", "social_hotspot", "other"]:
+            cat_items = grouped_items[cat_key]
+            if not cat_items:
+                continue
+            cat_name = section_labels.get(cat_key, cat_key.capitalize())
+            entries.append(f"\n*{cat_name}*")
+            for idx, item in cat_items:
+                title = str(item.metadata.get(f"title_{language}") or item.title).replace("[", "(").replace("]", ")")
+                if language == "zh":
+                    title = _pangu(title)
+                score = item.ai_score or "?"
+                category = self._get_category_label(item, language)
+                cat_suffix = f" [{category}]" if category else ""
+                entries.append(f"{idx}. [{title}]({item.url}) \u2b50\ufe0f {score}/10{cat_suffix}")
+
+        return header + "\n".join(entries).strip()
 
     def generate_webhook_item(
         self,
@@ -166,6 +275,8 @@ class DailySummarizer:
         title = str(_title).replace("[", "(").replace("]", ")")
         url = str(item.url)
         score = item.ai_score or "?"
+        category = self._get_category_label(item, language)
+        cat_suffix = f" [{category}]" if category else ""
         meta = item.metadata
 
         summary = (
@@ -215,7 +326,7 @@ class DailySummarizer:
 
         lines = [
             f'<a id="item-{index}"></a>',
-            f"## [{title}]({url}) \u2b50\ufe0f {score}/10",  # ⭐️
+            f"### [{title}]({url}) \u2b50\ufe0f {score}/10{cat_suffix}",  # ⭐️
             "",
             summary,
             "",

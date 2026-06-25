@@ -10,7 +10,7 @@
     "max_tokens": 8192,
     "throttle_sec": 0.0,
     "analysis_concurrency": 5,
-    "enrichment_concurrency": 6,
+    "enrichment_concurrency": 5,
     "languages": [
       "zh"
     ]
@@ -148,7 +148,7 @@
   "filtering": {
     "ai_score_threshold": 7.0,
     "time_window_hours": 24,
-    "max_items": 20,
+    "max_items": 25,
     "category_groups": {
       "tech": {
         "name": "Tech",
@@ -157,14 +157,16 @@
           "AI",
           "Programming Languages",
           "Cloud Native",
-          "Open Source"
+          "Open Source",
+          "technology"
         ]
       },
       "politics": {
         "name": "Politics",
         "limit": 6,
         "categories": [
-          "Politics / Current Affairs"
+          "Politics / Current Affairs",
+          "politics"
         ]
       },
       "social": {
@@ -172,7 +174,8 @@
         "limit": 6,
         "categories": [
           "Social Hot Topics",
-          "Social Network Hot Topics"
+          "Social Network Hot Topics",
+          "social_hotspot"
         ]
       }
     },

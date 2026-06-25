@@ -33,6 +33,7 @@ class ContentItem(BaseModel):
     metadata: Dict[str, Any] = Field(default_factory=dict)
 
     # AI analysis results
+    ai_category: Optional[str] = None  # Auto-classified category (tech, politics, social_hotspot, other)
     ai_score: Optional[float] = None  # 0-10 importance score
     ai_reason: Optional[str] = None
     ai_summary: Optional[str] = None
