@@ -56,8 +56,8 @@ jobs:
         with:
           ref: gh-pages
           path: built-site-src
-
-      - name: Build Jekyll site
+      
+      - name: Create Gemfile
         run: |
           cd built-site-src
           # 1. 动态创建 Gemfile
