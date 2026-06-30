@@ -105,5 +105,31 @@
     "default_group_limit": 3
   },
   "email": null,
-  "webhook": null
+  "webhook": {
+    "enabled": true,
+    "url_env": "HORIZON_WEBHOOK_URL",
+    "delivery": "summary",
+    "platform": "generic",
+    "layout": "markdown",
+    "request_body": {
+      "topic": "${HORIZON_NTFY_TOPIC}",
+      "title": "Horizon 每日速递 • #{date}",
+      "message": "📊 本日共筛选出 **#{important_items}** / #{all_items} 条高价值资讯：\n\n#{summary}",
+      "priority": 4,
+      "tags": [
+        "newspaper",
+        "chart_with_upwards_trend"
+      ],
+      "markdown": true,
+      "click": "https://cesszlr-horizon.pages.dev/#{date}/summary-#{language}",
+      "actions": [
+        {
+          "action": "view",
+          "label": "🌐 网页版完整报告",
+          "url": "https://cesszlr-horizon.pages.dev/#{date}/summary-#{language}",
+          "clear": true
+        }
+      ]
+    }
+  }
 }
