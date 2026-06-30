@@ -50,13 +50,13 @@ jobs:
           publish_dir: ./docs
           keep_files: true  # Keep existing summaries on gh-pages branch
           commit_message: "📝 Daily Summary: ${{ env.DATE }}"
-          publish_branch: gh-pages
+          publish_branch: gh-pages-pm
           enable_jekyll: true
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v6
         with:
-          ref: gh-pages
+          ref: gh-pages-pm
           path: built-site-src
 
       - name: Create Gemfile
