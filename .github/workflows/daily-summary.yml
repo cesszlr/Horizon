@@ -75,7 +75,7 @@ jobs:
       - name: Build Jekyll site
         run: |
           cd built-site-src
-          bundle exec jekyll build --destination ../dist-html
+          bundle exec jekyll build --baseurl "" --destination ../dist-html
       
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
