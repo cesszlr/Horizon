@@ -23,10 +23,64 @@
     },
     "rss": [
       {
+        "name": "量子位",
+        "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
+        "enabled": true,
+        "category": "AI"
+      },
+      {
+        "name": "OpenAI Blog",
+        "url": "https://openai.com/blog/rss.xml",
+        "enabled": true,
+        "category": "AI"
+      },
+      {
+        "name": "The Economist",
+        "url": "https://www.economist.com/latest/rss.xml",
+        "enabled": true,
+        "category": "Politics / Current Affairs"
+      },
+      {
+        "name": "Go Blog",
+        "url": "https://go.dev/blog/feed.atom",
+        "enabled": true,
+        "category": "Programming Languages"
+      },
+      {
+        "name": "Opensource.com",
+        "url": "https://opensource.com/feed",
+        "enabled": true,
+        "category": "Open Source"
+      },
+      {
         "name": "Buzzing China",
         "url": "https://china.buzzing.cc/feed.xml",
-        "enabled": false,
+        "enabled": true,
         "category": "Politics / Current Affairs"
+      },
+      {
+        "name": "Buzzing News",
+        "url": "https://news.buzzing.cc/feed.xml",
+        "enabled": true,
+        "category": "Politics / Current Affairs"
+      },
+      {
+        "name": "V2EX",
+        "url": "https://v2ex.com/index.xml",
+        "enabled": true,
+        "category": "Social Network Hot Topics"
+      },
+      {
+        "name": "钛媒体",
+        "url": "https://www.tmtpost.com/rss.xml",
+        "enabled": true,
+        "category": "Social Hot Topics"
+      },
+      {
+        "name": "DoNews",
+        "url": "https://rss.donews.com/rss/rss.xml",
+        "enabled": true,
+        "category": "Social Hot Topics"
       }
     ],
     "reddit": {
