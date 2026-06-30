@@ -25,12 +25,12 @@
       {
         "name": "Buzzing China",
         "url": "https://china.buzzing.cc/feed.xml",
-        "enabled": true,
+        "enabled": false,
         "category": "Politics / Current Affairs"
       }
     ],
     "reddit": {
-      "enabled": true,
+      "enabled": false,
       "subreddits": [
         {
           "subreddit": "golang",
