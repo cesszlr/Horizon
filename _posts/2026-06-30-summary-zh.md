@@ -5,447 +5,424 @@ date: 2026-06-30
 lang: zh
 ---
 
-> 从 298 条内容中筛选出 20 条重要资讯。
+> 从 296 条内容中筛选出 20 条重要资讯。
 
 ---
 
 #### 技术 (Technology)
-5. [中国地面测试可变形高超音速冲压发动机](#item-5) ⭐️ 9.0/10 [技术]
-7. [三星与 SK 海力士将宣布创纪录的 AI 投资计划](#item-7) ⭐️ 9.0/10 [技术]
-8. [火箭实验室以 80 亿美元收购铱星](#item-8) ⭐️ 8.0/10 [技术]
-9. [WATaBoy：JIT 编译 Game Boy 至 WASM 性能超原生解释器](#item-9) ⭐️ 8.0/10 [技术]
-10. [深入解析：CUDA 内核启动的完整路径](#item-10) ⭐️ 8.0/10 [技术]
-13. [DeepSeek V4 正式版发布：峰谷定价、百万上下文、Agent 能力](#item-13) ⭐️ 8.0/10 [技术]
-14. [.self 顶级域名提案：为自托管而生](#item-14) ⭐️ 7.0/10 [技术]
-15. [Qwen 3.6 27B：本地开发的理想选择](#item-15) ⭐️ 7.0/10 [技术]
-16. [智谱 GLM 5.2 开源发布，被比作 Claude 时刻](#item-16) ⭐️ 7.0/10 [技术]
-17. [OpenAI 报告描绘 AI 对欧盟就业的影响](#item-17) ⭐️ 7.0/10 [技术]
-18. [Janus：为 AI 编程助手打造的外部认知操作系统](#item-18) ⭐️ 7.0/10 [技术]
-19. [大模型上下文长度管理：实用技巧与限制](#item-19) ⭐️ 7.0/10 [技术]
-20. [Telegram 多模型 AI 统一交互层](#item-20) ⭐️ 7.0/10 [技术]
+7. [美团开源万亿参数大模型 LongCat-2.0，国产芯片训练](#item-7) ⭐️ 9.0/10 [技术]
+8. [火箭实验室以 80 亿美元历史性收购铱星](#item-8) ⭐️ 8.0/10 [技术]
+9. [韩国投资 1 万亿美元于存储芯片和人形机器人](#item-9) ⭐️ 8.0/10 [技术]
+10. [WATaBoy 将 Game Boy 指令即时编译为 WebAssembly，性能超越原生解释器](#item-10) ⭐️ 8.0/10 [技术]
+11. [CUDA 内核启动：从 CPU 到 GPU 的完整路径](#item-11) ⭐️ 8.0/10 [技术]
+12. [智谱 AI 开源 GLM-5.2，安全能力对标 Mythos](#item-12) ⭐️ 8.0/10 [技术]
+13. [Linux 内核高危漏洞 'pedit COW' 可本地提权至 root](#item-13) ⭐️ 8.0/10 [技术]
+14. [昆仑芯拟 500 亿美元港股 IPO，估值超母公司百度](#item-14) ⭐️ 8.0/10 [技术]
+16. [腾讯与长鑫存储签署 30 亿美元 DRAM 供应协议](#item-16) ⭐️ 8.0/10 [技术]
+17. [被劫持的 npm 和 Go 包利用 VS Code 任务部署 Python 信息窃取器](#item-17) ⭐️ 8.0/10 [技术]
+18. [特斯拉推送 FSD v14 Lite，HW3 车型获 HW4 级智驾能力](#item-18) ⭐️ 8.0/10 [技术]
+19. [Qwen 3.6 27B：本地 AI 开发的甜蜜点](#item-19) ⭐️ 7.0/10 [技术]
+20. [用 Markdown 写公众号的工具](#item-20) ⭐️ 7.0/10 [技术]
 
 #### 时政 (Politics)
-1. [最高法院：地理围栏搜查令需宪法保护](#item-1) ⭐️ 9.0/10 [时政]
-2. [最高法院扩大总统对联邦机构的权力](#item-2) ⭐️ 9.0/10 [时政]
-3. [《经济学人》评特朗普夏洛茨维尔回应：不称职](#item-3) ⭐️ 9.0/10 [时政]
-4. [2016 年南海仲裁案裁决十周年：持久影响](#item-4) ⭐️ 9.0/10 [时政]
-6. [中国军舰在争议浅滩附近跟踪美菲演习](#item-6) ⭐️ 9.0/10 [时政]
+1. [最高法院扩大特朗普对联邦机构的权力](#item-1) ⭐️ 9.0/10 [时政]
+2. [《经济学人》评特朗普在夏洛茨维尔事件后不称职](#item-2) ⭐️ 9.0/10 [时政]
+3. [中国批评家兼富豪郭文贵因诈骗被判 30 年监禁](#item-3) ⭐️ 9.0/10 [时政]
+4. [中国军方首次曝光第六代战机视频](#item-4) ⭐️ 9.0/10 [时政]
+5. [秘鲁：藤森被宣布赢得总统选举](#item-5) ⭐️ 9.0/10 [时政]
+6. [美伊冲突风险加剧，船只纷纷撤离](#item-6) ⭐️ 9.0/10 [时政]
 
 #### 社会热点 (Social Hotspots)
-11. [大众 10 万人重组计划：汽车工业新规则下的阵痛](#item-11) ⭐️ 8.0/10 [社会热点]
-12. [8.3 万次举报 94.8%不实，教师躺平](#item-12) ⭐️ 8.0/10 [社会热点]
+15. [8.3 万次举报中 94.8%不实，小学教师无奈躺平](#item-15) ⭐️ 8.0/10 [社会热点]
 
 ---
 
 ## 技术 (Technology)
 
-<a id="item-5"></a>
-### [中国地面测试可变形高超音速冲压发动机](https://news.google.com/read/CBMiwgFBVV95cUxPVDhmbmhzNUdfOUZXbUpZYWQxQjhta0FCMW9aMGhzV2d4ZDhJZTJudXZuRUFIR3p2SE00Mmd6UU5sUzUyQW1wV3JjQ3pJOFpDcnVsSVRPZ0Rpc0U3RU4zRGE5SGh1ekdmLUNrNTdTWFIxbE0yaEwtMDdvZ3I4N0dVckR0bDJjelJqMy0wVXkzUHNYbDlXSi1PMFBMWF96Uy1GZzZLN1VIVzBrWmhTU3pVaXdZamZwNXA1NUF5VXdUb0o0UdIBwgFBVV95cUxPMUtPTTVFbnNuTDlCMS1sNTl4V3prRk5DbFFzQjBoQnNsMGd3NGRyOHAweHRmRkl1TEpJOWlRWE80cnEtTmp5ZlJOVDNwWU5ia2RlSVZkS2VoVDUyUWJVRXhhejlPYjRjT19sNUJkcG0wNndEZzFIUXppVEstWjdKUXYzT0FkRmxGVW9aWkFuaUlZMGYtZG4tcjZTa3dTd05YVEFjaXJJS25hUU9SUS1kVWlCcXFwc1JHd0FlbUhPVE5BZw?hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [技术]
-
-据《南华早报》报道，中国成功对一种可在飞行中改变形状的高超音速冲压发动机进行了地面测试。这项测试标志着可变几何高超音速推进技术的一个重要里程碑。 这一突破可能显著提升高超音速飞行器的性能和效率，使其能够在更广泛的速度和高度范围内运行。它对军事应用（如先进导弹和侦察机）以及未来的民用航空航天技术都具有重大意义。 这种可变几何设计使发动机能够实时调整其进气道、燃烧室和喷管构型，以在不同马赫数下优化性能。类似的概念已在美国专利和研究项目中得到探索，包括最近由海军研究实验室资助、在中央佛罗里达大学进行的变形发动机项目。
-
-rss · Buzzing China · 6月29日 12:00
-
-**背景**: 冲压发动机是一种吸气式喷气发动机，利用飞行器的向前运动来压缩进入的空气，没有压缩机或涡轮等运动部件。高超音速通常定义为马赫数 5 及以上。可变几何冲压发动机至少从 20 世纪 60 年代就开始研究，以解决在宽速度范围内超音速进气道、燃烧室和喷管之间相互冲突的气动要求。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://patents.google.com/patent/US3974648A/en">US3974648A - Variable geometry ramjet engine - Google Patents</a></li>
-<li><a href="https://www.ucf.edu/news/new-dod-funded-project-will-develop-morphing-hypersonic-engine/">New DOD-funded Project Will Develop Morphing Hypersonic Engine</a></li>
-<li><a href="https://scispace.com/papers/variable-geometry-ramjet-engine-49xardsv27">Variable geometry ramjet engine (1968) | Charles Edward ...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#hypersonic`, `#ramjet`, `#China`, `#military technology`, `#aerospace`
-
----
-
 <a id="item-7"></a>
-### [三星与 SK 海力士将宣布创纪录的 AI 投资计划](https://t.me/zaihuapd/42235) ⭐️ 9.0/10 [技术]
+### [美团开源万亿参数大模型 LongCat-2.0，国产芯片训练](https://www.donews.com/news/detail/1/6614732.html) ⭐️ 9.0/10 [技术]
 
-三星和 SK 海力士将于 6 月 29 日在总统李在明主持的国家简报会上宣布大规模 AI 相关投资。三星计划公布 1000 万亿韩元（约 6480 亿美元）的十年支出方案，为韩国史上最大规模；SK 海力士则计划五年内将产能翻倍，并通过美国上市筹资 290 亿美元。 这一前所未有的投资标志着半导体行业的范式转变，两家公司聚焦于 AI 半导体、数据中心和物理 AI。其规模和战略方向具有重大的地缘政治和经济影响，可能重塑全球供应链并加速 AI 基础设施建设。 尽管宣布了大规模投资计划，三星电子和 SK 海力士的股价当日均下跌超过 9%，据报道与苹果相关担忧有关。SK 海力士的计划包括将 HBM（高带宽内存）产能翻倍并进行美国 IPO，而三星的十年计划是韩国历史上最大的企业投资。
+美团发布并开源了万亿参数大语言模型 LongCat-2.0，该模型采用混合专家（MoE）架构，总参数达 1.6 万亿，激活参数约 480 亿，支持 100 万 token 的超长上下文。模型在 5 万至 6 万张国产加速卡上完成全流程训练与推理，完全不依赖英伟达 GPU，这是业界首次在国产芯片上跑通万亿级大模型的训推闭环。 这一成就证明国产芯片现已能支持万亿参数模型的训练，减少了对国外 GPU 供应的依赖，增强了国内 AI 基础设施生态。LongCat-2.0 在代码生成和 Agent 任务上的领先性能也挑战了主流闭源模型的主导地位，有望加速开源、国产算力驱动的 AI 解决方案的普及。 LongCat-2.0 采用混合专家（MoE）架构，总参数 1.6 万亿，每次推理仅激活约 480 亿参数，从而实现高效计算。该模型支持 100 万 token 的超长上下文窗口，能够一次性处理极长的文档或对话。
 
-telegram · zaihuapd · 6月29日 07:00
+rss · DoNews · 6月30日 03:38
 
-**背景**: 物理 AI（Physical AI）是指能够理解物理定律并与现实世界交互的智能实体系统，被视为 AI 演进的下一个阶段。HBM（高带宽内存）是 AI 加速器的关键组件，三星和 SK 海力士是全球最大的内存芯片制造商。DRAM 市场历史上曾出现价格操纵丑闻，但目前 AI 相关内存产品的高需求带来了丰厚利润，无需串通。
+**背景**: 万亿参数级别的大语言模型训练需要巨大的计算资源，传统上由英伟达 GPU 主导。在中国，先进芯片的出口限制刺激了国产 AI 加速卡的发展和万卡级集群的建设，以支持模型训练。混合专家（MoE）是一种模型架构，每次输入仅激活部分参数，从而在高容量与计算效率之间取得平衡。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://baike.baidu.com/item/物理AI/65039806">物理AI_百度百科</a></li>
-<li><a href="https://www.thepaper.cn/newsDetail_forward_32413713">AI大咖们都在说的物理AI到底是什么，它将如何重塑未来_未来2%_澎湃新...</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/1993655892240011486">什么是“物理AI”？ - 知乎</a></li>
+<li><a href="https://www.sohu.com/a/1015335274_121956424">美团LongCat-2.0大模型开放测试：万亿参数与1000万免费Token引发关注_-Preview_领域_技术</a></li>
+<li><a href="https://ai-bot.cn/longcat-2-0-preview/">LongCat-2.0-Preview - 美团推出的万亿参数级大模型预览版 | AI工具集</a></li>
+<li><a href="https://finance.sina.com.cn/tech/2026-06-30/doc-inifeaae6731577.shtml">美团发布LongCat-2.0大模型：总参数规模1.6万亿，全程由国产算力训练_新浪财经_新浪网</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: Hacker News 上的社区评论讨论了 DRAM 市场潜在的价格操纵问题，引用了过去的丑闻和 2022 年一起失败的诉讼。有人认为停产旧的 DDR3 和 DDR4 是正常的行业转型，并非串通，而当前的高需求自然支撑高利润率，无需价格操纵。
-
-**标签**: `#Samsung`, `#SK Hynix`, `#AI investment`, `#semiconductors`, `#Korea`, `#data centers`
+**标签**: `#大模型`, `#开源`, `#国产芯片`, `#万亿参数`, `#美团`, `#AI`
 
 ---
 
 <a id="item-8"></a>
-### [火箭实验室以 80 亿美元收购铱星](https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully) ⭐️ 8.0/10 [技术]
+### [火箭实验室以 80 亿美元历史性收购铱星](https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully) ⭐️ 8.0/10 [技术]
 
-火箭实验室于 6 月 29 日宣布，将以现金加股票方式收购铱星通信公司，交易价值约 80 亿美元，每股作价 54 美元。该交易已获双方董事会一致批准，预计于 2027 年年中完成，尚需铱星股东和监管机构批准。 此次收购打造了一家集发射服务、卫星制造和全球卫星星座于一体的完全整合型航天公司，效仿了 SpaceX 的 Starlink 战略。它为火箭实验室锁定了稳定的发射需求，并为铱星提供了未来星座升级的路径，可能重塑航天业的竞争格局。 企业价值约 80 亿美元，火箭实验室已获得 36 亿美元过桥贷款承诺。铱星运营着一个由 66 颗卫星组成的低轨星座，提供全球语音和数据服务；而火箭实验室自行制造卫星，并正在开发更大的中子号火箭，可处理铱星级别的载荷。
+火箭实验室于 6 月 29 日宣布，将以现金加股票方式收购铱星，交易价值约 80 亿美元，每股作价 54 美元。该交易已获双方董事会一致批准，预计在 2027 年年中完成，尚需铱星股东和监管机构批准。 此次合并打造了一家集发射服务、卫星制造和全球低轨卫星网络于一体的完全整合型太空公司，可能重塑太空经济的竞争格局。同时，它为火箭实验室提供了稳定的发射订单基线，并获得了铱星的 L 波段频谱和超过 255 万订阅用户，从而能够拓展卫星物联网、直连设备和定位导航授时等应用市场。 火箭实验室已获得 36 亿美元的过桥贷款承诺以支持该交易；铱星 2025 年营收为 8.717 亿美元，运营 EBITDA 为 4.95 亿美元，利润率高达 57%。此次收购包括铱星由 66 颗在轨卫星组成的星座及其 L 波段频谱，该频谱对移动卫星服务极具价值。
 
 hackernews · everfrustrated · 6月29日 14:09 · [社区讨论](https://news.ycombinator.com/item?id=48719485)
 
-**背景**: 火箭实验室是一家美国航天公司（最初在新西兰创立），以其电子号小型运载火箭和卫星制造能力而闻名。铱星通信公司运营着一个由 66 颗低轨卫星组成的星座，为超过 500 家合作伙伴提供全球语音和数据通信服务。此次合并将发射服务提供商与卫星运营商结合，形成了类似 SpaceX 与 Starlink 模式的垂直整合。
-
-**社区讨论**: 社区反应褒贬不一，但多数人认可其战略合理性。一些评论者称赞此举是应对市场波动的明智对冲，类似于 SpaceX 利用 Starlink 保障发射需求；另一些人则对太空垃圾和卫星数量增加的环境影响表示担忧。少数人质疑轨道兼容性，指出铱星卫星位于低轨，火箭实验室的电子号火箭可到达这些轨道，但未来替换可能需要更大的中子号火箭。
-
-**标签**: `#rocketlab`, `#iridium`, `#acquisition`, `#space`, `#satellites`, `#launch`
-
----
-
-<a id="item-9"></a>
-### [WATaBoy：JIT 编译 Game Boy 至 WASM 性能超原生解释器](https://humphri.es/blog/WATaBoy/) ⭐️ 8.0/10 [技术]
-
-一位开发者创建了 WATaBoy，这是一个 Game Boy 模拟器，它使用即时（JIT）编译在运行时将 Game Boy 指令翻译为 WebAssembly（WASM），性能超过了原生解释器。 这种方法巧妙地利用了 Web 浏览器内置的 WebAssembly JIT 能力，绕过了 iOS 的 JIT 限制，从而在原本禁止原生 JIT 编译的平台上实现高性能模拟。 该项目是一个本科论文项目，结果显示 Firefox 在此工作负载下比 Chrome 或 Safari 慢约 25%，这可能是由于 WASM JIT 引擎性能的差异。
-
-hackernews · energeticbark · 6月29日 15:02 · [社区讨论](https://news.ycombinator.com/item?id=48720190)
-
-**背景**: 即时（JIT）编译在程序执行期间翻译代码，结合了编译代码的速度和解释的灵活性。WebAssembly（WASM）是一种低级二进制格式，在 Web 浏览器中以接近原生的性能运行。Game Boy 模拟器传统上使用解释或提前编译；JIT 到 WASM 是一种新颖的混合方法，利用了浏览器的 JIT 引擎。
+**背景**: 火箭实验室由彼得·贝克于 2006 年在新西兰创立，是一家提供发射服务、卫星设计与制造以及航天器组件的端到端太空公司。铱星运营着唯一真正全球性的卫星网络，拥有 66 颗低轨卫星组成的星座，可在地球任何地方提供语音和数据通信，并于 2019 年完成了整个星座的升级。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/JIT_compilation">JIT compilation</a></li>
-<li><a href="https://stackoverflow.com/questions/95635/what-does-a-just-in-time-jit-compiler-do">What does a just-in-time (JIT) compiler do? - Stack Overflow</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Iridium_satellite_constellation">Iridium satellite constellation - Wikipedia</a></li>
+<li><a href="https://www.iridium.com/">The Only Truly Global Network | Iridium Satellite Communications</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rocket_Lab">Rocket Lab - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者称赞该项目作为本科作品令人印象深刻，指出 WASM 开销（约 20%）远小于解释器开销（约 1000%），并讨论了相关技术，如使用 JavaScript 的 eval()进行 JIT，以及苹果在 iOS 上对浏览器 JIT 的例外处理。
+**社区讨论**: 评论者指出，这与 SpaceX 利用 Starlink 确保最低成本下稳定发射基线的做法类似，认为火箭实验室同样可以利用铱星来对冲市场波动。有人对太空垃圾以及发射成本下降导致低价值卫星泛滥表示担忧，而另一些人则强调了将发射、卫星制造和星座运营商整合在一起的战略价值。
+
+**标签**: `#rocketlab`, `#iridium`, `#acquisition`, `#space`, `#satellites`
+
+---
+
+<a id="item-9"></a>
+### [韩国投资 1 万亿美元于存储芯片和人形机器人](https://arstechnica.com/ai/2026/06/south-korea-to-spend-1t-on-more-memory-chip-production-and-humanoid-robots/) ⭐️ 8.0/10 [技术]
+
+韩国宣布了一项 1 万亿美元的投资计划，用于扩大存储芯片产能并加速人形机器人开发，旨在巩固其在半导体和物理 AI 领域的地位。 这一巨额投资标志着韩国在基础存储芯片和新兴人形机器人领域的战略押注，可能重塑全球供应链并加速人形机器人的商业化。 该投资涵盖两个截然不同的领域：存储芯片制造（成熟的商品市场）和人形机器人（仍面临自主性、灵巧性和成本挑战的新兴技术）。鉴于这两个领域成熟度的巨大差异，该计划的严肃性引发讨论。
+
+hackernews · jnord · 6月29日 22:21 · [社区讨论](https://news.ycombinator.com/item?id=48726102)
+
+**背景**: 存储芯片几乎是所有电子设备的关键组件，韩国（三星、SK 海力士）是全球生产领导者。人形机器人旨在模仿人类形态和运动，但当前系统大多局限于有监督的结构化环境，主要挑战包括电池续航、AI 局限性和高成本。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://roboticsandautomationnews.com/2026/02/07/the-state-of-humanoid-robotics-from-research-labs-to-real-world-potential/98732/">The state of humanoid robotics: assessing the capabilities ...</a></li>
+<li><a href="https://blog.robozaps.com/b/challenges-in-humanoid-robotics">Humanoid Robotics Challenges [2026] | Robozaps</a></li>
+<li><a href="https://www.imarcgroup.com/memory-chip-market">Memory Chip Market Size, Share & Trends Forecast to 2034</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者对将存储芯片和人形机器人混为一谈表示怀疑，将其比作‘杂货和舞蹈课’——一个是成熟的商品，另一个是投机性赌注。其他人质疑人形形态的合理性，以及为何世界在当前局限下如此大力投资。
+
+**标签**: `#semiconductors`, `#humanoid robots`, `#investment`, `#South Korea`, `#technology policy`
+
+---
+
+<a id="item-10"></a>
+### [WATaBoy 将 Game Boy 指令即时编译为 WebAssembly，性能超越原生解释器](https://humphri.es/blog/WATaBoy/) ⭐️ 8.0/10 [技术]
+
+一篇博客文章介绍了 WATaBoy，这是一个本科生项目，它将 Game Boy 的 CPU 指令即时编译（JIT）为 WebAssembly 模块，性能超过了原生解释器。该项目展示了 WebAssembly 可以作为模拟器中有效的 JIT 目标。 这种方法可以在网页浏览器和 iOS 上实现高性能的 Game Boy 模拟，而 iOS 除了浏览器引擎外禁止传统的 JIT 编译。它还表明 WebAssembly 的开销（约 20%）远低于解释器开销（约 1000%），使得通过 WASM 进行 JIT 成为一种实用的替代方案。 WATaBoy 在运行时将 Game Boy 的 Sharp LR35902 指令翻译为 WebAssembly，利用浏览器内置的 WASM JIT 编译器。基准测试显示，Firefox 在此工作负载下比 Chrome 和 Safari 慢约 25%，这可能是由于 WASM 优化方面的差异。
+
+hackernews · energeticbark · 6月29日 15:02 · [社区讨论](https://news.ycombinator.com/item?id=48720190)
+
+**背景**: 模拟器传统上使用解释器来模拟游戏机的 CPU，这可能会很慢，因为每条指令都需要反复解码和执行。即时编译（JIT）在运行时将频繁执行的代码翻译为原生机器码，从而显著提升速度。WebAssembly（WASM）是一种低级二进制格式，在浏览器中以接近原生的性能运行，并且浏览器内部已经对 WASM 进行 JIT 编译。WATaBoy 利用这一点，通过输出 WASM 而非原生代码，绕过了平台特定的 JIT 限制。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://github.com/sysprog21/jitboy">GitHub - sysprog21/jitboy: A Game Boy emulator with dynamic ... GameRoy: JIT compilation in High-Accuracy Game Boy Emulation Berry Boy JIT - Game Boy Emulator jitboy/README.md at master · sysprog21/jitboy · GitHub An introduction to JIT compilation for video game console CPU ... GameRoy: JIT compilation in High-Accuracy Game Boy Emulation Guac Emulator</a></li>
+<li><a href="https://rodrigodd.github.io/2023/09/02/gameroy-jit.html">GameRoy: JIT compilation in High-Accuracy Game Boy Emulation</a></li>
+<li><a href="https://8bitworkshop.com/docs/posts/2021/webassembly-vs-javascript-emulator-performance.html">Emulator Performance: WebAssembly vs. JavaScript — 8bitworkshop documentation</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 评论者称赞该项目作为本科生作品令人印象深刻。Scaevolus 指出，使用 JavaScript 的 eval() 或 new Function() 是一种更简单的 JIT 方法。mikepurvis 引用了 Andrew Kelley 早期关于静态重编译 NES 代码的工作，该工作得出结论认为 JIT 方法可能更好。bawolff 强调，苹果在 iOS 上的 JIT 限制使得这种基于浏览器的 WASM JIT 方法特别优雅。ahartmetz 观察到，WASM 的开销（约 20%）与解释器开销（约 1000%）相比微不足道，因此超越原生解释器是意料之中的。
 
 **标签**: `#JIT`, `#WebAssembly`, `#Game Boy`, `#emulation`, `#performance`
 
 ---
 
-<a id="item-10"></a>
-### [深入解析：CUDA 内核启动的完整路径](https://fergusfinn.com/blog/what-happens-when-you-run-a-gpu-kernel/) ⭐️ 8.0/10 [技术]
+<a id="item-11"></a>
+### [CUDA 内核启动：从 CPU 到 GPU 的完整路径](https://fergusfinn.com/blog/what-happens-when-you-run-a-gpu-kernel/) ⭐️ 8.0/10 [技术]
 
-一篇详细的技术博客文章解释了 CUDA 内核从 CPU 驱动程序提交到 GPU 执行的完整过程，涵盖了门铃寄存器、队列管理描述符（QMD）以及同步机制。 这篇文章弥合了高级 CUDA 语法与底层硬件操作之间的鸿沟，对于希望优化 GPU 性能或理解 GPU 驱动程序内部机制的开发者来说非常有价值。 文章引用了 NVIDIA 的开放 GPU 文档，描述了通知 GPU 获取工作的门铃机制，以及指定网格维度、线程块大小和程序地址的 QMD 格式。
+这篇博客文章详细介绍了 CUDA 内核启动的完整过程，从 CPU 端的驱动程序交互到 GPU 硬件上的 warp 调度器执行。它解释了命令缓冲区、门铃（doorbell）和队列管理描述符（QMD）在连接主机和设备中的作用。 理解内核启动的完整路径对于希望优化性能和调试底层问题的 GPU 程序员至关重要。这篇文章填补了空白，将高级 CUDA 语法与实际硬件操作联系起来，对初学者和有经验的开发者都很有价值。 文章涵盖了 CUDA 驱动程序的作用、通过 GPU 命令队列提交工作以及 warp 调度器的资格逻辑。它还解释了默认流中的信号量如何处理隐式同步，与 Vulkan 等 API 中的显式同步形成对比。
 
 hackernews · mezark · 6月29日 13:11 · [社区讨论](https://news.ycombinator.com/item?id=48718863)
 
-**背景**: CUDA 内核是在 NVIDIA GPU 上运行的函数，通过 CUDA 运行时从 CPU 代码启动。启动过程涉及 CPU 驱动程序构建命令缓冲区并写入门铃寄存器以通知 GPU，然后 GPU 读取队列管理描述符（QMD）来执行内核。理解这一路径有助于开发者诊断性能瓶颈并编写更高效的 GPU 代码。
+**背景**: 在 CUDA 编程中，内核（kernel）是一个在 GPU 上并行运行于众多线程的函数。启动语法<<<grid, block>>>指定了线程层次结构，但实际过程涉及 CPU 驱动程序将内核代码和参数打包到命令缓冲区中，然后通过门铃（doorbell）机制发送到 GPU。GPU 的 warp 调度器随后选择符合条件的 warp（32 个线程的组）来执行指令，通过在 warp 之间切换来隐藏延迟。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://developer.nvidia.com/cuda/toolkit">CUDA Toolkit - Free Tools and Training | NVIDIA Developer</a></li>
-<li><a href="https://deepwiki.com/geohot/cuda_ioctl_sniffer/4.1-qmd-and-command-buffer-inspection">QMD and Command Buffer Inspection | geohot/cuda_ioctl_sniffer | DeepWiki</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Thread_block_(CUDA_programming)">Thread block (CUDA programming) - Wikipedia</a></li>
+<li><a href="https://docs.nvidia.com/cuda/cuda-programming-guide/01-introduction/programming-model.html">1.2. Programming Model — CUDA Programming Guide</a></li>
+<li><a href="https://modal.com/gpu-glossary/device-hardware/warp-scheduler">What is a Warp Scheduler ? | GPU Glossary</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者称赞了文章的深度，特别是门铃和 QMD 的解释，将 CUDA 语法与实际硬件提交联系起来。一位读者指出，控制码比描述的要复杂，涉及表查找而非简单的位操作。另一位则推测内核优化公司的未来可能会被开源库或 NVIDIA 自身颠覆。
+**社区讨论**: 评论者称赞了文章的深度，特别是关于门铃和 QMD 的解释，这些将 CUDA 语法与硬件提交联系起来。一位用户指出，CUDA 通过默认流信号量实现的隐式同步比 Vulkan 的显式方法更简单。另一位评论者推测了内核优化公司与开源库的未来。
 
 **标签**: `#CUDA`, `#GPU`, `#kernel`, `#hardware`, `#programming`
 
 ---
 
-<a id="item-13"></a>
-### [DeepSeek V4 正式版发布：峰谷定价、百万上下文、Agent 能力](https://www.donews.com/news/detail/1/6614279.html) ⭐️ 8.0/10 [技术]
+<a id="item-12"></a>
+### [智谱 AI 开源 GLM-5.2，安全能力对标 Mythos](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247900312&idx=2&sn=b5ec17232d8089ec9bb546aec201c145) ⭐️ 8.0/10 [技术]
 
-DeepSeek 宣布 DeepSeek V4 正式版将于 2026 年 7 月中旬上线，推出峰谷定价（高峰时段价格翻倍），支持百万字上下文窗口，并具备领先的 Agent 能力。 此次发布标志着 AI 模型领域的重大升级，百万字上下文和先进的 Agent 能力使得更复杂的长时间推理和自主任务执行成为可能，可能对企业应用和开发者工作流程产生深远影响。 峰谷定价模式意味着在高需求时段使用成本翻倍，这可能影响重度用户的预算规划。百万字上下文窗口允许在单次会话中处理非常长的文档，例如整本书籍或大型代码库。
+智谱 AI 发布了开源权重模型 GLM-5.2，其漏洞挖掘能力已达到 Anthropic 旗下 Mythos 模型的水平。超过 30 家机构对此发布表示看好。 这标志着开源 AI 模型在网络安全领域迈出了重要一步，有望将此前仅由 Mythos 等闭源模型掌握的先进漏洞检测能力普及化。此举可能加速安全研究，并减少对专有解决方案的依赖。 GLM-5.2 是一个开源权重模型，其训练参数公开可用，支持使用和微调。据报道，该模型的漏洞发现性能与 Mythos 相当，而 Anthropic 声称 Mythos 能够自主发现主流软件系统中的零日漏洞。
 
-rss · DoNews · 6月29日 23:52
+rss · 量子位 · 6月29日 05:03
 
-**背景**: 在大语言模型中，'上下文长度'指的是模型一次能处理的最大 token（字或词）数量。百万字上下文（中文约 25 万 token）使得处理极长输入成为可能。'AI Agent' 指的是一种能够感知环境、自主决策并执行动作的智能系统，超越简单的问答，能够执行复杂的多步骤任务。
+**背景**: Mythos 是 Anthropic 在 Project Glasswing 下开发的网络安全 AI 模型，旨在自主检测和利用关键基础设施软件中的零日漏洞。由于其强大的能力，它被描述为潜在的地缘政治工具。智谱 AI 是中国领先的人工智能公司，一直发布开源模型以追赶前沿闭源模型。GLM-5.2 是他们将先进 AI 能力带给开源社区的最新努力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://zhuanlan.zhihu.com/p/27598806064">大模型核心概念科普：Token、上下文长度、最大输出，一次讲透</a></li>
-<li><a href="https://developer.baidu.com/article/detail.html?id=7756633">百万级上下文大模型技术突破：解码新一代长文本处理引擎-百度开发者中...</a></li>
-<li><a href="https://blog.csdn.net/l01011_/article/details/146495533">AI时代，一文彻底搞懂天天被提到的Agent是什么？_ai agent概念-CSDN博...</a></li>
+<li><a href="https://post.smzdm.com/p/aggrnzw3/">GLM 5 . 2 ：给国产 模 型 追赶Anthropic...</a></li>
+<li><a href="https://www.eigent.ai/zh-CN/blog/claude-mythos">Claude Mythos：Anthropic 的网络安全 AI 模型详解（2026）</a></li>
+<li><a href="https://www.163.com/dy/article/KR7A97ER0514R9P4.html">非公开AI模型Mythos：是网络安全破坏者还是一场“恐惧营销”？|人工智能|ai模型|安全漏洞|mythos_网易订阅</a></li>
 
 </ul>
 </details>
 
-**标签**: `#DeepSeek`, `#AI`, `#大模型`, `#版本发布`
+**标签**: `#AI`, `#开源`, `#智谱`, `#GLM5.2`, `#Mythos`
+
+---
+
+<a id="item-13"></a>
+### [Linux 内核高危漏洞 'pedit COW' 可本地提权至 root](https://www.v2ex.com/t/1223842#reply4) ⭐️ 8.0/10 [技术]
+
+V2EX 上一位开发者警告了一个严重的 Linux 内核漏洞 CVE-2026-46331（绰号 'pedit COW'），该漏洞通过 tc 子系统的 act_pedit 模块中的越界写入实现本地提权至 root。该漏洞影响 Linux 内核 v5.18 至 v7.1-rc6 版本，且 PoC 利用代码已于 6 月 17 日公开。 该漏洞极为严重，因为它影响自 2022 年以来几乎所有 Linux 发行版（包括 Ubuntu、RHEL、Debian），允许拥有本地访问权限的攻击者获取完全 root 权限。由于利用代码已公开，系统管理员和安全团队必须紧急修补系统以防止潜在入侵。 该漏洞是 Linux 内核流量控制（tc）子系统的 act_pedit 模块中的越界写入，该模块在修改网络包时未能正确实现写时拷贝（COW）。攻击者可以利用此漏洞修改内存中的系统二进制文件（如 /bin/su），从而获得 root shell。CVSS 评分为 7.3（高危），受影响发行版包括 Ubuntu 18.04~26.04、RHEL 8/9/10 和 Debian 13。
+
+rss · V2EX · 6月30日 01:59
+
+**背景**: Linux 内核的流量控制（tc）子系统负责管理网络数据包的排队和调度。act_pedit 模块用于实时编辑数据包内容。写时拷贝（COW）是一种内存管理技术，在写入发生前延迟数据复制；COW 失败可能导致意外的内存修改。本地提权（LPE）是指拥有有限访问权限的用户获取更高级别权限（通常是 root）的攻击。
+
+**标签**: `#security`, `#vulnerability`, `#warning`, `#developer`
 
 ---
 
 <a id="item-14"></a>
-### [.self 顶级域名提案：为自托管而生](https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/) ⭐️ 7.0/10 [技术]
+### [昆仑芯拟 500 亿美元港股 IPO，估值超母公司百度](https://www.tmtpost.com/8045729.html) ⭐️ 8.0/10 [技术]
 
-HCCF 提出了一项名为 .self 的新顶级域名（TLD）提案，旨在通过向每个人提供免费子域名来专门支持自托管。该提案旨在创建一种以人为本的互联网基础设施，优先考虑用户控制和隐私。 如果实施，.self 可以通过消除域名注册成本来普及自托管，可能使数百万用户能够运行自己的服务。然而，该提案在资金、滥用预防和技术可行性方面面临重大挑战，引发了关于去中心化互联网基础设施未来的关键辩论。 该提案包括为每个人提供免费子域名的计划，且不允许停放、抢注或转售。HCCF 已发布了一份草案规范，但关于如何在没有注册费的情况下支付运营 TLD 的巨额成本的问题仍然存在。
+昆仑芯（Kunlunxin）是百度分拆出来的 AI 芯片公司，据报道正寻求以 500 亿美元估值在港股上市，这一估值将超过母公司百度当前的市值。 此次 IPO 凸显了国产 AI 芯片在中国日益增长的战略重要性，尤其是在美国出口限制下作为 Nvidia 替代品的地位。以如此高的估值成功上市，可能吸引大量资本，加速中国在 AI 硬件领域的自主可控。 昆仑芯于 2021 年 4 月从百度分拆出来，百度仍是其最大股东。该公司已制定五年路线图，包括 2026 年的 M100 芯片和 2027 年的 M300 芯片，其第二代昆仑 II 芯片已进入量产，用于云数据中心和智能电动汽车。
 
-hackernews · HumanCCF · 6月29日 19:49 · [社区讨论](https://news.ycombinator.com/item?id=48724230)
+rss · 钛媒体 · 6月29日 12:45
 
-**背景**: 自托管是指在自己的服务器上运行和维护网站或服务，而不是依赖第三方提供商，从而让用户完全控制自己的数据和隐私。像 .com 和 .org 这样的顶级域名（TLD）由 ICANN 管理，获得新的 TLD 需要漫长的申请过程和大量的财务资源。.self 提案是从大型集中式平台中夺回数字自主权的更广泛运动的一部分。
+**背景**: 百度于 2011 年启动昆仑 AI 芯片项目，并于 2021 年将其分拆为昆仑芯公司。该公司开发的 AI 加速器用于百度数据中心运行其 ERNIE AI 模型，同时也服务于外部云客户和智能汽车。在美国对华先进芯片出口限制的背景下，昆仑芯等国产厂商被视为填补 Nvidia 留下的空白的关键力量。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Self-hosting_(network)">Self-hosting (network) - Wikipedia</a></li>
-<li><a href="https://tldz.com/2026-gtld-guide-how-to-get-your-own-top-level-domain/">2026 gTLD Guide: How to Get Your Own Top-Level Domain</a></li>
-<li><a href="https://www.newgtldprogram.com/post/how-to-create-my-own-top-level-domain">How To Create My Own Top-Level Domain - newgtldprogram.com</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kunlunxin">Kunlunxin - Wikipedia</a></li>
+<li><a href="https://www.cnbc.com/2025/11/28/baidu-is-major-ai-chip-player-in-china-to-fill-nvidia-gap.html">Baidu is emerging as a major AI chip player in China to fill the Nvidia gap</a></li>
+<li><a href="https://www.datacenterdynamics.com/en/news/baidus-kunlun-ii-ai-chips-enter-mass-production/">Baidu's Kunlun II AI chips enter mass production - DCD</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论既表达了兴奋也表达了怀疑。一些用户回忆起 .tk TLD 的历史，免费域名吸引了诈骗者并导致广泛屏蔽，引发了对滥用的担忧。其他人则质疑免费 TLD 的财务可持续性以及缺乏明确的命名方案，而少数人则希望这样的举措能够对抗企业破坏自托管的努力。
-
-**标签**: `#TLD`, `#self-hosting`, `#domain names`, `#internet infrastructure`
-
----
-
-<a id="item-15"></a>
-### [Qwen 3.6 27B：本地开发的理想选择](https://quesma.com/blog/qwen-36-is-awesome/) ⭐️ 7.0/10 [技术]
-
-一篇博客文章和社区讨论指出，Qwen 3.6 27B 是本地 AI 开发的优秀选择，称赞其编码性能，同时就运行在 MacBook Pro 上的高昂硬件成本和实用性展开辩论。 这一讨论之所以重要，是因为它反映了本地 LLM 的隐私与控制优势与基于云 API 的低成本和便利性之间的持续张力，影响着开发者在 AI 工具方面的决策。 Qwen 3.6 27B 原生支持 262,144 个 token 的上下文长度，可扩展至超过 100 万个 token，并在 Ollama 和 Hugging Face 上可用。本地运行需要高端硬件，例如 128GB 的 MacBook Pro 或 Mac Mini M4。
-
-hackernews · stared · 6月29日 17:05 · [社区讨论](https://news.ycombinator.com/item?id=48721903)
-
-**背景**: Qwen 是阿里巴巴 Qwen 团队开发的一系列大型语言模型。这个 27B 参数的稠密模型提供了旗舰级的编码和智能体能力。本地运行此类模型可提供隐私和离线访问，但需要大量 RAM 和算力，通常使得云 API 对许多用户来说更经济。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://qwen.ai/blog?id=qwen3.6-27b">Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</a></li>
-<li><a href="https://huggingface.co/Qwen/Qwen3.6-27B">Qwen/Qwen3.6-27B · Hugging Face</a></li>
-<li><a href="https://ollama.com/library/qwen3.6:27b">qwen3.6:27b</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区评论褒贬不一：一些用户称赞模型性能，但警告在 MacBook Pro 上运行的高成本和噪音，建议改用 Mac Mini M4。另一些用户则认为使用 OpenRouter 等云 API 更经济，并质疑展示的示例是否代表真实的编码任务。
-
-**标签**: `#Qwen`, `#local LLM`, `#AI development`, `#MacBook Pro`, `#hardware`
+**标签**: `#IPO`, `#AI chips`, `#Kunlun Chip`, `#Baidu`, `#valuation`
 
 ---
 
 <a id="item-16"></a>
-### [智谱 GLM 5.2 开源发布，被比作 Claude 时刻](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247900312&idx=2&sn=b5ec17232d8089ec9bb546aec201c145) ⭐️ 7.0/10 [技术]
+### [腾讯与长鑫存储签署 30 亿美元 DRAM 供应协议](https://www.donews.com/news/detail/1/6614347.html) ⭐️ 8.0/10 [技术]
 
-智谱 AI（现更名为 Z.ai）以 MIT 许可证开源发布了其 GLM 5.2 大语言模型，被类比为 Anthropic 的 Claude Mythos 模型。该发布获得了 30 多家机构的看好。 此次发布标志着开源 AI 迈出了重要一步，可能使媲美 Claude 等专有系统的高性能模型更加普及。它有望加速智能体工程和安全漏洞检测领域的创新。 GLM 5.2 采用宽松的 MIT 许可证发布，延续了 Z.ai 自 2025 年 7 月以来的开源策略。该模型托管在 Hugging Face 和 GitHub 上，旨在支持从 vibe coding 到高级工程的智能体工作流。
+腾讯与长鑫存储（CXMT）签署了一项价值超过 200 亿元人民币（约 29.4 亿美元）的长期 DRAM 芯片供应协议，期限为三至五年，涵盖服务器内存供应。该协议可能还包括高带宽内存（HBM）芯片。 该协议标志着中国领先科技公司与国内唯一大规模 DRAM 制造商之间的重大战略合作，增强了中国半导体供应链的自主性。它还可能提升长鑫存储上市前的收入和信誉，同时减少腾讯对外国内存供应商的依赖。 据报道，该协议期限为三至五年，消息人士对具体时长说法不一。长鑫存储还在与其他中国互联网公司（包括阿里云、字节跳动和小米）洽谈类似的供应协议。
 
-rss · 量子位 · 6月29日 05:03
+rss · DoNews · 6月30日 00:57
 
-**背景**: Z.ai（原名智谱 AI）是中国领先的人工智能公司之一，常被称为“AI 虎将”，被视为中国第三大大语言模型厂商。该公司于 2025 年 1 月被列入美国实体清单。Claude Mythos 是 Anthropic 最新发布的高性能模型，以安全性和复杂任务执行能力著称。
+**背景**: 长鑫存储技术股份有限公司（CXMT）是一家总部位于中国安徽合肥的半导体公司，专注于 DRAM 内存芯片的设计、研发、生产和销售。公司成立于 2016 年，是目前中国大陆唯一具备通用型 DRAM 大规模量产能力的企业。高带宽内存（HBM）是一种 3D 堆叠 DRAM 技术，相比传统 DRAM 提供显著更高的带宽，对于 AI 和高性能计算应用至关重要。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/GLM_5.2">GLM 5.2</a></li>
-<li><a href="https://github.com/zai-org/GLM-5">GitHub - zai-org/GLM-5: GLM-5: From Vibe Coding to Agentic ...</a></li>
-<li><a href="https://huggingface.co/zai-org/GLM-5.2">zai-org/GLM-5.2 · Hugging Face</a></li>
+<li><a href="https://en.wikipedia.org/wiki/ChangXin_Memory_Technologies">ChangXin Memory Technologies - Wikipedia</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/长鑫存储">长鑫存储 - 维基百科，自由的百科全书</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/1923513639094195664">万亿算力背后的“内存心脏”：HBM技术全面拆解 2025 版 - 知乎</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#开源`, `#大模型`, `#智谱`, `#GLM5.2`
+**标签**: `#Tencent`, `#ChangXin Memory`, `#DRAM`, `#HBM`, `#semiconductor`, `#supply agreement`
 
 ---
 
 <a id="item-17"></a>
-### [OpenAI 报告描绘 AI 对欧盟就业的影响](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 7.0/10 [技术]
+### [被劫持的 npm 和 Go 包利用 VS Code 任务部署 Python 信息窃取器](https://www.reddit.com/r/golang/comments/1uiojr9/hijacked_npm_and_go_packages_use_vs_code_tasks_to/) ⭐️ 8.0/10 [技术]
 
-OpenAI 发布了一份新报告，描绘了人工智能如何可能重塑整个欧盟的就业格局，指出了可能面临自动化、增长或工作流程重大变化的职业。 这份报告为政策制定者、企业和劳动者提供了关键见解，帮助他们理解并应对 AI 驱动的欧洲劳动力市场变革。 该报告可能分析了具体的职业和行业，指出了哪些工作最容易受到自动化的影响，以及哪些工作可能因 AI 的增强而增长。
+攻击者劫持了合法的 npm 和 Go 包，在其中嵌入恶意的 VS Code 任务，当开发者打开项目文件夹时，这些任务会自动执行一个 Python 信息窃取器。 这种新型供应链攻击利用受信任的开发工具（VS Code）绕过传统安全检查，可能窃取数千名开发者的凭证和敏感数据。 恶意任务定义在 .vscode/tasks.json 文件中，并将 "runOn" 属性设置为 "folderOpen"，导致文件夹打开时立即执行。载荷是一个基于 Python 的信息窃取器，目标是个人身份信息和登录凭证。
 
-rss · OpenAI Blog · 6月29日 07:00
+reddit · r/golang · /u/local_hiddenvariable · 6月29日 10:20
 
-**背景**: 人工智能越来越能够执行传统上由人类完成的任务，这引发了人们对就业岗位被取代的担忧，但也带来了新角色和生产力提升的机会。此类报告有助于描绘不同地区和行业的潜在影响，为劳动力规划和政策决策提供信息。
+**背景**: VS Code 任务是开发者用于构建、测试或代码检查的自动化脚本。信息窃取器是一种恶意软件，它会扫描计算机中的敏感信息，如密码和财务数据。通过劫持 npm 和 Go 注册表上的流行包，攻击者可以将恶意代码分发给信任这些包的开发者。
 
-**标签**: `#AI`, `#workforce`, `#EU`, `#automation`, `#jobs`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://undercodetesting.com/opening-a-vs-code-project-just-became-a-security-nightmare-how-malicious-tasks-can-hijack-your-system-video/">Opening A VS Code Project Just Became... - Undercode Testing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Infostealer">Infostealer - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#supply chain attack`, `#npm`, `#Go`, `#VS Code`, `#infostealer`, `#security`
 
 ---
 
 <a id="item-18"></a>
-### [Janus：为 AI 编程助手打造的外部认知操作系统](https://www.v2ex.com/t/1223794#reply0) ⭐️ 7.0/10 [技术]
+### [特斯拉推送 FSD v14 Lite，HW3 车型获 HW4 级智驾能力](https://x.com/Tesla_AI/status/2071592820889260101) ⭐️ 8.0/10 [技术]
 
-Janus 是一个零依赖的 MCP 服务器，为 AI 编程助手提供长期记忆和主动约束功能，使其能够记住过去的决策并防止不必要的文件修改。 这解决了 AI 编程助手的一个关键限制——跨会话缺乏持久上下文——通过维护项目知识和强制执行规则，有望提高开发者生产力并减少错误。 Janus 使用 PPR 图遍历和 TF-IDF 语义搜索实现双路召回，实现了四级记忆生命周期并自动晋升，还提供作用域锁、约束注册和守卫拦截以实现主动约束。
+2026 年 6 月 29 日，特斯拉开始推送 FSD v14 Lite，这是一个经过压缩的全自动驾驶软件版本，将 HW4 级别的能力（包括强化学习和离线模型）下放至较老的 HW3 车辆。此次更新还首次引入了自动泊车、出库和倒车功能。 此次更新显著延长了配备 HW3 的特斯拉车辆的使用寿命和价值，车主获得了此前仅限新 HW4 硬件的先进驾驶行为和自动泊车功能。这展示了特斯拉为旧硬件优化神经网络的能力，可能加速实现无人监督的全自动驾驶。 FSD v14 Lite 仍然是受监督的 L2 级系统，驾驶员必须保持注意力并随时准备干预。'Lite'名称表示这是一个压缩后的神经网络架构，专为在 HW3 的处理限制内运行而设计，而 HW4 车辆继续运行完整的 v14 版本。
 
-rss · V2EX · 6月29日 22:05
+telegram · zaihuapd · 6月30日 02:26
 
-**背景**: 模型上下文协议（MCP）是一个开放标准，允许 AI 应用程序连接到外部数据源和工具，类似于 AI 的 USB-C 端口。像 Claude Code、Cursor 和 Cline 这样的 AI 编程助手使用 MCP 来扩展其能力。Janus 被构建为一个 MCP 服务器，意味着它可以被任何兼容 MCP 的工具使用，无需额外集成。
+**背景**: 特斯拉的硬件 3（HW3）和硬件 4（HW4）是用于 Autopilot 和全自动驾驶的车载计算机硬件代际。HW4 提供显著更高的处理能力和内存，支持更先进的神经网络。FSD v14 Lite 是 v14 软件的蒸馏版本，利用强化学习等技术改善复杂驾驶场景中的决策能力。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://modelcontextprotocol.io/docs/getting-started/intro">What is the Model Context Protocol (MCP)?</a></li>
-<li><a href="https://modelcontextprotocol.info/docs/">MCP Docs – Model Context Protocol （MCP）</a></li>
+<li><a href="https://electrek.co/2026/06/29/tesla-fsd-v14-lite-hw3-rollout/">Tesla starts FSD v14 ‘Lite’ rollout to HW3 cars - Electrek</a></li>
+<li><a href="https://www.basenor.com/blogs/news/tesla-update-v14-lite-1">FSD 14 Lite: Everything HW3 Owners Need to Know</a></li>
+<li><a href="https://www.tesla.com/AI">AI & Robotics - Tesla</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI编程助手`, `#MCP服务器`, `#开源`, `#长期记忆`, `#Claude Code`
+**标签**: `#Tesla`, `#FSD`, `#自动驾驶`, `#HW3`, `#HW4`, `#自动泊车`
 
 ---
 
 <a id="item-19"></a>
-### [大模型上下文长度管理：实用技巧与限制](https://www.v2ex.com/t/1223787#reply1) ⭐️ 7.0/10 [技术]
+### [Qwen 3.6 27B：本地 AI 开发的甜蜜点](https://quesma.com/blog/qwen-36-is-awesome/) ⭐️ 7.0/10 [技术]
 
-一位 V2EX 用户分享个人经验，认为大模型上下文应控制在 100k tokens 以内，超过 150k tokens 时模型常出现注意力涣散、幻觉和死循环，浪费 token 和时间。 这一讨论揭示了当前基于 Transformer 的大模型在实际使用中的局限性，强调 agent 工具（而非仅模型改进）对可靠的长上下文任务至关重要，影响开发者如何设计 AI 工作流。 该用户总结了三种 harness 技巧：控制思维链（如 Karpathy 指南）、管理记忆（如及时清理已读文件）和控制输出（如要求输出文言文）。他们认为对于长时间任务，agent 工具比模型本身更重要。
+Qwen 3.6 27B，一个密集的 270 亿参数多模态模型，已开源，并被赞誉为第一个真正适合作为通用智能用于开发工作的本地模型。 该模型在可本地运行的规模上提供了旗舰级的智能体编码性能，可能使开发者无需依赖云服务即可使用强大的 AI，但需要昂贵的硬件，如 128GB MacBook Pro。 该模型有两个变体：密集的 27B 版本（较慢但更强大）和混合专家 35B-A3B 版本。本地运行至少需要 128GB 统一内存，MacBook Pro 起售价为 6,699 美元。
 
-rss · V2EX · 6月29日 16:54
+hackernews · stared · 6月29日 17:05 · [社区讨论](https://news.ycombinator.com/item?id=48721903)
 
-**背景**: 基于 Transformer 的大语言模型使用注意力机制处理序列，但注意力在超长上下文中会“涣散”，导致模型忽略重要信息。这一限制是 Transformer 架构固有的，尽管模型声称支持百万 token 上下文，实际可靠性通常在超过 100k–150k tokens 时下降。Agent harness 工程——包括上下文管理、工具设计和反馈循环——已成为让大模型在生产中可用的关键外层。
+**背景**: Qwen 是阿里云开发的一系列大语言模型。“密集”模型每次推理使用所有参数，而混合专家（MoE）模型每次只激活一部分参数，以牺牲部分能力换取速度。本地 LLM 开发是指在个人硬件上运行 AI 模型而非云服务器，提供隐私和离线访问，但需要大量计算资源。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://zhuanlan.zhihu.com/p/694729500">万字长文带你详细了解 Attention 和 Transformer - 知乎</a></li>
-<li><a href="https://www.gankinterview.cn/blog/stop-worshiping-prompts-in-2026-the-core-moat-of-top-agents-is-harness-control-w">别再迷信 Prompt 了：2026 年顶级 Agent 的核心壁垒是“ Harness ...”</a></li>
-<li><a href="https://adg.csdn.net/694cf2ad5b9f5f31781a9dcc.html">思维链（Chain of Thought）深度解析：原理、价值与应用全面指南！_人工智能_发菜君-火山引擎 ADG 社区</a></li>
+<li><a href="https://huggingface.co/Qwen/Qwen3.6-27B">Qwen/Qwen3.6-27B · Hugging Face</a></li>
+<li><a href="https://qwen.ai/blog?id=qwen3.6-27b">Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</a></li>
 
 </ul>
 </details>
 
-**标签**: `#大模型`, `#上下文长度`, `#注意力机制`, `#agent工具`
+**社区讨论**: 社区成员称赞该模型的能力，但警告在 MacBook Pro 上运行会产生过多热量和噪音，使得实际操作编码不切实际。其他人则认为像 OpenRouter 这样的云替代方案更具成本效益，10 美元就能使用更大的未量化模型。
+
+**标签**: `#AI`, `#local LLM`, `#Qwen`, `#development`, `#hardware`
 
 ---
 
 <a id="item-20"></a>
-### [Telegram 多模型 AI 统一交互层](https://www.v2ex.com/t/1223776#reply1) ⭐️ 7.0/10 [技术]
+### [用 Markdown 写公众号的工具](https://www.v2ex.com/t/1223875#reply0) ⭐️ 7.0/10 [技术]
 
-一位 V2EX 用户提议利用 Telegram 的话题模式作为多模型 AI 的统一交互界面，用户可以在同一对话中通过 @ 不同模型（如 @豆包、@Claude）执行事实核查、改写等专门任务，无需使用多个独立应用。 这一概念解决了跨多个 AI 模型导出和管理对话的痛点，并可能通过在广泛使用的 Telegram 中创建持久化的多模型协作空间来简化工作流程。 该提议设想了一个“群体决策系统”，主模型（如 GPT-5.x）负责主要回答，辅助模型通过 @ 提及触发特定角色，如逻辑检查或结构优化。现有项目如 SYNTX AI 和 multimodel_telegram_bot 已在 Telegram 中提供多模型集成，但并非完全基于 @ 的协作方式。
+inputpub.com 的开发者构建了一个工具，能将 Markdown 内容转换为适用于微信公众号编辑器的 HTML 格式，并自动处理内联样式和图片嵌入。 这解决了使用 Markdown 写作但需要在微信公众号上发布的作者的常见痛点，节省时间并减少格式错误。它展示了理解微信剪贴板行为的实际应用。 该工具通过将带有内联样式的 HTML 放入剪贴板来工作，利用了微信解析 HTML 和自动抓取外部图片的能力。它还包含一个简单的模板语言，用于针对不同平台定制输出内容。
 
-rss · V2EX · 6月29日 14:58
+rss · V2EX · 6月30日 03:20
 
-**背景**: Telegram 的话题模式支持线程化对话，天然适合多轮 AI 对话。许多用户目前在不同 AI 聊天应用（如 ChatGPT、Claude、Gemini）之间切换以完成不同任务，但导出对话历史往往很麻烦。使用单一消息应用作为多模型 AI 中心的理念正逐渐流行，已有多个机器人通过 PostgreSQL 等数据库提供模型切换和持久化记忆功能。
+**背景**: 微信公众号编辑器本身不支持 Markdown，只接受以 HTML 形式粘贴的富文本。但它会丢弃 <style> 标签和 class 选择器，因此需要内联样式。此外，它会自动从外部 URL 下载图片并存储到微信的素材库中。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://syntx.ai/">SYNTX AI : 90+ AI Models in One Place | Telegram & Web</a></li>
-<li><a href="https://github.com/MrAlaminH/multimodel_telegram_bot">GitHub - MrAlaminH/ multimodel _ telegram _bot: Using the gradio client...</a></li>
-<li><a href="https://github.com/mannyvarjr/Telegram-AI-Agent">GitHub - mannyvarjr/Telegram-AI-Agent: A persistent Scientific Assistant Chatbot for Telegram. This workflow uses AI Agents to answer complex science questions by autonomously searching Wikipedia. Unlike basic bots, it uses a Postgres database to remember past interactions, providing a seamless and personalized user experience directly in the Telegram app. · GitHub</a></li>
-
-</ul>
-</details>
-
-**标签**: `#Telegram`, `#AI`, `#multi-model`, `#collaboration`, `#LLM`, `#conversation interface`
+**标签**: `#Markdown`, `#微信公众号`, `#工具`, `#V2EX`
 
 ---
 
 ## 时政 (Politics)
 
 <a id="item-1"></a>
-### [最高法院：地理围栏搜查令需宪法保护](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10 [时政]
+### [最高法院扩大特朗普对联邦机构的权力](https://www.economist.com/united-states/2026/06/29/the-supreme-court-has-handed-donald-trump-yet-more-power) ⭐️ 9.0/10 [时政]
 
-美国最高法院裁定，地理围栏搜查令（允许执法机构获取特定区域内所有设备的位置数据）需要根据第四修正案获得宪法保护，这标志着数字隐私领域的一项里程碑式裁决。 这项裁决极大地限制了执法机构在没有合理理由的情况下进行大规模位置监控的能力，影响了警方实践以及存储此类数据的科技公司（如 Google）。它为数字时代的隐私权树立了先例。 该案为 Chatrie 诉美国案，涉及 Google 提供银行抢劫案附近 19 台设备的位置数据。法院认为，获取这些数据构成第四修正案下的搜查行为，需要基于合理理由的搜查令。
+最高法院裁定赋予唐纳德·特朗普总统对数十个联邦机构更大的控制权，但美联储除外，这标志着行政权力的显著扩张。 这一里程碑式的决定重塑了总统与联邦机构之间的权力平衡，可能允许总统直接影响政府各机构的监管和执法行动。 该裁决适用于数十个机构，但明确将美联储排除在外，保留了其独立性。这一决定引发了争论，批评者认为它过度扩大了总统权力，而支持者则声称它正确解读了宪法。
 
-hackernews · cdrnsf · 6月29日 15:54 · [社区讨论](https://news.ycombinator.com/item?id=48720924)
+rss · The Economist · 6月29日 23:06
 
-**背景**: 地理围栏搜查令（又称反向位置搜查令）允许警方从 Google 等公司请求特定时间段内特定地理区域内的所有设备列表。这引发了第四修正案关于这种广泛数据收集是否属于需要搜查令的“搜查”的争议。最高法院的裁决明确了这一点。
+**背景**: 美国宪法确立了行政、立法和司法三权分立的原则。历史上，许多联邦机构在一定程度上独立于总统的直接控制，通常通过独立委员会或两党领导层运作。这项裁决通过将大多数机构置于总统的随意支配之下，改变了这一平衡，引发了关于监管独立性的未来问题。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant - Wikipedia</a></li>
-<li><a href="https://techcrunch.com/2026/04/28/scotus-chatrie-geofence-search-warrant-ruling-arguments/">US Supreme Court appears split over controversial use of ' geofence ...</a></li>
-<li><a href="https://www.culawreview.org/journal/mapping-the-future-of-surveillance-geofence-warrants-and-the-risks-of-chatrie">Mapping the Future of Surveillance: Geofence Warrants and the Risks...</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 评论者指出该裁决对 Flock 摄像头等其他监控工具的影响，赞扬裁决的同时批评了持异议的大法官 Alito、Thomas 和 Barrett。一位评论者提供了一个历史案例，说明即使没有手机，位置数据也能识别个人。
-
-**标签**: `#supreme court`, `#geofence warrants`, `#privacy`, `#law enforcement`, `#constitutional law`
+**标签**: `#Supreme Court`, `#presidential power`, `#federal agencies`, `#Donald Trump`, `#politics`
 
 ---
 
 <a id="item-2"></a>
-### [最高法院扩大总统对联邦机构的权力](https://www.economist.com/united-states/2026/06/29/the-supreme-court-has-handed-donald-trump-yet-more-power) ⭐️ 9.0/10 [时政]
+### [《经济学人》评特朗普在夏洛茨维尔事件后不称职](https://www.economist.com/interactive/united-states/2026/06/29/unfit) ⭐️ 9.0/10 [时政]
 
-美国最高法院裁定，数十个联邦机构现在直接受总统控制，大幅扩大了行政权力。美联储明确被排除在此裁决之外。 这项裁决从根本上改变了美国政府内部的权力平衡，赋予总统对独立机构前所未有的控制权。它可能导致监管职能政治化，并削弱对行政权力的制度制衡。 该裁决豁免了美联储，但使其他独立机构如美国证券交易委员会、联邦贸易委员会和联邦通信委员会直接受总统控制。该决定基于单一行政理论，该理论认为总统必须对行政部门拥有唯一权力。
+《经济学人》发表了一篇题为“Unfit”的社论，严厉批评唐纳德·特朗普对 2017 年夏洛茨维尔极右翼集会的回应，认为他的言行表明其根本不适合担任总统。 这份来自全球知名刊物的分析强化了关于特朗普在美国政治历史关键时刻领导力的批评叙事，可能影响公众舆论和政治讨论。 文章特别聚焦于特朗普在致命集会后的争议性言论，他将暴力归咎于“双方”，这一立场被广泛谴责为将白人至上主义者与抗议者等同对待。
 
-rss · The Economist · 6月29日 23:06
+rss · The Economist · 6月29日 15:33
 
-**背景**: 单一行政理论是一种宪法解释，主张美国宪法第二条将全部行政权力赋予总统一人，包括罢免官员的权力。独立机构传统上被设计为不受总统直接控制，以确保监管公正。这项裁决推翻了长期保护机构独立性的先例，例如 1958 年的 Wiener 诉美国案。
+**背景**: 2017 年在弗吉尼亚州夏洛茨维尔举行的“团结右翼”集会是一场极右翼示威活动，演变为暴力事件，导致抗议者 Heather Heyer 死亡。特朗普最初回应称“双方都有非常优秀的人”，引发广泛批评，成为其总统任期内的标志性争议。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Unitary_executive_theory">Unitary executive theory</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Independent_agencies_of_the_United_States_federal_government">Independent agencies of the United States federal government - Wikipedia</a></li>
-<li><a href="https://www.law.cornell.edu/wex/unitary_executive_theory_(uet)">Unitary Executive Theory (UET) | Legal Information Institute</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 文章呈现了两种对立观点：一种认为法院过度扩大了总统权力，另一种则认为法院正确解读了宪法。未提供其他社区评论。
-
-**标签**: `#US Supreme Court`, `#executive power`, `#Donald Trump`, `#federal agencies`, `#constitutional law`
+**标签**: `#Donald Trump`, `#Charlottesville`, `#far-right rally`, `#political response`, `#The Economist`
 
 ---
 
 <a id="item-3"></a>
-### [《经济学人》评特朗普夏洛茨维尔回应：不称职](https://www.economist.com/interactive/united-states/2026/06/29/unfit) ⭐️ 9.0/10 [时政]
+### [中国批评家兼富豪郭文贵因诈骗被判 30 年监禁](https://news.google.com/read/CBMiqwFBVV95cUxOOE5IQzI5Tm14RzZOQ0pDZzIxb3RUdlYzN2NLVDBMaGU0aEVacFQ4RWR5cW1GREVWd2k3NFU5UnRxS0tDOUFxVW91TWNSa2U0dGlDa0kwZGU5OWVoXzI0Tl9TMHl0TUlFZktpN0oxZ0NqcXpVcUdQcURlVUFwNDVoWV92clBxaUlyRHhQejdELVNKWnVrQ2V3V1dsYXZPSDNWQ1RqT3JTdF9hZ1U?hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
 
-《经济学人》发表了一篇社论，分析唐纳德·特朗普对 2017 年夏洛茨维尔极右翼集会的争议性回应，该集会曾导致暴力事件和一人死亡。 这篇分析意义重大，因为它批评了一位前美国总统在处理种族敏感事件时的表现，对美国政治话语和领导标准具有深远影响。 该文章出自《经济学人》的社论栏目，表明其强烈的编辑立场，很可能认为特朗普的回应不符合总统应有的标准。
+中国商界大亨、中国政府直言不讳的批评者郭文贵，因诈骗罪被美国联邦法院判处 30 年监禁。该判决是在他多项诈骗罪名成立后作出的。 此判决标志着一项重大的法律和政治事件，因为郭文贵是一位高调人物，在流亡期间利用其平台批评中国领导人。该案件凸显了金融犯罪、政治异议与国际法律程序之间的交集。 郭文贵被判定通过涉及虚假投资和奢侈消费的计划诈骗了数千名投资者。他自 2014 年起自我流亡美国，并于 2023 年被捕。
 
-rss · The Economist · 6月29日 15:33
+rss · Buzzing China · 6月29日 23:49
 
-**背景**: 2017 年 8 月的夏洛茨维尔集会涉及白人至上主义者和反示威者，导致暴力冲突和一名反示威者死亡。特朗普最初的评论因未明确谴责极右翼团体而受到批评，这一事件成为美国政治的焦点。
+**背景**: 郭文贵（英文名 Miles Guo）是一位中国亿万富翁，逃往美国后成为中国共产党直言不讳的批评者。他通过指控中国领导人腐败并宣扬反政府言论积累了大量追随者。诈骗罪名源于其商业活动，包括一项以虚假理由从投资者那里筹集数亿美元的骗局。
 
-**标签**: `#Donald Trump`, `#Charlottesville`, `#far-right rally`, `#US politics`, `#The Economist`
+**标签**: `#China`, `#Guo Wengui`, `#fraud`, `#sentencing`, `#politics`
 
 ---
 
 <a id="item-4"></a>
-### [2016 年南海仲裁案裁决十周年：持久影响](https://news.google.com/read/CBMiqgFBVV95cUxPTl9jSU9ob2I4Vld2Q1V5MEVkb2hSV095ZW1fNDA4dWh1bDAtUWQ3ZnNJZExmVGFyWWNyVXFtRDlfTGpWZEN3NUlESGc0OU9VTWJtcUxYcjZDeHhSQ2dsNFdkQ1BQS0FsNmQ1SEI5UENjRGE5NjBDMnVuTFdIR3Q3ekJPNXBxajJJb05kdXpDdm1tU0pvUFlJWktMU1hWd3VXSHJMLThlNXkyUQ?hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
+### [中国军方首次曝光第六代战机视频](https://news.google.com/read/CBMisAFBVV95cUxNaU0wd3F4OVZGVUgtOFF5alBpSGx5Z1JaNGNDUThHNlk1cTkwSGx4MlFueWdtU3RhSHNwRFVMUWdoWGV3MEpBejBuZEU3ZXBrMnBSS0RBTXp0NGJfTFdHWkROTnVlZnhRVlBqclFBUDIyVUdjcTE4blMwLTNOTEtNanp4MUZ6OFFaanFCNzZieWhRVWQyTjB4dlF2dFMyXzc1WXMyeTByUTVKUF8xbUx4Vg?hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
 
-在 2016 年 7 月 12 日常设仲裁法院裁决十周年之际，《外交官》杂志分析了该裁决的持久意义，该裁决支持菲律宾，并驳回了中国的九段线主张。 该裁决仍然是国际海洋法的一个关键参考点，并继续塑造亚太地区的地缘政治动态，影响中国、菲律宾及其他声索国之间的关系。 根据《联合国海洋法公约》设立的仲裁庭裁定，中国的九段线主张没有法律依据，其填海造地活动侵犯了菲律宾的主权权利。
+中国军方首次发布官方视频，展示了一款第六代战斗机，标志着其先进战斗机项目取得进展。 此次曝光标志着中国军事现代化的重要里程碑，直接挑战美国及其他国家在下一代空中优势竞赛中的地位，具有重大地缘政治影响。 该视频未披露具体技术细节，但第六代战斗机预计将具备先进隐身能力、定向能武器以及网络中心战能力。
 
-rss · Buzzing China · 6月29日 14:26
+rss · Buzzing China · 6月29日 07:56
 
-**背景**: 南海是一条具有战略重要性的水道，多个国家在此有重叠的领土主张。2013 年，菲律宾根据《联合国海洋法公约》对中国提起仲裁，中国拒绝参与并拒绝接受裁决。2016 年的裁决是一项里程碑式的决定，澄清了海洋地物的法律地位，并驳回了历史性权利主张。
+**背景**: 第六代战斗机是超越当前第五代战斗机（如 F-22 和歼-20）的概念机型。它们被设计为与无人机和传感器协同作战的“系统之系统”。中国的该项目高度保密，但旨在与美国“下一代空中优势”（NGAD）计划相抗衡。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/South_China_Sea_Arbitration">South China Sea Arbitration - Wikipedia</a></li>
-<li><a href="https://www.uscc.gov/research/south-china-sea-arbitration-ruling-what-happened-and-whats-next">South China Sea Arbitration Ruling: What Happened and What’s Next? | U.S.- CHINA | ECONOMIC and SECURITY REVIEW COMMISSION</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sixth-generation_fighter">Sixth - generation fighter - Wikipedia</a></li>
+<li><a href="https://www.sps-aviation.com/story/?id=3651">Decoding China ’s Sixth - Generation Fighter Aircraft Programme</a></li>
+<li><a href="https://www.twz.com/china-is-working-on-its-own-sixth-generation-fighter-program-official">China Is Working On Its Own Sixth - Generation Fighter Program ...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#South China Sea`, `#arbitration`, `#geopolitics`, `#international law`, `#Asia-Pacific`
+**标签**: `#China`, `#sixth-generation fighter`, `#military technology`, `#defense`, `#geopolitics`
+
+---
+
+<a id="item-5"></a>
+### [秘鲁：藤森被宣布赢得总统选举](https://news.google.com/rss/articles/CBMikAFBVV95cUxNbDM2cFBmcFphcGM5Y1dfMTMzNWFQdG9vR0picUdVY3kzb250dHZkOXRybFg1c29HdC1acnNuNUlaN21yOWlENmYycjNPSnJJem1xcUhUMi1leUJJOTRJcThGaG5KMXlKTmdiM0dqd0s5RFVLblVxVDFlY2swMVItM3NBMGtoTW82ZlFBRnRxeWvSAZABQVVfeXFMTUJjMXhMY3hETnNKajJhN1hIRmxGbU55UjFabnFNajhSVUZ4cTZ0ZlNwTTc5cFpvUmdRUXNEZUJjX0dmZjlkMHppUFVBTWZ2aXNiTmdDWnFxRHNUS1VvcVJrNjd2aUNuOF9Hb25DOUxTX2oyUlQ2enBzcEN2ZVhpQUNGZ2xVVXEtb3pWOWY3ZjZR?oc=5&hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
+
+秘鲁选举机构宣布藤森为总统选举获胜者，标志着该国政治进程中的一个决定性结果。 这一宣布可能重塑秘鲁的政治格局，并影响南美洲的区域动态，因为藤森家族几十年来一直是秘鲁政治中一个两极分化的力量。 具体的藤森候选人（很可能是藤森庆子）在经过一场备受关注的选举后被宣布获胜。关于得票率差距、反对派反应以及可能的第二轮投票细节尚待公布。
+
+rss · Buzzing News · 6月30日 03:54
+
+**背景**: 秘鲁是一个南美洲国家，每五年举行一次总统选举。藤森家族一直是重要的政治力量，阿尔贝托·藤森在 1990 年至 2000 年担任总统，他的女儿藤森庆子随后多次参选。该国曾经历政治不稳定和腐败丑闻，使得每次选举都成为关键事件。
+
+**标签**: `#Peru`, `#presidential election`, `#Fujimori`, `#politics`
 
 ---
 
 <a id="item-6"></a>
-### [中国军舰在争议浅滩附近跟踪美菲演习](https://news.google.com/read/CBMi2gFBVV95cUxOampCSjhjZWhINXJXM0Nfd1ZjRVAtMWJyUk5zN1EtdnRDZG1oWlNJOE85cUpQcXBDRmlKb3Z4VHVyVEdrd2VFYWtCMFY0MDJkV01UNUtLc1lySGtnM3R5VGJXQm9KeDhHU2dsQUlNNVBQQW1VOFBwZGUzdmxmSVNyaWdCSTAzanBzZ29FdXo1YXM3a29XWWk3ODk3b29kWHJxVU9XS2s0RncxOHRiQU45UV9wOGhBcThGSlEyT0tqUm9WMTBjQVpMZU5ZamUyalZNSVpBZUZ6YWI2d9IB2gFBVV95cUxPSlB5NVJDaC1WaUxuRW9PUmhyMWZOLUFDNnU2UzhPOU9BX1RBTU80WGJSckJtTEJRZFJZb1hwOUFrSW5aa2E5YXRRcWFWY01ueE5OX3FzZUVvb1llM0VKRXNId0hPNUpTeTJGakNTOXhpTDk1cFJXdEw5SXJWOG1td1gxT2o2RVBSZG92dXB2Q2RiZFFtMTh0czBwdHl0dGhZd0w5QXFxenFxWlk0cjcwYVAzQk9uYW01aXJVc2FqaDhDWC1pSnNSSlBYQi1yY0l3Y1JZbU9vT25VUQ?hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
+### [美伊冲突风险加剧，船只纷纷撤离](https://news.google.com/rss/articles/CBMijAFBVV95cUxQMVpLSXJnM0gxVVF5Um5raVAzNVVkdGdTRVRqallDVjBXYlhMWGZiTWdhTUdHWWY0enFRcHYwbkRjLXBTQV8zdEdVTjFUTGU1LWdJZTZjd3RNSko4NDAxdWFHVkZqZDlETGF6RjZSM21ITWs5akYwZU5XelYzSklIYXliRW5IN1JZVWdZeg?oc=5&hl=en-US&gl=US&ceid=US%3Aen) ⭐️ 9.0/10 [时政]
 
-中国人民解放军舰艇在南海一处有争议的浅滩附近，对美菲联合军事演习进行了跟踪监视。 这一事件凸显了南海地区地缘政治紧张局势的升级，多个国家在该地区存在重叠的领土主张，可能影响区域稳定和国际海洋秩序。 跟踪监视发生在争议浅滩附近，根据《联合国海洋法公约》，浅滩属于低潮高地，可被主张为专属经济区的一部分。
+由于美国和伊朗之间军事打击风险升高，商业船只正从霍尔木兹海峡附近区域撤离。 此次撤离表明美伊紧张局势严重升级，威胁到通过全球最重要咽喉要道之一的石油运输和海上贸易。 据《纽约时报》报道，船只正主动离开该区域，反映出航运公司为避免空袭或海上交火可能造成的附带损害而做出的实时运营决策。
 
-rss · Buzzing China · 6月29日 10:28
+rss · Buzzing News · 6月29日 23:38
 
-**背景**: 南海是一条具有丰富渔场和潜在油气资源的战略水道。中国、菲律宾、越南、马来西亚、文莱和台湾地区存在相互竞争的主张。美国开展航行自由行动并与盟友举行联合演习，以维护国际法。
+**背景**: 霍尔木兹海峡是连接波斯湾与阿曼湾的狭窄水道，全球约 20%的石油经此运输。美伊紧张局势曾因核计划、地区影响力和军事姿态而周期性爆发，导致过往油轮被扣押和水雷袭击事件。当前升级似乎涉及直接打击或打击威胁，促使商业航运采取预防性撤离。
 
-**标签**: `#South China Sea`, `#PLA`, `#US-Philippine drills`, `#geopolitical tension`, `#military monitoring`
+**标签**: `#US-Iran conflict`, `#geopolitics`, `#maritime security`, `#international relations`
 
 ---
 
 ## 社会热点 (Social Hotspots)
 
-<a id="item-11"></a>
-### [大众 10 万人重组计划：汽车工业新规则下的阵痛](https://www.tmtpost.com/8045924.html) ⭐️ 8.0/10 [社会热点]
+<a id="item-15"></a>
+### [8.3 万次举报中 94.8%不实，小学教师无奈躺平](https://www.tmtpost.com/8044975.html) ⭐️ 8.0/10 [社会热点]
 
-据报道，大众汽车正计划裁减多达 10 万个岗位，并关闭四家德国工厂，这是一项历史性的重组计划，其背后是中国竞争对手的压力和欧洲市场需求的下滑。 此次重组标志着汽车行业的一个关键转折点，像大众这样的传统巨头必须适应电动化和全球竞争的新规则。潜在的 10 万人失业将在德国乃至全球产生深远的经济和社会影响。 潜在的裁员约占大众全球员工的 15%，并且是在已与工会商定的 5 万人裁员基础上新增的。该计划还可能涉及关闭四家德国工厂，这在公司历史上是前所未有的。
+一份报告显示，在中国针对小学教师的 8.3 万次举报中，94.8%被认定为不实，这导致教师普遍出现“躺平”现象，即主动减少教学投入。 这凸显了家长与教育者之间信任的系统性流失，打击了教师士气，并威胁到小学教育质量。同时也反映了更广泛的社会压力和线上举报文化的影响。 94.8%的不实举报率表明绝大多数指控缺乏依据，但调查过程仍给教师带来负担。“躺平”一词原指年轻人退出社会竞争，此处则指教师主动减少积极投入。
 
-rss · 钛媒体 · 6月29日 11:18
+rss · 钛媒体 · 6月29日 10:37
 
-**背景**: 汽车行业正经历一场由电动汽车转型和中国汽车制造商崛起驱动的重大变革。像大众这样的传统制造商面临欧洲销量下滑，以及来自在电动汽车技术和成本上占据优势的中国品牌的激烈竞争。为了生存，大众必须大幅削减成本并重组业务，这一过程如今正触及其在德国本土的市场。
+**背景**: 在中国，“躺平”是一个年轻人中流行的俚语，指拒绝激烈竞争、只做最低限度的事情。在教育领域，面对大量不实举报的教师可能选择避免任何可能引发新举报的行为，从而在职业上“躺平”。这一现象因线上举报文化盛行和教师保护不足而加剧。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.iux24.com/zh/news/volkswagen-considers-cutting-100-000-jobs-in-potential-german-plant-closures-20260626/">Volkswagen 权衡裁减 10 万个岗位的历史性重组计划 | IUX24</a></li>
-<li><a href="https://www.cnn.com/2026/06/26/economy/volkswagen-job-cuts">Volkswagen reportedly planning to axe 100,000 jobs | CNN Business</a></li>
-<li><a href="https://cn.wsj.com/articles/大众汽车深化降本重组-裁员或达10万人-2c0a9bba">大众汽车深化降本重组，裁员或达10万人 - Wsj</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tang_ping">Tang ping - Wikipedia</a></li>
+<li><a href="https://hskstory.com/slang/tangping">Tang Ping 躺平 Meaning — 'Lying Flat' Chinese Slang | HSKStory</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Volkswagen`, `#restructuring`, `#automotive industry`, `#layoffs`, `#industry transformation`
-
----
-
-<a id="item-12"></a>
-### [8.3 万次举报 94.8%不实，教师躺平](https://www.tmtpost.com/8044975.html) ⭐️ 8.0/10 [社会热点]
-
-最近一篇文章披露，针对中国小学教师的 8.3 万次举报中，94.8%被证实为不实，导致许多教师感到无奈并采取‘躺平’态度。 这凸显了家长与教师之间信任的严重缺失，导致教师倦怠，不愿积极投入教育工作。大量不实举报威胁教师职业的稳定性和中国小学教育的质量。 8.3 万次举报和 94.8%不实率的数据来自钛媒体的一篇文章，反映了教师日益成为无端投诉目标的广泛社会现象。‘躺平’反应表明教师为避免风险而放弃额外责任。
-
-rss · 钛媒体 · 6月29日 10:37
-
-**背景**: 在中国，小学教师经常面临来自家长的压力，家长可能就教学方法、纪律或其他问题提出投诉。‘躺平’是近年来流行的术语，描述一种放弃奋斗、接受最低努力的心态，通常是对系统性压力的回应。这篇文章揭示了不实举报如何加剧了教师中的这一现象。
-
-**标签**: `#education`, `#teacher burnout`, `#false reports`, `#lying flat`, `#social issue`
+**标签**: `#education`, `#teacher burnout`, `#false reports`, `#social phenomenon`, `#China`
 
 ---
