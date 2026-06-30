@@ -36,7 +36,7 @@ jobs:
           # Modify these based on your data/config.github.json provider settings
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           HORIZON_AI_BASE_URL: ${{ secrets.HORIZON_AI_BASE_URL }}
-          HORIZON_NTFY_TOPIC: ${{ secrets.HORIZON_NTFY_TOPIC }}
+          HORIZON_NTFY_TOPIC_PM: ${{ secrets.HORIZON_NTFY_TOPIC_PM }}
           HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
         run: uv run horizon
 
