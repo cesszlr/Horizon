@@ -2,7 +2,7 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # Runs every day at 8:00 AM
+    - cron: '0 5 * * *'  # Runs every day at 5:00 AM
       timezone: 'Asia/Shanghai'
   workflow_dispatch:      # Allow manual trigger
 
@@ -50,3 +50,32 @@ jobs:
           commit_message: "📝 Daily Summary: ${{ env.DATE }}"
           publish_branch: gh-pages
           enable_jekyll: true
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: built-site-src
+
+      - name: Build Jekyll site
+        run: |
+          cd built-site-src
+          # 动态创建 Gemfile，避免 Cloudflare 或本地缺少 Jekyll 插件和主题
+          echo 'source "https://rubygems.org"' > Gemfile
+          echo 'gem "jekyll", "~> 4.3"' >> Gemfile
+          echo 'gem "jekyll-theme-cayman"' >> Gemfile
+          echo 'gem "jekyll-feed"' >> Gemfile
+          
+          # 使用 Docker 构建 Jekyll 站点，极其干净，不需要手动安装 Ruby
+          docker run --rm \
+            -v "$PWD:/srv/jekyll" \
+            -v "$PWD/../dist-html:/srv/jekyll/_site" \
+            jekyll/jekyll:4.2.0 \
+            bash -c "bundle install && jekyll build"
+      
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ../dist-html --project-name=horizon
