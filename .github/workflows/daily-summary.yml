@@ -13,43 +13,43 @@ jobs:
       contents: write  # Needed to commit changes
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
+      # - name: Checkout code
+      #   uses: actions/checkout@v6
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
+      # - name: Set up Python
+      #   uses: actions/setup-python@v6
+      #   with:
+      #     python-version: "3.12"
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v8.2.0
+      # - name: Install uv
+      #   uses: astral-sh/setup-uv@v8.2.0
 
-      - name: Install dependencies
-        run: uv sync
+      # - name: Install dependencies
+      #   run: uv sync
 
-      - name: Prepare GitHub Actions config
-        run: cp data/config.github.json data/config.json
+      # - name: Prepare GitHub Actions config
+      #   run: cp data/config.github.json data/config.json
 
-      - name: Run Horizon
-        env:
-          # Map secrets to environment variables expected by config.json
-          # Modify these based on your data/config.github.json provider settings
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          HORIZON_AI_BASE_URL: ${{ secrets.HORIZON_AI_BASE_URL }}
-        run: uv run horizon
+      # - name: Run Horizon
+      #   env:
+      #     # Map secrets to environment variables expected by config.json
+      #     # Modify these based on your data/config.github.json provider settings
+      #     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      #     HORIZON_AI_BASE_URL: ${{ secrets.HORIZON_AI_BASE_URL }}
+      #   run: uv run horizon
 
-      - name: Set current date as environment variable
-        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      # - name: Set current date as environment variable
+      #   run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          keep_files: true  # Keep existing summaries on gh-pages branch
-          commit_message: "📝 Daily Summary: ${{ env.DATE }}"
-          publish_branch: gh-pages
-          enable_jekyll: true
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v4
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./docs
+      #     keep_files: true  # Keep existing summaries on gh-pages branch
+      #     commit_message: "📝 Daily Summary: ${{ env.DATE }}"
+      #     publish_branch: gh-pages
+      #     enable_jekyll: true
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v6
@@ -60,13 +60,19 @@ jobs:
       - name: Build Jekyll site
         run: |
           cd built-site-src
-          # 动态创建 Gemfile，避免 Cloudflare 或本地缺少 Jekyll 插件和主题
+          # 1. 动态创建 Gemfile
           echo 'source "https://rubygems.org"' > Gemfile
           echo 'gem "jekyll", "~> 4.3"' >> Gemfile
           echo 'gem "jekyll-theme-cayman"' >> Gemfile
           echo 'gem "jekyll-feed"' >> Gemfile
           
-          # 使用 Docker 构建 Jekyll 站点，极其干净，不需要手动安装 Ruby
+          # 2. 关键修复：赋予当前目录以及输出目录所有用户可读写权限 (777)
+          # 这样 Docker 容器内的非 root 用户就可以写入 Gemfile.lock 和静态文件了
+          chmod -R 777 .
+          mkdir -p ../dist-html
+          chmod -R 777 ../dist-html
+          
+          # 3. 使用 Docker 构建 Jekyll 站点
           docker run --rm \
             -v "$PWD:/srv/jekyll" \
             -v "$PWD/../dist-html:/srv/jekyll/_site" \
