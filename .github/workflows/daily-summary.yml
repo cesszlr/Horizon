@@ -56,28 +56,26 @@ jobs:
         with:
           ref: gh-pages
           path: built-site-src
-      
+
       - name: Create Gemfile
         run: |
           cd built-site-src
-          # 1. 动态创建 Gemfile
           echo 'source "https://rubygems.org"' > Gemfile
           echo 'gem "jekyll", "~> 4.3"' >> Gemfile
           echo 'gem "jekyll-theme-cayman"' >> Gemfile
           echo 'gem "jekyll-feed"' >> Gemfile
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true  # 开启缓存，下一次运行只需几秒钟
+          working-directory: built-site-src
           
-          # 2. 关键修复：赋予当前目录以及输出目录所有用户可读写权限 (777)
-          # 这样 Docker 容器内的非 root 用户就可以写入 Gemfile.lock 和静态文件了
-          chmod -R 777 .
-          mkdir -p ../dist-html
-          chmod -R 777 ../dist-html
-          
-          # 3. 使用 Docker 构建 Jekyll 站点
-          docker run --rm \
-            -v "$PWD:/srv/jekyll" \
-            -v "$PWD/../dist-html:/srv/jekyll/_site" \
-            jekyll/jekyll:4.2.0 \
-            bash -c "bundle install && jekyll build"
+      - name: Build Jekyll site
+        run: |
+          cd built-site-src
+          bundle exec jekyll build --destination ../dist-html
       
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
