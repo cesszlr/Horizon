@@ -71,7 +71,7 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true  # 开启缓存，下一次运行只需几秒钟
           working-directory: built-site-src
-          
+
       - name: Build Jekyll site
         run: |
           cd built-site-src
@@ -82,4 +82,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ../dist-html --project-name=horizon
+          command: pages deploy dist-html --project-name=horizon
