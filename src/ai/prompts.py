@@ -20,12 +20,14 @@ Respond with valid JSON only:
 
 If there are no duplicates at all, return: {{"duplicates": []}}"""
 
-CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter high-value updates across multiple domains: Technology, Politics/Current Affairs (时政), and Social/Social Media Hotspots (社会/社交媒体热点).
+CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter high-value updates across multiple domains: Technology, Politics/Current Affairs (时政), Social/Social Media Hotspots (社会/社交媒体热点), Trending Hot Topics (热搜), and Product Management (产品经理).
 
 First, classify the content into one of the following categories:
 - "technology"
 - "politics" (Politics/Current Affairs)
 - "social_hotspot" (Social/Social Media Hotspots)
+- "trending" (Trending Hot Topics/热搜)
+- "product_manager" (Product Management/产品经理)
 - "other"
 
 Then, score content on a 0-10 scale based on importance and relevance for that specific category:
@@ -51,7 +53,21 @@ Then, score content on a 0-10 scale based on importance and relevance for that s
 - **3-4: Low Priority** - Temporary viral trends (memes), personal stories with low broader impact.
 - **0-2: Noise** - Personal drama, spam, celebrity gossip, or trivial social media posts.
 
-### 4. Other (其他)
+### 4. Trending Hot Topics (热搜)
+- **9-10: Groundbreaking / Exploding** - Major real-time events that dominate search engines or social media trend charts globally or nationally, representing breaking news of huge societal focus.
+- **7-8: High Value** - Highly discussed trending topics on social platforms, hot searches with deep societal/economic analysis, widely debated topics or mainstream public opinions.
+- **5-6: Interesting** - Common trending topics, search chart items with moderate discussion, interesting cultural stories.
+- **3-4: Low Priority** - Temporary, shallow viral trends, minor celebrity or pop-culture topics with low long-term value.
+- **0-2: Noise** - Spam, clickbait, individual drama, or low-quality/meaningless hot search items.
+
+### 5. Product Management (产品经理)
+- **9-10: Groundbreaking / Masterclass** - System-level product design philosophy shifts, major product strategy transformations of industry giants, highly influential product teardowns/analyses, or creation of new product paradigms (e.g. next-gen AI interfaces).
+- **7-8: High Value** - In-depth product manager guides, user research/UIUX design case studies, agile/scrum methodology best practices, high-quality analysis of product growth or monetization strategies.
+- **5-6: Interesting** - Regular feature announcements, product teardowns, tools recommendation, or career development insights for PMs.
+- **3-4: Low Priority** - General product marketing materials, basic template sharing, routine updates of small apps.
+- **0-2: Noise** - Recruitment ads, corporate PR fluff, or generic motivational content.
+
+### 6. Other (其他)
 - Score 0-10 based on general relevance and importance.
 
 Consider:
@@ -77,7 +93,7 @@ URL: {url}
 
 Respond with valid JSON only:
 {{
-  "category": "technology" | "politics" | "social_hotspot" | "other",
+  "category": "technology" | "politics" | "social_hotspot" | "trending" | "product_manager" | "other",
   "score": <number>,
   "reason": "<explanation>",
   "summary": "<one-sentence-summary>",

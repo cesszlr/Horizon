@@ -170,3 +170,69 @@ def test_generate_summary_includes_category():
 
     assert "[技术]" in result_zh
     assert "[时政]" in result_zh
+
+
+def test_generate_summary_custom_category_groups():
+    summarizer = DailySummarizer()
+    item1 = _make_item(1)
+    item1.ai_category = "pm"
+    item2 = _make_item(2)
+    item2.ai_category = "finance"
+    item3 = _make_item(3)
+    item3.ai_category = "other-stuff"
+
+    # Define custom category groups
+    custom_groups = {
+        "pm_group": {
+            "name": "PM Corner (产品经理专栏)",
+            "categories": ["pm", "product_manager"]
+        },
+        "finance_group": {
+            "name": "Finance Updates (金融动态)",
+            "categories": ["finance"]
+        }
+    }
+
+    result = _run_async(
+        summarizer.generate_summary(
+            [item1, item2, item3],
+            date="2026-04-25",
+            total_fetched=10,
+            language="zh",
+            category_groups=custom_groups,
+            default_group="misc"
+        )
+    )
+
+    # Assert that custom section names appear in TOC and header
+    assert "PM Corner (产品经理专栏)" in result
+    assert "Finance Updates (金融动态)" in result
+    assert "Misc" in result  # default_group displays as capitalize
+
+    # Assert that the items are correctly listed
+    assert "1. [Important Item 1]" in result
+    assert "2. [Important Item 2]" in result
+    assert "3. [Important Item 3]" in result
+
+
+def test_generate_summary_trending_and_pm_default():
+    summarizer = DailySummarizer()
+    item_trending = _make_item(1)
+    item_trending.ai_category = "trending"
+    item_pm = _make_item(2)
+    item_pm.ai_category = "product_manager"
+
+    result = _run_async(
+        summarizer.generate_summary(
+            [item_trending, item_pm],
+            date="2026-04-25",
+            total_fetched=10,
+            language="zh",
+        )
+    )
+
+    # Defaults should render both new categories
+    assert "[热搜]" in result
+    assert "[产品经理]" in result
+    assert "热搜 (Trending Hot Topics)" in result
+    assert "产品经理 (Product Management)" in result

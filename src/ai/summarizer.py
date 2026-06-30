@@ -1,7 +1,7 @@
 """Daily summary generation — pure programmatic rendering."""
 
 import re
-from typing import List, Dict
+from typing import List, Dict, Any
 
 from ..models import ContentItem
 
@@ -41,6 +41,8 @@ LABELS = {
             "technology": "Technology",
             "politics": "Politics & Current Affairs",
             "social_hotspot": "Social & Social Media Hotspots",
+            "trending": "Trending Hot Topics",
+            "product_manager": "Product Management",
             "other": "Other",
         },
     },
@@ -67,6 +69,8 @@ LABELS = {
             "technology": "技术 (Technology)",
             "politics": "时政 (Politics)",
             "social_hotspot": "社会热点 (Social Hotspots)",
+            "trending": "热搜 (Trending Hot Topics)",
+            "product_manager": "产品经理 (Product Management)",
             "other": "其他 (Other)",
         },
     },
@@ -93,12 +97,16 @@ class DailySummarizer:
                 "technology": "技术",
                 "politics": "时政",
                 "social_hotspot": "社会热点",
+                "trending": "热搜",
+                "product_manager": "产品经理",
                 "other": "其他",
             },
             "en": {
                 "technology": "Tech",
                 "politics": "Politics",
                 "social_hotspot": "Social",
+                "trending": "Trending",
+                "product_manager": "PM",
                 "other": "Other",
             }
         }
@@ -106,7 +114,7 @@ class DailySummarizer:
         return lang_map.get(cat.lower(), cat)
 
     def _normalize_category_key(self, item: ContentItem) -> str:
-        """Normalize category value to one of: technology, politics, social_hotspot, other."""
+        """Normalize category value to one of: technology, politics, social_hotspot, trending, product_manager, other."""
         cat = item.ai_category
         if not cat:
             cat = item.metadata.get("category")
@@ -120,8 +128,75 @@ class DailySummarizer:
             return "politics"
         elif cat_lower in ("social_hotspot", "social hot topics", "social network hot topics"):
             return "social_hotspot"
+        elif cat_lower in ("trending", "hot search", "热搜"):
+            return "trending"
+        elif cat_lower in ("product_manager", "pm", "产品经理"):
+            return "product_manager"
         
         return "other"
+
+    def _group_items_by_category(
+        self,
+        items: List[ContentItem],
+        category_groups: Dict[str, Any],
+        default_group: str,
+    ) -> Dict[str, List[tuple[int, ContentItem]]]:
+        """Group items according to the category_groups definition."""
+        grouped = {group_key: [] for group_key in category_groups.keys()}
+        grouped[default_group] = []
+
+        cat_to_group = {}
+        for group_key, group in category_groups.items():
+            categories = getattr(group, "categories", None)
+            if categories is None and isinstance(group, dict):
+                categories = group.get("categories", [])
+            for cat in (categories or []):
+                cat_to_group[cat.lower()] = group_key
+
+        for i, item in enumerate(items):
+            cat = item.ai_category
+            if not cat:
+                cat = item.metadata.get("category")
+            
+            group_key = default_group
+            if cat:
+                cat_str = str(cat).lower()
+                if cat_str in cat_to_group:
+                    group_key = cat_to_group[cat_str]
+                elif cat_str in category_groups:
+                    group_key = cat_str
+                else:
+                    found = False
+                    for group_k, group in category_groups.items():
+                        categories = getattr(group, "categories", None)
+                        if categories is None and isinstance(group, dict):
+                            categories = group.get("categories", [])
+                        if any(c.lower() in cat_str or cat_str in c.lower() for c in (categories or [])):
+                            group_key = group_k
+                            found = True
+                            break
+                    if not found:
+                        group_key = default_group
+
+            grouped[group_key].append((i + 1, item))
+            
+        return grouped
+
+    def _get_group_display_name(
+        self,
+        group_key: str,
+        category_groups: Dict[str, Any],
+        default_group: str,
+        section_labels: Dict[str, str],
+    ) -> str:
+        if group_key in category_groups:
+            group = category_groups[group_key]
+            name = getattr(group, "name", None)
+            if name is None and isinstance(group, dict):
+                name = group.get("name")
+            if name:
+                return name
+        return section_labels.get(group_key, group_key.capitalize())
 
     async def generate_summary(
         self,
@@ -129,6 +204,8 @@ class DailySummarizer:
         date: str,
         total_fetched: int,
         language: str = "en",
+        category_groups: Dict[str, Any] | None = None,
+        default_group: str = "other",
     ) -> str:
         """Generate daily summary in Markdown format.
 
@@ -139,6 +216,8 @@ class DailySummarizer:
             date: Date string (YYYY-MM-DD)
             total_fetched: Total number of items fetched before filtering
             language: Output language, either "en" or "zh"
+            category_groups: Optional configuration-driven category groups map
+            default_group: Default group key for items not matching any category group
 
         Returns:
             str: Markdown formatted summary
@@ -154,26 +233,43 @@ class DailySummarizer:
             "---\n\n"
         )
 
-        # Group items by category (preserving global index for anchor compatibility)
-        grouped_items = {
-            "technology": [],
-            "politics": [],
-            "social_hotspot": [],
-            "other": []
-        }
-        for i, item in enumerate(items):
-            cat_key = self._normalize_category_key(item)
-            grouped_items[cat_key].append((i + 1, item))
-
         section_labels = labels.get("category_sections", {})
+        if not category_groups:
+            category_groups = {
+                "technology": {
+                    "name": section_labels.get("technology", "Technology"),
+                    "categories": ["technology", "tech", "ai", "programming languages", "cloud native", "open source"]
+                },
+                "politics": {
+                    "name": section_labels.get("politics", "Politics"),
+                    "categories": ["politics", "politics / current affairs"]
+                },
+                "social_hotspot": {
+                    "name": section_labels.get("social_hotspot", "Social"),
+                    "categories": ["social_hotspot", "social hot topics", "social network hot topics"]
+                },
+                "trending": {
+                    "name": section_labels.get("trending", "Trending"),
+                    "categories": ["trending", "hot search", "热搜"]
+                },
+                "product_manager": {
+                    "name": section_labels.get("product_manager", "Product Manager"),
+                    "categories": ["product_manager", "pm", "产品经理"]
+                }
+            }
+
+        grouped_items = self._group_items_by_category(items, category_groups, default_group)
+        render_keys = list(category_groups.keys())
+        if default_group not in render_keys:
+            render_keys.append(default_group)
 
         # TOC grouped by category
         toc_parts = []
-        for cat_key in ["technology", "politics", "social_hotspot", "other"]:
-            cat_items = grouped_items[cat_key]
+        for cat_key in render_keys:
+            cat_items = grouped_items.get(cat_key, [])
             if not cat_items:
                 continue
-            cat_name = section_labels.get(cat_key, cat_key.capitalize())
+            cat_name = self._get_group_display_name(cat_key, category_groups, default_group, section_labels)
             toc_parts.append(f"#### {cat_name}")
             for idx, item in cat_items:
                 _t = item.metadata.get(f"title_{language}") or item.title
@@ -190,11 +286,11 @@ class DailySummarizer:
 
         # Content Details grouped by category
         detail_parts = []
-        for cat_key in ["technology", "politics", "social_hotspot", "other"]:
-            cat_items = grouped_items[cat_key]
+        for cat_key in render_keys:
+            cat_items = grouped_items.get(cat_key, [])
             if not cat_items:
                 continue
-            cat_name = section_labels.get(cat_key, cat_key.capitalize())
+            cat_name = self._get_group_display_name(cat_key, category_groups, default_group, section_labels)
             detail_parts.append(f"## {cat_name}\n\n")
             for idx, item in cat_items:
                 detail_parts.append(self._format_item(item, labels, language, idx))
@@ -207,6 +303,8 @@ class DailySummarizer:
         date: str,
         total_fetched: int,
         language: str = "en",
+        category_groups: Dict[str, Any] | None = None,
+        default_group: str = "other",
     ) -> str:
         """Generate a compact overview for multi-message webhook delivery."""
         labels = LABELS.get(language, LABELS["en"])
@@ -226,25 +324,42 @@ class DailySummarizer:
                 "Details will be sent item by item so you can read only the topics you care about.\n\n"
             )
 
-        # Group items by category (preserving global index)
-        grouped_items = {
-            "technology": [],
-            "politics": [],
-            "social_hotspot": [],
-            "other": []
-        }
-        for i, item in enumerate(items):
-            cat_key = self._normalize_category_key(item)
-            grouped_items[cat_key].append((i + 1, item))
-
         section_labels = labels.get("category_sections", {})
+        if not category_groups:
+            category_groups = {
+                "technology": {
+                    "name": section_labels.get("technology", "Technology"),
+                    "categories": ["technology", "tech", "ai", "programming languages", "cloud native", "open source"]
+                },
+                "politics": {
+                    "name": section_labels.get("politics", "Politics"),
+                    "categories": ["politics", "politics / current affairs"]
+                },
+                "social_hotspot": {
+                    "name": section_labels.get("social_hotspot", "Social"),
+                    "categories": ["social_hotspot", "social hot topics", "social network hot topics"]
+                },
+                "trending": {
+                    "name": section_labels.get("trending", "Trending"),
+                    "categories": ["trending", "hot search", "热搜"]
+                },
+                "product_manager": {
+                    "name": section_labels.get("product_manager", "Product Manager"),
+                    "categories": ["product_manager", "pm", "产品经理"]
+                }
+            }
+
+        grouped_items = self._group_items_by_category(items, category_groups, default_group)
+        render_keys = list(category_groups.keys())
+        if default_group not in render_keys:
+            render_keys.append(default_group)
 
         entries = []
-        for cat_key in ["technology", "politics", "social_hotspot", "other"]:
-            cat_items = grouped_items[cat_key]
+        for cat_key in render_keys:
+            cat_items = grouped_items.get(cat_key, [])
             if not cat_items:
                 continue
-            cat_name = section_labels.get(cat_key, cat_key.capitalize())
+            cat_name = self._get_group_display_name(cat_key, category_groups, default_group, section_labels)
             entries.append(f"\n*{cat_name}*")
             for idx, item in cat_items:
                 title = str(item.metadata.get(f"title_{language}") or item.title).replace("[", "(").replace("]", ")")

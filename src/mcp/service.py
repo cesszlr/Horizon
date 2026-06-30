@@ -454,6 +454,8 @@ class HorizonPipelineService:
             date_str,
             total_fetched,
             language=language,
+            category_groups=ctx.config.filtering.category_groups,
+            default_group=ctx.config.filtering.default_group,
         )
 
         run_summary_path = self.run_store.save_summary(run_id, language, summary)
