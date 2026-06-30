@@ -114,7 +114,7 @@
     "request_body": {
       "topic": "${HORIZON_NTFY_TOPIC}",
       "title": "Horizon 每日速递 • #{date}",
-      "message": "📊 本日共筛选出 **#{important_items}** / #{all_items} 条高价值资讯：\n\n#{summary}",
+      "message": "📊 本日筛选出 **#{important_items}** / #{all_items} 条资讯，以下为精选目录：\n\n#{summary?limit=1500&split=---}\n\n👉 更多详情请点击下方按钮阅读网页版。",
       "priority": 4,
       "tags": [
         "newspaper",
