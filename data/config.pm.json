@@ -1,0 +1,167 @@
+{
+  "version": "1.0",
+  "ai": {
+    "provider": "openai",
+    "provider_chain": null,
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "base_url": "${HORIZON_AI_BASE_URL}",
+    "api_key_env": "OPENAI_API_KEY",
+    "temperature": 0.3,
+    "max_tokens": 8192,
+    "throttle_sec": 0.0,
+    "analysis_concurrency": 5,
+    "enrichment_concurrency": 5,
+    "languages": [
+      "zh"
+    ]
+  },
+  "sources": {
+    "hackernews": {
+      "enabled": false,
+      "fetch_top_stories": 30,
+      "min_score": 100
+    },
+    "rss": [
+      {
+        "name": "量子位",
+        "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
+        "enabled": true,
+        "category": "AI"
+      },
+      {
+        "name": "人人都是产品经理",
+        "url": "https://www.woshipm.com/feed",
+        "enabled": true,
+        "category": "product_manager"
+      },
+      {
+        "name": "人人都是产品经理日榜",
+        "url": "https://plink.anyfeeder.com/woshipm/popular",
+        "enabled": true,
+        "category": "product_manager"
+      },
+      {
+        "name": "微博热搜",
+        "url": "https://plink.anyfeeder.com/weibo/search/hot",
+        "enabled": true,
+        "category": "trending"
+      },
+      {
+        "name": "知乎日榜",
+        "url": "https://plink.anyfeeder.com/zhihu/daily",
+        "enabled": true,
+        "category": "trending"
+      },
+      {
+        "name": "虎嗅",
+        "url": "https://plink.anyfeeder.com/huxiu",
+        "enabled": true,
+        "category": "trending"
+      },
+      {
+        "name": "钛媒体",
+        "url": "https://www.tmtpost.com/rss.xml",
+        "enabled": true,
+        "category": "trending"
+      },
+      {
+        "name": "雷峰网",
+        "url": "https://plink.anyfeeder.com/leiphone",
+        "enabled": true,
+        "category": "AI"
+      },
+      {
+        "name": "新智元",
+        "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+        "enabled": true,
+        "category": "AI"
+      },
+      {
+        "name": "36氪",
+        "url": "https://plink.anyfeeder.com/36kr",
+        "enabled": true,
+        "category": "trending"
+      }
+    ],
+    "reddit": {
+      "enabled": false,
+      "subreddits": [],
+      "users": [],
+      "fetch_comments": 10
+    },
+    "telegram": {
+      "enabled": false,
+      "channels": []
+    },
+    "twitter": null,
+    "openbb": null,
+    "ossinsight": {
+      "enabled": false
+    }
+  },
+  "filtering": {
+    "ai_score_threshold": 6.5,
+    "time_window_hours": 24,
+    "max_items": 20,
+    "category_groups": {
+      "ai": {
+        "name": "AI 探索 (AI)",
+        "limit": 6,
+        "categories": [
+          "AI",
+          "technology",
+          "tech"
+        ]
+      },
+      "product_manager": {
+        "name": "产品专栏 (Product Management)",
+        "limit": 6,
+        "categories": [
+          "product_manager",
+          "pm",
+          "产品经理"
+        ]
+      },
+      "trending": {
+        "name": "热搜焦点 (Trending)",
+        "limit": 6,
+        "categories": [
+          "trending",
+          "social_hotspot",
+          "Social Hot Topics",
+          "Social Network Hot Topics"
+        ]
+      }
+    },
+    "default_group": "other",
+    "default_group_limit": 3
+  },
+  "email": null,
+  "webhook": {
+    "enabled": true,
+    "url_env": "HORIZON_WEBHOOK_URL",
+    "delivery": "summary",
+    "platform": "generic",
+    "layout": "markdown",
+    "request_body": {
+      "topic": "${HORIZON_NTFY_TOPIC_PM}",
+      "title": "Horizon 每日速递 • #{date}",
+      "message": "📊 本日筛选出 **#{important_items}** / #{all_items} 条资讯，以下为精选目录：\n\n#{summary?limit=1500&split=---}\n\n👉 更多详情请点击下方按钮阅读网页版。",
+      "priority": 4,
+      "tags": [
+        "newspaper",
+        "chart_with_upwards_trend"
+      ],
+      "markdown": true,
+      "click": "https://pm.bao-horizon.pages.dev/#{date}/summary-#{language}",
+      "actions": [
+        {
+          "action": "view",
+          "label": "🌐 网页版完整报告",
+          "url": "https://pm.bao-horizon.pages.dev/#{date}/summary-#{language}",
+          "clear": true
+        }
+      ]
+    }
+  }
+}
