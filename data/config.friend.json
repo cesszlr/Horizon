@@ -63,6 +63,24 @@
         "url": "https://www.tmtpost.com/rss.xml",
         "enabled": true,
         "category": "trending"
+      },
+      {
+        "name": "雷峰网",
+        "url": "https://plink.anyfeeder.com/leiphone",
+        "enabled": true,
+        "category": "AI"
+      },
+      {
+        "name": "新智元",
+        "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+        "enabled": true,
+        "category": "AI"
+      },
+      {
+        "name": "36氪",
+        "url": "https://plink.anyfeeder.com/36kr",
+        "enabled": true,
+        "category": "trending"
       }
     ],
     "reddit": {
@@ -135,12 +153,12 @@
         "chart_with_upwards_trend"
       ],
       "markdown": true,
-      "click": "https://bao-horizon.pages.dev/#{date}/summary-#{language}",
+      "click": "https://pm.bao-horizon.pages.dev/#{date}/summary-#{language}",
       "actions": [
         {
           "action": "view",
           "label": "🌐 网页版完整报告",
-          "url": "https://bao-horizon.pages.dev/#{date}/summary-#{language}",
+          "url": "https://pm.bao-horizon.pages.dev/#{date}/summary-#{language}",
           "clear": true
         }
       ]
