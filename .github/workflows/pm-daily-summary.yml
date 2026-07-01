@@ -1,4 +1,4 @@
-name: Daily Horizon Summary
+name: Daily Horizon Summary - PM
 
 on:
   # schedule:
@@ -28,7 +28,7 @@ jobs:
         run: uv sync
 
       - name: Prepare GitHub Actions config
-        run: cp data/config.github.json data/config.json
+        run: cp data/config.friend.json data/config.json
 
       - name: Run Horizon
         env:
@@ -36,7 +36,7 @@ jobs:
           # Modify these based on your data/config.github.json provider settings
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           HORIZON_AI_BASE_URL: ${{ secrets.HORIZON_AI_BASE_URL }}
-          HORIZON_NTFY_TOPIC: ${{ secrets.HORIZON_NTFY_TOPIC }}
+          HORIZON_NTFY_TOPIC_PM: ${{ secrets.HORIZON_NTFY_TOPIC_PM }}
           HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
         run: uv run horizon
 
@@ -50,13 +50,13 @@ jobs:
           publish_dir: ./docs
           keep_files: true  # Keep existing summaries on gh-pages branch
           commit_message: "📝 Daily Summary: ${{ env.DATE }}"
-          publish_branch: gh-pages
+          publish_branch: gh-pages-pm
           enable_jekyll: true
 
       - name: Checkout gh-pages branch
         uses: actions/checkout@v6
         with:
-          ref: gh-pages
+          ref: gh-pages-pm
           path: built-site-src
 
       - name: Create Gemfile
@@ -84,4 +84,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist-html --project-name=cesszlr-horizon
+          command: pages deploy dist-html --project-name=bao-horizon
