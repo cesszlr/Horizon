@@ -5,406 +5,392 @@ date: 2026-07-02
 lang: zh
 ---
 
-> 从 110 条内容中筛选出 18 条重要资讯。
+> 从 119 条内容中筛选出 18 条重要资讯。
 
 ---
 
 #### AI 探索 (AI)
-1. [他山科技与图灵奖得主萨顿共建“机器人幼儿园”](#item-1) ⭐️ 9.0/10 [技术]
-10. [ICRA 2026 揭示具身智能三大趋势](#item-10) ⭐️ 8.0/10 [技术]
-11. [国产 AI 编程争霸：MiniMax 登顶，DeepSeek 性价比胜出](#item-11) ⭐️ 8.0/10 [技术]
-15. [IEEE 论文提出 MoonBit 语言 AI 完整训练路线](#item-15) ⭐️ 7.0/10 [技术]
-17. [物理 AI 到来，移动网络如何进化？](#item-17) ⭐️ 7.0/10 [技术]
-18. [Claude 封禁中国用户以防模型蒸馏](#item-18) ⭐️ 7.0/10 [技术]
+13. [ICRA 2026 揭示中国具身智能产业三大趋势](#item-13) ⭐️ 8.0/10 [技术]
+14. [图灵奖得主萨顿共建机器人幼儿园，推动具身智能新范式](#item-14) ⭐️ 8.0/10 [技术]
+15. [Ken Goldberg 在 ICRA 2026 质疑具身智能数据是否足够](#item-15) ⭐️ 8.0/10 [技术]
+16. [IEEE 论文提出 MoonBit 语言 AI 训练完整路线](#item-16) ⭐️ 7.0/10 [技术]
+17. [ICML 2026 投稿翻倍，机器学习方向换挡](#item-17) ⭐️ 7.0/10 [技术]
+18. [Anthropic Claude Code 暗藏针对中国监视代码](#item-18) ⭐️ 7.0/10 [技术]
 
 #### 产品专栏 (Product Management)
-3. [多智能体协作放大编码代理，突破单智能体局限](#item-3) ⭐️ 8.0/10 [产品经理]
-4. [AI 语音输入法成为 2026 年最火互联网产品](#item-4) ⭐️ 8.0/10 [产品经理]
-5. [唱吧出海东南亚：Gamoji 游戏陪玩平台下载量突破 300 万](#item-5) ⭐️ 8.0/10 [产品经理]
-6. [痛点等级：印尼洗脸扑营销的关键](#item-6) ⭐️ 8.0/10 [产品经理]
-7. [弦理论物理学家用诺特定理指导 AI 创业战略](#item-7) ⭐️ 8.0/10 [产品经理]
-8. [六种 PDF 跨页表格解析方案实测对比](#item-8) ⭐️ 8.0/10 [产品经理]
+2. [谷歌 27 亿收购的 AI 人才 22 个月后转投 OpenAI](#item-2) ⭐️ 8.0/10 [产品经理]
+3. [滴滴支付页面的信贷诱导策略](#item-3) ⭐️ 8.0/10 [产品经理]
+4. [AI Agent 进入性价比时代：产品经理如何重新选择大模型](#item-4) ⭐️ 8.0/10 [产品经理]
+5. [财务系统 AI 选型：场景比参数更重要](#item-5) ⭐️ 8.0/10 [产品经理]
+6. [构建定制化企业知识图谱的六条经验](#item-6) ⭐️ 8.0/10 [产品经理]
+7. [Agent 时代，定义正确比模型更稀缺](#item-7) ⭐️ 8.0/10 [产品经理]
 
 #### 热搜焦点 (Trending)
-2. [PlayStation 将于 2028 年停止实体游戏光盘](#item-2) ⭐️ 9.0/10 [热搜]
-9. [美国海关新规迫使货运代理拒收电商货物](#item-9) ⭐️ 8.0/10 [热搜]
-12. [核聚变初创爆发：AI 能源需求与政策催生投资狂潮](#item-12) ⭐️ 8.0/10 [热搜]
-13. [Valar 与英伟达演示微型核反应堆供电 AI 数据中心](#item-13) ⭐️ 8.0/10 [热搜]
-14. [美联储主席沃什：美国通胀仍过高](#item-14) ⭐️ 8.0/10 [热搜]
-16. [赢得利润却错过时代：谁在付出代价？](#item-16) ⭐️ 7.0/10 [热搜]
+1. [北大博士量子团队获高瓴创投领投](#item-1) ⭐️ 9.0/10 [热搜]
+8. [黄光裕 5 年败光 500 亿，痛失国美](#item-8) ⭐️ 8.0/10 [热搜]
+9. [约四分之一青少年自伤，成人浑然不知](#item-9) ⭐️ 8.0/10 [热搜]
+10. [作业帮失去了一代人的学习入口地位](#item-10) ⭐️ 8.0/10 [热搜]
+11. [美国 AI 自我设限，中国大模型迎来窗口期](#item-11) ⭐️ 8.0/10 [热搜]
+12. [美国海关新规导致小型电商卖家陷入困境](#item-12) ⭐️ 8.0/10 [热搜]
 
 ---
 
 ## AI 探索 (AI)
 
-<a id="item-1"></a>
-### [他山科技与图灵奖得主萨顿共建“机器人幼儿园”](https://www.leiphone.com/category/industrynews/LaVawKu3UpUILUSR.html) ⭐️ 9.0/10 [技术]
+<a id="item-13"></a>
+### [ICRA 2026 揭示中国具身智能产业三大趋势](https://www.leiphone.com/category/private/fDotgIuCGA028lZJ.html) ⭐️ 8.0/10 [技术]
 
-6 月 29 日，他山科技与图灵奖得主理查德·萨顿在北京共同揭牌“机器人幼儿园”，这是强化学习在具身智能领域的首个实体落地。该项目标志着机器人从被动模仿的“数据时代”正式迈向交互试错的“经验时代”。 这代表了具身智能领域的范式转变——从数据驱动的模仿学习转向基于强化学习的经验积累，可能从根本上改变机器人的学习和适应方式。该计划有望加速开发更自主、更适应环境的机器人，使其能够在真实世界中安全运行。 他山科技将为机器人幼儿园提供四个核心条件：允许犯错的机会、安全的探索环境、持续的真实交互、及时而明确的反馈。该公司已在全球人形机器人上部署了数十万个触觉指尖，并计划利用触觉定义机器人“疼痛”机制，驱动机器人内在探索动机。
-
-rss · 雷峰网 · 7月1日 06:18
-
-**背景**: 具身智能是指能够通过身体（如机器人）感知、学习并与物理世界交互的人工智能系统。传统机器人学习严重依赖从人类示范中进行的模仿学习，萨顿认为这种方式产生的行为“不够强大”。由萨顿开创的强化学习使智能体能够通过与环境的交互进行试错学习，类似于人类婴儿的学习方式。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://m.pedaily.cn/news/547928">追觅、海尔、安克都下场，「 具 身 智 能 」到底是噱头还是良方|投资界</a></li>
-<li><a href="https://c.m.163.com/news/a/JQKQIOTK0511831M.html">两会重磅 定 调，Manus一夜蹿红，什么是 具 身 智 能</a></li>
-<li><a href="http://www.broadview.com.cn/article/420497">被众多AI大佬看好的 具 身 智 能 到底是什么？ 它凭什么成为下一个AI...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#embodied AI`, `#reinforcement learning`, `#robot kindergarten`, `#Richard Sutton`, `#Tashan Technology`, `#AI paradigm shift`
-
----
-
-<a id="item-10"></a>
-### [ICRA 2026 揭示具身智能三大趋势](https://www.leiphone.com/category/robot/fDotgIuCGA028lZJ.html) ⭐️ 8.0/10 [技术]
-
-一份来自 ICRA 2026 维也纳会议的报告，基于对 30 多家中国企业的观察，揭示了具身智能产业的三大趋势，包括新型机器人本体、灵巧手以及完整的数据采集和算法展示。 该报告凸显了中国企业在具身智能领域的快速进展，标志着全球机器人及 AI 竞争格局的转变，并彰显了中国创新在该领域日益增长的影响力。 这些趋势是在 2026 年 6 月 1 日至 5 日于奥地利维也纳举行的 ICRA 2026 上发现的，中国参展商展示了令人印象深刻的现场演示，吸引了大量观众。报告特别指出了机器人硬件、灵巧操作以及集成 AI 流水线方面的进展。
+在维也纳举行的 ICRA 2026 上，超过 30 家中国企业展示了新型机器人本体、灵巧手以及完整的数据采集和算法流水线，揭示了中国具身智能产业的三大趋势。 这表明中国在具身智能领域（将人工智能与实体机器人相结合）的领导地位日益增强，并预示着该领域的商业化和创新正在加速。 雷锋网的文章报道称，中国企业展位因令人惊叹的现场演示而围满了人，突显了具身 AI 在硬件与软件集成方面的快速进展。
 
 rss · 雷峰网 · 7月1日 09:07
 
-**背景**: 具身智能是指通过传感器和执行器在物理环境中感知和行动的 AI 系统，其认知能力由身体与环境互动塑造。ICRA（IEEE 国际机器人与自动化会议）是机器人研究领域的顶级年度会议，是展示前沿进展的关键平台。中国企业在 ICRA 2026 上的强大参与反映了该国在机器人和 AI 领域日益增长的投资与创新。
+**背景**: 具身智能是人工智能的一个子领域，智能体通过与物理环境的交互来学习和行动，融合感知、认知和行动。ICRA（IEEE 机器人与自动化国际会议）是顶级的机器人会议，每年举办一次。2026 届于 6 月 1 日至 5 日在维也纳举行。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://2026.ieee-icra.org/">2026 IEEE International Conference on Robotics and Automation ( ICRA )</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Embodied_intelligence">Embodied intelligence</a></li>
+<li><a href="https://baike.baidu.com/item/具身智能/63286570">具身智能（智能体通过身体将感知、行动与认知深度融合的智能系统）_...</a></li>
+<li><a href="https://2026.ieee-icra.org/">2026 IEEE International Conference on Robotics and Automation ...</a></li>
+<li><a href="https://robohorizon.cn/zh/events/icra-2026-vienna/">ICRA 2026：IEEE 机器人与自动化旗舰会议进驻维也纳 | RoboHorizon</a></li>
 
 </ul>
 </details>
 
-**标签**: `#embodied intelligence`, `#robotics`, `#ICRA`, `#Chinese AI`, `#trends`
+**标签**: `#embodied intelligence`, `#robotics`, `#ICRA`, `#AI trends`, `#China`
 
 ---
 
-<a id="item-11"></a>
-### [国产 AI 编程争霸：MiniMax 登顶，DeepSeek 性价比胜出](https://www.leiphone.com/category/industrynews/ft5tFfCB8Zh0ZFo8.html) ⭐️ 8.0/10 [技术]
+<a id="item-14"></a>
+### [图灵奖得主萨顿共建机器人幼儿园，推动具身智能新范式](https://www.leiphone.com/category/industrynews/LaVawKu3UpUILUSR.html) ⭐️ 8.0/10 [技术]
 
-一项对比五款国产 AI 编程模型（DeepSeek V4 Pro、Kimi K2.6、Qwen 3.7 Max、GLM 5.1 和 MiniMax M3）的基准测试显示，MiniMax M3 在整体性能上领先，而 DeepSeek 在性价比方面表现最佳。评估使用真实工程任务，由 Claude Opus 4.7 从可运行性、正确性、可读性和可维护性四个维度进行评分。 这一对比凸显了国产 AI 模型在编程能力上的快速进步，编程能力对于智能体工作流和实际生产力至关重要。开发者和企业可以利用这些洞察，在顶级性能（MiniMax）和成本效益（DeepSeek）之间做出选择。 该基准测试使用真实工程任务而非标准学术基准，并由 Claude Opus 4.7 作为裁判模型。测试包含截至 2026 年 6 月 10 日可用的模型，不包括后续发布的 Kimi K2.7 和 GLM-5.2。
+2026 年 6 月 29 日，他山科技与 2024 年图灵奖得主理查德·萨顿联合在北京启动“机器人幼儿园”，这是强化学习理论在具身智能领域的首个实体落地，标志着机器人从被动模仿的“数据时代”迈向交互试错的“经验时代”。 这一举措代表了具身智能领域的范式转变，从依赖人类示教数据转向让机器人通过持续交互和试错自主学习，有望极大加速能够适应真实环境的通用机器人发展。 机器人幼儿园以触觉感知为核心突破口，为机器人提供安全试错的环境。他山科技已有数十万个触觉指尖应用于全球人形机器人，该项目计划定义机器人“疼痛”机制以驱动内在探索动机。
 
-rss · 雷峰网 · 7月1日 05:34
+rss · 雷峰网 · 7月1日 06:18
 
-**背景**: 编程能力已成为评估大语言模型的关键指标，因为它反映了逻辑推理、工具使用和实际生产力。MiniMax 和 DeepSeek 等中国 AI 公司开发了专门的编程模型；MiniMax M3 是一个开放权重的模型，拥有 100 万 token 的上下文窗口，而 DeepSeek 提供如 DeepSeek Coder 等性价比高的解决方案。
+**背景**: 具身智能是人工智能与机器人学交叉的前沿领域，智能体通过与物理环境的动态交互实现学习。强化学习由理查德·萨顿开创，通过试错让智能体学习最优行为。传统机器人训练依赖大量人类示教数据，泛化能力有限。机器人幼儿园的概念受艾伦·图灵 1950 年论文启发，旨在让机器人像婴儿一样通过直接经验学习。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.minimax.io/models/text/m3">MiniMax M3 - Coding & Agentic Frontier, 1M Context, Multimodal</a></li>
-<li><a href="https://minimax-ai.chat/models/minimax-m3/">MiniMax M3 Guide: Benchmarks, Pricing, API Access... - Minimax Ai</a></li>
-<li><a href="https://deepseekcoder.github.io/">DeepSeek Coder</a></li>
+<li><a href="https://finance.sina.com.cn/stock/t/2026-07-01/doc-inifhvws0982122.shtml">他山科技联合图灵奖得主萨顿共建“机器人幼儿园”，具身智能从“模仿时代...</a></li>
+<li><a href="https://baike.baidu.com/item/具身智能/63286570">具身智能（智能体通过身体将感知、行动与认知深度融合的智能系统）_...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#coding`, `#MiniMax`, `#DeepSeek`, `#benchmark`, `#Chinese AI`
+**标签**: `#AI`, `#embodied intelligence`, `#reinforcement learning`, `#robot kindergarten`, `#Turing Award`
 
 ---
 
 <a id="item-15"></a>
-### [IEEE 论文提出 MoonBit 语言 AI 完整训练路线](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247901046&idx=3&sn=f81efbdae1fa6cca391a9c4389820598) ⭐️ 7.0/10 [技术]
+### [Ken Goldberg 在 ICRA 2026 质疑具身智能数据是否足够](https://www.leiphone.com/category/industrynews/92jlrAw30yRS1lnt.html) ⭐️ 8.0/10 [技术]
 
-一篇 IEEE 论文提出了一套从零到及格线的完整训练路线，用于让 AI 模型学习 MoonBit 编程语言。以 Qwen 2.5 Coder 32B Base 为基础模型，经过继续预训练后，模型在 MoonBit 上的 pass@1 达到了及格水平。 这很重要，因为 MoonBit 被设计为一门 AI 原生语言，而一条经过验证的训练路线能够提升 AI 对该语言的代码生成能力，可能影响 AI 时代新语言的采纳方式。同时，该方法也可推广到其他冷门语言。 该论文以 Qwen 2.5 Coder 32B Base 为基础模型，详细描述了继续预训练的过程。MoonBit 的 AI 原生设计体现在其语言结构上，这使得 AI 模型更容易学习和生成正确的代码。
+在 ICRA 2026 上，加州大学伯克利分校教授 Ken Goldberg 发表了题为《GOFE 和 Code-as-Policy 能否弥合机器人操作中十万年的“数据鸿沟”？》的演讲。他指出，当前具身智能领域积累的数据总量仅相当于人类几年的阅读量，而训练大语言模型所用的全部数据需要约十万年才能读完，从而质疑仅靠海量数据就能解决具身智能问题的信念。 这场辩论至关重要，因为数十亿资金正涌入具身智能领域，但机器人的实际落地仍然有限。Goldberg 的观点挑战了当前主流的无模型、数据驱动范式（如 VLA 模型），并强调需要将数据与工程和基于模型的方法相结合，以实现可靠的机器人操作。 Goldberg 引用了其团队的 Dex-Net 项目，该项目结合了概率模型、大规模仿真数据集和神经网络来实现真实世界的抓取，表明数据与工程的深度融合优于单纯的数据扩展。他还指出，虽然 VLA 模型具有惊人的泛化能力，但环境发生细微变化时可能失效，而传统工程系统虽然缺乏通用性，但可靠性更高。
 
-rss · 量子位 · 7月1日 05:53
+rss · 雷峰网 · 7月1日 05:45
 
-**背景**: MoonBit 是一门相对较新的编程语言和开发者平台，专注于 AI 原生设计，旨在让 AI 模型容易理解和生成代码。在 AI 上训练一门新语言具有挑战性，因为训练数据有限且语法独特。这篇 IEEE 论文提供了一种系统化的方法，从零数据开始，最终达到及格基准线。
+**背景**: 具身智能是指通过身体与物理世界交互的 AI 系统，例如机器人。在机器人领域，主要有两种方法：无模型方法（如 VLA 模型）通过深度学习直接从数据中学习，而基于模型的方法则依赖显式的物理模型和工程。VLA（视觉-语言-动作）模型结合了视觉感知、语言理解和动作生成，其灵感来自类似 ChatGPT 的大语言模型。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://zh.wikipedia.org/wiki/MoonBit">MoonBit - 维基百科，自由的百科全书</a></li>
-<li><a href="https://www.moonbitlang.cn/">MoonBit</a></li>
-<li><a href="https://www.aitntnews.com/newDetail.html?newId=26751">冷门新语言 AI 写不动？ IEEE论文：从零到及格 线 ， MoonBit ...</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/658644217">什么是模型自由（Model-Free）和模型基础（Model-Based）的强化学习？...</a></li>
+<li><a href="https://github.com/Eriwdz/Embodied-AI-Guide-">具身智能入门指南 Embodied-AI-Guide - GitHub</a></li>
 
 </ul>
 </details>
 
-**标签**: `#MoonBit`, `#编程语言`, `#AI训练`, `#IEEE论文`
+**标签**: `#embodied AI`, `#robotics`, `#VLA`, `#model-based`, `#data`, `#ICRA 2026`, `#Ken Goldberg`
+
+---
+
+<a id="item-16"></a>
+### [IEEE 论文提出 MoonBit 语言 AI 训练完整路线](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247901046&idx=3&sn=f81efbdae1fa6cca391a9c4389820598) ⭐️ 7.0/10 [技术]
+
+一篇 IEEE 论文发布了从零开始训练 AI 模型学习冷门编程语言 MoonBit 的完整路线，并达到了及格水平。 这很重要，因为它展示了一种系统性的方法，使 AI 模型能够理解和生成新兴编程语言的代码，这可能加速新语言的采用，并减少 AI 代码生成的数据瓶颈。 该论文可能涵盖了针对 MoonBit 的数据收集、模型微调和评估策略。MoonBit 是一种静态类型、多范式的语言，专为 WebAssembly 设计，语法类似 Rust。
+
+rss · 量子位 · 7月1日 05:53
+
+**背景**: MoonBit 是一种由全职团队开发的现代编程语言，专注于云和边缘计算，使用 WebAssembly。目前处于 alpha 阶段，旨在提供比现有方案更小的 WASM 输出和更快的运行时性能。AI 模型通常需要大量训练数据才能有效生成代码，而对于像 MoonBit 这样的小众语言，这类数据非常稀缺。这篇 IEEE 论文通过提供从零开始的训练路线来填补这一空白。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.moonbitlang.com/">MoonBit</a></li>
+<li><a href="https://docs.moonbitlang.com/">MoonBit Documentation — MoonBit v0.10.0 documentation</a></li>
+
+</ul>
+</details>
+
+**标签**: `#MoonBit`, `#AI`, `#programming language`, `#training`, `#IEEE`
 
 ---
 
 <a id="item-17"></a>
-### [物理 AI 到来，移动网络如何进化？](https://www.leiphone.com/category/industrynews/CpoGYmsPl9BAuO0W.html) ⭐️ 7.0/10 [技术]
+### [ICML 2026 投稿翻倍，机器学习方向换挡](https://www.leiphone.com/category/private/Nw1OlDVlsfqh1PJq.html) ⭐️ 7.0/10 [技术]
 
-文章探讨了物理 AI 时代移动网络面临的挑战：AI 智能体（如智能眼镜、机器人、自动驾驶汽车）需要实时、高上行、低延迟的连接。文章认为，网络必须从单纯的数据管道转变为能够识别、优先保障不同 AI 任务的智能系统。 随着 AI 进入物理设备，网络性能直接影响现实世界 AI 应用的可靠性。这一转变将影响运营商、设备制造商和 AI 开发者，要求从根本上重新设计移动基础设施，以支持到 2035 年数十亿级别的 AI 智能体。 文章强调了三个关键变化：连接范围扩大（覆盖基础设施、家庭、工厂）、连接密度提高（大量设备同时上传）、连接质量要求更严格（确定性时延、无抖动）。文章还指出，当前网络针对下行流量优化，但 AI 需要对称或上行为主的流量。
+第 43 届国际机器学习大会（ICML 2026）将于 2026 年 7 月 6 日至 11 日在韩国首尔举行，主题为“面向真实世界的机器学习”。投稿量较往年翻倍，标志着该领域正在发生方向性转变。 投稿量的激增反映了学界对机器学习真实场景落地和实际部署的关注度日益提高。这一转变可能重塑未来几年的研究重点、产业应用以及会议生态。 ICML 2026 引入了新的评审政策，包括作者可选择是否使用 AI 辅助评审、强制互审义务（每位作者最多只能在其 2 篇投稿中被指定为互审人），以及原稿将公开。会议将在首尔 COEX 会展中心举行。
 
-rss · 雷峰网 · 7月1日 14:05
+rss · 雷峰网 · 7月2日 01:48
 
-**背景**: 物理 AI 指的是通过传感器和执行器与物理世界交互的 AI 系统，如自动驾驶汽车、机器人和智能眼镜。AI 智能体是能够感知环境、做出决策并采取行动的自主系统。移动网络传统上服务于人类用户下载内容，但物理 AI 需要持续上传传感器数据和低延迟反馈回路。
+**背景**: ICML 是机器学习领域的顶级会议之一，传统上侧重于理论进展和算法创新。投稿量翻倍以及新的“真实世界”主题表明了一个更广泛的趋势：该领域正从纯研究转向解决实际挑战的可部署方案。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://xueqiu.com/2010531319/393606421">两连板背后的“冰与火”：天娱数科是 物 理 AI ...</a></li>
-<li><a href="https://juejin.cn/post/7568323565771145252">一文读懂！ Al Agent ( 智 能 体 ) 到底是个啥?一文读懂！ Al Agent ...</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/1996652846389696162">评审用不用AI，作者说了算？ICML 2026全新评审政策出炉 - 知乎</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/1969774622795887025">ICML 2026新规「避坑」指南：参会非必须、原稿将公开、互审设上限</a></li>
+<li><a href="https://icml.cc/Conferences/2026">2026 Conference - icml.cc</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#移动网络`, `#物理AI`, `#网络进化`
+**社区讨论**: 在知乎等平台上的讨论中，对新 AI 评审政策的反应不一：一些人认为这是应对评审负担的务实折中方案，而另一些人则担心执行困难和潜在的公平性问题。互审上限普遍被视为分散工作量的积极举措。
+
+**标签**: `#ICML`, `#机器学习`, `#趋势分析`
 
 ---
 
 <a id="item-18"></a>
-### [Claude 封禁中国用户以防模型蒸馏](https://www.leiphone.com/category/ai/rzmbSvqty7wRNC3N.html) ⭐️ 7.0/10 [技术]
+### [Anthropic Claude Code 暗藏针对中国监视代码](https://www.leiphone.com/category/zaobao/8xIKNxdh5DASn0Tj.html) ⭐️ 7.0/10 [技术]
 
-一名 Reddit 用户逆向分析了 Claude Code，发现其 2.1.196 版本中内置了监控程序，用于检测并封禁中国用户；Anthropic 的 Claude Code 负责人回应称，此举是为了防止模型蒸馏。 此事揭示了 Anthropic 为保护模型知识产权而采取的强硬手段，直接影响中国开发者，并引发了对 AI 工具区域限制的更广泛担忧。 该监控程序在 Claude Code 2.1.196 版本中被发现；回应来自 Claude Code 负责人本人；模型蒸馏是一种让小模型从大模型中学习的技术，常用于创建高效模型。
+一名外国用户发现 Anthropic 的 AI 编程工具 Claude Code 中包含一段代码，通过检测时区和域名列表识别中国用户，并向 Anthropic 服务器发送隐藏标记。Anthropic 产品负责人确认这是一项防止未经授权转售和模型蒸馏攻击的实验，并表示将于 7 月 2 日移除该代码。 此事件引发了关于 AI 安全与伦理的严重担忧，因为该代码类似于后门，可能实现对特定国家用户的监视或歧视。它削弱了人们对 AI 公司的信任，并凸显了 AI 开发中蕴含的地缘政治紧张局势。 该代码执行两项检测：检查系统时区是否为中国时区（Asia/Shanghai 或 Asia/Urumqi），以及 URL 是否匹配包含 147 个中国科技域名（包括百度、阿里巴巴、字节跳动以及大量 Claude API 中转服务地址）的清单。一旦检测到，它会悄悄篡改系统提示词中的日期格式和符号，向 Anthropic 服务器发送隐藏标记。
 
-rss · 雷峰网 · 7月1日 10:37
+rss · 雷峰网 · 7月2日 00:52
 
-**背景**: 模型蒸馏是 Hinton 于 2015 年提出的技术，通过让较小的“学生”模型模仿较大的“教师”模型，实现高效部署。Claude Code 是 Anthropic 开发的 AI 编程代理，能够读取代码库并执行命令。中国用户使用 Claude 服务时遭到封禁的情况日益增多，此次事件给出了官方解释。
+**背景**: AI 中的后门攻击是指在模型或其周围代码中微妙地植入隐藏触发条件，在特定情况下激活恶意行为。此事件类似后门，因为代码在用户不知情的情况下秘密识别中国用户。这种做法可用于未经授权的数据收集或防止模型盗窃，但引发了严重的隐私和伦理问题。更广泛的背景是，人们对 AI 公司使用类似监视的技术来跨境执行使用政策的担忧日益增加。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
-<li><a href="https://blog.csdn.net/pythonhy/article/details/149597959">blog.csdn.net/pythonhy/article/details/149597959</a></li>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
+<li><a href="https://www.practical-devsecops.com/glossary/backdoor-attack/">Backdoor Attack in AI: How Hackers Compromise ML Models</a></li>
+<li><a href="https://www.cobalt.io/blog/backdoor-attacks-on-ai-models">Backdoor Attacks on AI Models - Cobalt</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#Claude`, `#封号`, `#模型蒸馏`, `#安全`
+**标签**: `#AI安全`, `#监视代码`, `#机器人替代`, `#小米人事`, `#苹果价格`
 
 ---
 
 ## 产品专栏 (Product Management)
 
-<a id="item-3"></a>
-### [多智能体协作放大编码代理，突破单智能体局限](https://www.woshipm.com/ai/6423349.html) ⭐️ 8.0/10 [产品经理]
+<a id="item-2"></a>
+### [谷歌 27 亿收购的 AI 人才 22 个月后转投 OpenAI](https://www.woshipm.com/ai/6423204.html) ⭐️ 8.0/10 [产品经理]
 
-本文为 Claude Code 和 Codex 等编码代理引入了一个多智能体协作框架，其中主协调器动态生成具有明确角色、边界和验证机制的子智能体，以处理复杂的软件工程任务。它提出了一个受控流水线，通过角色分离和交接协议防止上下文污染并确保可验证的结果。 这很重要，因为单个编码代理在复杂任务中经常丢失上下文、混淆角色并产生不可验证的结果，限制了它们在生产软件开发中的实际应用。多智能体协作将 AI 编码从单一助手模式转变为结构化的工程流水线，使 AI 工具在实际项目中更加可靠和可扩展。 该框架使用一个协调器代理，它从不陷入代码细节，而是生成包含 role_name、mission、allowed_edit_scope、forbidden_actions 和 success_criteria 等字段的子智能体 brief。子智能体严格限于其分配的任务，不能决定下一步调用哪个代理，从而防止失控的代理链。
+Transformer 架构共同发明者 Noam Shazeer 在加入谷歌 22 个月后离职前往 OpenAI，随后诺贝尔奖得主 John Jumper 等五位顶尖 AI 研究员在一周内相继加入 Anthropic。 这场人才流失标志着 AGI 人才和战略的重大转变，暴露了谷歌在组织和决策效率上的弱点，同时增强了 OpenAI 和 Anthropic 在通用人工智能竞赛中的地位。 Shazeer 是通过 27 亿美元收购 Character.AI 的方式回归谷歌的，但离职前其项目的算力被重新分配。Jumper 曾领导 AlphaFold 并获得 2024 年诺贝尔奖，他加入 Anthropic 是该公司系统性构建 AI for Science 布局的一部分。
 
-rss · 人人都是产品经理日榜 · 7月1日 09:37
+rss · 人人都是产品经理 · 7月2日 01:39
 
-**背景**: 像 Claude Code（由 Anthropic 开发）和 Codex（由 OpenAI 开发）这样的编码代理是 AI 工具，可以读取代码库、编辑文件、运行命令并在终端和 IDE 中进行调试。然而，当处理复杂的多文件功能或错误调查时，单个代理的上下文窗口会被中间结果污染，并且代理可能无法保持一致的职责或产生可验证的输出。模型上下文协议（MCP）是一个开放标准，它规范了 AI 应用程序如何连接到外部工具和数据源，可用于扩展代理能力。
+**背景**: Transformer 架构源自谷歌 2017 年论文《Attention Is All You Need》，是现代大语言模型（如 GPT、Claude、Gemini）的基础。AGI（通用人工智能）指能够执行人类任何智力任务的 AI。Character.AI 是 Shazeer 在 2021 年因产品发布速度分歧离开谷歌后创立的聊天机器人平台。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent , Terminal, IDE</a></li>
-<li><a href="https://docs.anthropic.com/en/docs/claude-code/overview">Claude Code overview - Anthropic</a></li>
-<li><a href="https://developers.openai.com/codex">Codex | OpenAI Developers</a></li>
-<li><a href="https://modelcontextprotocol.io/">What is the Model Context Protocol ( MCP )? - Model Context Protocol</a></li>
+<li><a href="https://juejin.cn/post/7555780704270532627">23_ Transformer 架 构 详解：从原理到PyTorch实现引言 Transformer ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Character.ai">Character.ai</a></li>
 
 </ul>
 </details>
 
-**标签**: `#multi-agent`, `#coding agent`, `#AI engineering`, `#product management`, `#software development`
+**标签**: `#谷歌`, `#OpenAI`, `#AGI`, `#人才流失`, `#产品战略`
+
+---
+
+<a id="item-3"></a>
+### [滴滴支付页面的信贷诱导策略](https://www.woshipm.com/it/6423606.html) ⭐️ 8.0/10 [产品经理]
+
+近日，新京报等媒体调查发现，滴滴等平台的支付页面突出显示优惠金额，却以较小字体标注信贷产品性质，导致用户在不知情的情况下开通消费信贷服务。 这种做法模糊了支付与借贷的界限，引发用户知情权和金融合规的严重担忧。它揭示了平台增长策略与消费者保护法规之间的紧张关系。 支付页面通过视觉层次突出显示‘限时优惠’，而将‘消费信贷产品’等关键信息以极小字体标注。用户点击付款按钮时通常无需强制阅读条款，相当于默认开通信贷服务。
+
+rss · 人人都是产品经理 · 7月2日 01:34
+
+**背景**: 信用购是持牌金融机构提供的消费信贷服务，类似于支付宝的花呗。自 2015 年起，滴滴一直在构建‘出行+金融’生态，持有支付、保险、贷款等牌照。许多中国平台曾利用支付页面推广信贷产品，但监管机构现已要求支付与信贷明确分离，截止日期为 2026 年 9 月。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://zhidao.baidu.com/question/1251914541461781099.html">信用购是什么意思，和花呗有什么区别？_百度知道</a></li>
+<li><a href="https://jrj.wuhan.gov.cn/ztzl_57/xyrd/bxy/201912/t20191217_169978.shtml">滴 滴 金 融 版图浮现 保险 业 务扛大旗</a></li>
+<li><a href="https://m.163.com/dy/article/KRIIEH7O0556MAM3.html">m.163.com/dy/article/KRIIEH7O0556MAM3.html</a></li>
+
+</ul>
+</details>
+
+**标签**: `#产品设计`, `#用户体验`, `#金融合规`, `#支付`, `#滴滴`
 
 ---
 
 <a id="item-4"></a>
-### [AI 语音输入法成为 2026 年最火互联网产品](https://www.woshipm.com/share/6423391.html) ⭐️ 8.0/10 [产品经理]
+### [AI Agent 进入性价比时代：产品经理如何重新选择大模型](https://www.woshipm.com/ai/6423575.html) ⭐️ 8.0/10 [产品经理]
 
-2025 年至 2026 年，字节跳动、腾讯、阿里巴巴、智谱等中国互联网大厂纷纷推出或更新了 AI 驱动的语音输入法产品，包括豆包输入法、微信输入法的“隔空传送”功能以及阿里的 CosyVoice 等。这些发布标志着 AI 大模型与语音输入深度融合的战略转变，旨在抢占用户数据入口并重新定义交互方式。 这一趋势表明，AI 驱动的语音输入正成为科技巨头争夺的关键数据入口和竞争战场，可能重塑用户与设备及 AI 助手的交互方式。它也反映了行业从传统文字输入向更自然的 AI 增强型语音交互的转变，对用户隐私、数据所有权以及搜索引擎的未来产生深远影响。 这些新输入法利用大语言模型（LLM）提升语音识别准确率、实现上下文感知纠错和智能预测。然而，许多产品尚未实现全平台覆盖（iOS、Android、Windows、macOS），且部分公司并未大力推广下载，表明这是一种谨慎的“占坑”策略而非立即追求大规模普及。
+2026 年 6 月 30 日，Anthropic 发布了 Claude Sonnet 5，这是一款具备强大智能体能力的中端模型；同时，Claude Fable 5 和 Mythos 5 在出口管制解除后恢复访问。这标志着 AI Agent 竞争正从单纯追求能力转向注重性价比和任务交付能力。 产品经理现在必须优先考虑任务交付能力和单位任务总成本，而非模型榜单排名，因为像 Sonnet 5 这样的中端模型正以更低成本接近高端模型性能。这一转变使得 AI 产品能够更务实地在真实业务工作流中可靠执行长链路任务。 文章提出了新的成本公式：单位任务成本 = token 成本 + 工具调用成本 + 重试成本 + 人工审核成本 + 失败补救成本 + 用户等待成本。同时建议采用多模型分层架构：低风险高频任务使用廉价模型，中等任务使用高性价比 Agent 模型，高风险任务使用顶级模型。
 
-rss · 人人都是产品经理 · 7月1日 08:15
+rss · 人人都是产品经理 · 7月2日 01:34
 
-**背景**: 输入法在中国已是超过 20 年的成熟产品类别，搜狗、百度、讯飞等长期占据主导地位。近期复兴的驱动力来自 AI 大语言模型（LLM），它们能更准确、更自然地处理语音输入，模糊了输入工具与 AI 助手之间的界限。随着 AI 聊天机器人成为主流，各公司视语音输入为自然延伸，并借此收集宝贵的用户语音数据用于模型训练。
+**背景**: AI Agent 是指具备自主规划、使用工具和执行复杂任务能力的数字实体，不同于简单的聊天机器人。Claude Sonnet 5 是 Anthropic 最新发布的中端模型，专为智能体工作流设计，具备以往只有更大 Opus 级模型才有的能力。文章主张产品经理应根据具体场景的任务需求而非通用榜单来评估模型。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://toutiaoyan.com/post/B0agdGmBxkSW3GURik">豆 包 输 入 法 正式上线 深度整合 AI ... | 头条眼</a></li>
-<li><a href="https://ai.lemonsee.com/sites/1141.html">豆 包 输 入 法 - 柠檬 AI</a></li>
-<li><a href="https://www.80aj.com/2026/02/02/douyin-browser-speech-comparison/">同品牌不同命？ 豆 包 浏览器与 输 入 法 语音识别效果差距巨大</a></li>
+<li><a href="https://zh.wikipedia.org/zh-tw/Claude_(语言模型)">Claude (語言模型) - 維基百科，自由的百科全書</a></li>
+<li><a href="https://felo.ai/zh-Hans/blog/claude-sonnet-5-is-here/">Claude Sonnet 5 正式发布 — 史上最具 Agent 能力的 Sonnet 模型，Felo 免费可用 | Felo Search Blog</a></li>
+<li><a href="https://javaguide.cn/ai/agent/agent-basis.html">AI Agent 核心概念：Agent Loop、Plan-and-Execute、A2A、Agentic ...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#输入法`, `#AI`, `#产品战略`, `#互联网大厂`, `#语音输入`
+**标签**: `#AI Agent`, `#大模型`, `#产品经理`, `#模型选型`, `#性价比`
 
 ---
 
 <a id="item-5"></a>
-### [唱吧出海东南亚：Gamoji 游戏陪玩平台下载量突破 300 万](https://www.woshipm.com/share/6423365.html) ⭐️ 8.0/10 [产品经理]
+### [财务系统 AI 选型：场景比参数更重要](https://www.woshipm.com/ai/6423551.html) ⭐️ 8.0/10 [产品经理]
 
-唱吧（北京唱吧科技有限公司）于 2025 年 2 月在东南亚推出游戏陪玩平台 Gamoji，覆盖印度尼西亚、马来西亚、菲律宾、泰国、越南五国，近一年内 Google Play 端总下载量突破 300 万。 此举标志着唱吧从 K 歌业务跨界切入游戏社交赛道，通过标准化商品封装和情绪价值服务构建商业化闭环，为中国应用出海提供了高价值案例参考，尤其针对东南亚快速增长的游戏陪玩市场。 Gamoji 覆盖东南亚六款头部手游（Free Fire、Mobile Legends、Roblox、Magic Chess、PUBG Mobile、王者荣耀国际服），采用按时计费（如 30 分钟/50 钻石）或按次计费（如 1 局/50 钻石）两种模式，并独立提供陪聊和唱歌增值服务。钻石充值档位从 5000 印尼盾（约 2.3 元人民币）到 250 万印尼盾（约 1160 元人民币）不等。
+一篇来自产品管理平台的详细指南分析了财务系统的六个核心场景，并将其与六款主流国产大模型进行匹配，为每个用例选择合适的模型组合提供了决策框架。 该框架帮助产品经理避免使用单一“最佳”模型覆盖所有财务任务的常见错误，这种做法往往导致每个场景表现欠佳。它强调针对特定场景选择模型可以显著提升企业财务 AI 部署的准确性、效率和成本效益。 六个场景包括费用审核报销、应收应付、现金流预测、总账报表分析、税务合规和预算管理。对比的六款模型是 DeepSeek-V4-Flash、通义千问 Qwen3.5、智谱 GLM-5.2、Kimi-K2.6、文心一言 5.0 和腾讯混元 Hunyuan-T1，每款在多模态识别、数学推理、长文本处理和工具调用等方面各有专长。
 
-rss · 人人都是产品经理 · 7月1日 07:53
+rss · 人人都是产品经理 · 7月2日 01:28
 
-**背景**: 唱吧是中国知名的 K 歌应用公司，近年来积极拓展海外市场。东南亚地区以移动互联网为主导，年轻用户基数大，游戏陪玩市场正从基础带练向情绪陪伴升级。Gamoji 由唱吧全资子公司 PICA 香港有限公司运营，体现了唱吧跨赛道出海的战略布局。
+**背景**: 财务系统涉及发票识别、数据提取、数学计算和合规检查等多种任务，每种任务需要不同的 AI 能力。国产大模型发展迅速，DeepSeek 擅长数学推理，通义千问在多模态理解方面突出，Kimi 在长文本处理上领先。该文章为产品经理提供了选择和组合这些模型以构建最佳财务 AI 解决方案的实用框架。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.yfchuhai.com/article/10228458.html">唱吧出海东南亚： Gamoji 游 戏 陪 玩 平台300万用户背后的商业逻辑</a></li>
-<li><a href="https://www.woshipm.com/tag/gamoji">Gamoji | 人人都是产品经理</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek">DeepSeek - Wikipedia</a></li>
+<li><a href="https://www.bbc.com/news/articles/c5yv5976z9po">What is DeepSeek - and why is everyone talking about it?</a></li>
+<li><a href="https://arxiv.org/html/2510.23066">Multi-Stage Field Extraction of Financial Documents with OCR and Compact Vision-Language Models</a></li>
 
 </ul>
 </details>
 
-**标签**: `#唱吧`, `#Gamoji`, `#游戏陪玩`, `#东南亚`, `#产品策略`, `#出海`, `#标准化`, `#情绪价值`
+**标签**: `#AI`, `#financial systems`, `#model selection`, `#product management`, `#enterprise software`
 
 ---
 
 <a id="item-6"></a>
-### [痛点等级：印尼洗脸扑营销的关键](https://www.woshipm.com/share/6423336.html) ⭐️ 8.0/10 [产品经理]
+### [构建定制化企业知识图谱的六条经验](https://www.woshipm.com/ai/6423539.html) ⭐️ 8.0/10 [产品经理]
 
-印尼洗脸扑营销案例表明，聚焦单一高痛点（去黑头）的转化率是四合一卖点的 2-3 倍，揭示了消费者痛点等级的重要性以及从发散到收敛的战略价值。 这一洞察帮助营销人员和产品经理根据消费者愿意付出的金钱和精力来优先选择痛点，从而减少广告浪费，提升内容营销的 ROI。 文章介绍了三种收敛方法：从使用场景倒推痛点价值、让达人自由演绎不同痛点、以及针对已验证痛点拓展人群（如男性用户）。
+一位实践者基于真实的运营商知识图谱项目，分享了六大关键经验，强调真正的挑战不在于构建复杂的网络，而在于让知识有序进入系统并进行结构化治理与复用。 随着企业越来越多地采用 RAG 和智能 Agent 等 AI 系统，将分散文档转化为可靠、可复用的业务资产的能力变得至关重要。本文为从事企业 AI 的产品经理和工程师提供了可操作的指导，揭示了演示阶段的 RAG 与生产级知识治理之间的差距。 六大步骤包括：1）建立准入机制对知识类型进行分类；2）将 AI 发现能力与业务定义的抽取规则相结合；3）将文档中的规则挂接到产品对象上；4）通过证据链而非仅答案正确性来评估回答质量；5）超越节点/关系数量来衡量图谱质量；6）将图谱能力封装为 MCP 服务，供 Agent 和 RAG 系统复用。
 
-rss · 人人都是产品经理 · 7月1日 07:12
+rss · 人人都是产品经理 · 7月2日 01:28
 
-**背景**: 在营销中，'痛点'指消费者面临的具体问题。并非所有痛点都同等重要，有些更紧迫且解决成本更高，消费者更愿意购买。文章对比了发散思维（头脑风暴多个方向）与收敛思维（选择最有效的方向集中资源）。
+**背景**: 知识图谱将信息组织为实体和关系，支持结构化查询和推理。RAG（检索增强生成）系统将文档检索与大语言模型结合来回答问题，但往往缺乏企业级应用所需的治理和可追溯性。企业知识图谱旨在弥补这一差距，提供一个经过治理、可复用的知识层，供多个 AI 应用调用。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.ganhuoku.cn/archives/287854">品牌 营 销 的三板斧： 痛 点 、痒 点 、爽 点 ，你get了吗？ - 广告人干货库</a></li>
+<li><a href="https://www.woshipm.com/ai/6100298.html">Rag系统的发展历程，从朴素、高级到模块化 | 人人都是产品经理</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/1967165604369790237">如何构建企业级知识图谱：从规划到实施的全流程指南</a></li>
+<li><a href="https://www.betteryeah.com/blog/knowledge-graph-top10-enterprise-platforms-guide-2026">知识图谱top10平台深度测评：2026年企业级解决方案完整指南</a></li>
 
 </ul>
 </details>
 
-**标签**: `#产品营销`, `#痛点分析`, `#数据验证`, `#场景还原`, `#印尼市场`, `#卖点选择`
+**标签**: `#知识图谱`, `#企业级应用`, `#AI`, `#数据治理`, `#产品实践`
 
 ---
 
 <a id="item-7"></a>
-### [弦理论物理学家用诺特定理指导 AI 创业战略](https://www.woshipm.com/ai/6423333.html) ⭐️ 8.0/10 [产品经理]
+### [Agent 时代，定义正确比模型更稀缺](https://www.woshipm.com/ai/6423511.html) ⭐️ 8.0/10 [产品经理]
 
-AI 公司 Factory 的 CEO Matan Grinberg 将物理学中的诺特定理转化为创业决策框架，提出'Token Budget'资源分配模型，并公开批评 Anthropic 的数据留存和输出质量降级行为。 这展示了物理学思维如何重塑 AI 时代的商业逻辑，揭示了模型商品化、开源与闭源之争的战略洞察，并引发了对 AI 安全实践的伦理担忧。 Grinberg 的框架利用诺特定理识别商业中的守恒量（如待解决问题的总量），然后分析被打破的对称性。他的 Token Budget 模型迫使 CEO 在人力、算力和 token 之间分配增量支出。他还认为 AI 价值正在向编排层转移，使模型商品化。
+文章指出，AI 智能体的真正瓶颈不在于生成能力，而在于验证标准的自动化程度；将人脑中的主观判断转化为机器可执行的验证体系，才是下一代 AI 竞争的关键。 这一观点将 AI 竞争从模型性能转向系统设计，强调随着模型趋于同质化，长期壁垒在于构建可靠的自验证智能体系统。 文章介绍了 Claude Code 团队提出的四种智能体循环模式——回合制、目标驱动、时间驱动和主动式，并指出它们代表了人类从验证过程中退出的不同程度。
 
-rss · 人人都是产品经理日榜 · 7月1日 07:06
+rss · 人人都是产品经理 · 7月2日 01:06
 
-**背景**: 诺特定理指出，物理系统的每一种连续对称性都对应一个守恒量，例如时间平移对称性对应能量守恒。Grinberg 将其应用于商业：先找到守恒量（如问题总量），再分析 AI 打破了哪些对称性。Token Budget 概念指的是在人力、算力和 token 使用之间进行战略资源分配。
+**背景**: AI 智能体是一种能够自主执行多步任务而无需人工干预的系统。其核心挑战在于智能体必须独立判断任务进度和正确性，这需要明确、可量化的标准。传统 AI 遵循被动的问答模式，而智能体则主动分解并执行目标。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://blog.leowang.net/0h1yru5kbm7/">诺 特 定 理 ：能量守恒只是宇宙的“习惯”，而非铁律 | 宏观阿尔法</a></li>
+<li><a href="https://blog.csdn.net/u011808788/article/details/158928662">【AI】深度解析OpenClaw智能体循环（Agentic Loop）：底层运行机制、R...</a></li>
+<li><a href="https://openclaw.cc/concepts/agent-loop.html">智能体循环 | OpenClaw 中文站</a></li>
+<li><a href="https://www.vincirufus.com/zh/posts/agent-loop/">智能体循环 | Vinci Rufus</a></li>
 
 </ul>
 </details>
 
-**标签**: `#弦理论`, `#诺特定理`, `#创业思维`, `#AI战略`, `#Factory`, `#Token Budget`
-
----
-
-<a id="item-8"></a>
-### [六种 PDF 跨页表格解析方案实测对比](https://www.woshipm.com/share/6423312.html) ⭐️ 8.0/10 [产品经理]
-
-一位产品经理在 5 类真实场景下系统评测了 6 种 PDF 跨页表格解析方案，包括文档解析工具（MinerU、PaddleOCR-VL-1.6）、多模态大模型（Qwen、DeepSeek、Claude）和纯 OCR（PP-OCRv6）。其中 Claude Opus 4.8 表现最佳，能自动生成正确的 Excel 输出，MinerU 排名第二，纯 OCR 则完全失败。 跨页表格解析是企业文档处理中的关键痛点，尤其在涉及合同、报告和图纸的 B 端场景中。本次评测为产品经理提供了可落地的技术选型指导，指出在实际部署中数据安全和成本约束往往比单纯的效果更重要。 评测覆盖了 5 类场景：原始 PDF 无页脚、原始 PDF 含页脚、扫描件 PDF 无页脚、扫描件 PDF 含页脚、扫描件 PDF 含印章。Claude 是唯一在所有场景（包括含印章干扰）中正确合并跨页表格和单元格的方案，而 Qwen 和 DeepSeek 则出现缺字和漏页问题。
-
-rss · 人人都是产品经理 · 7月1日 06:46
-
-**背景**: PDF 跨页表格解析的难点不在于 OCR 字符识别，而在于结构重组：系统需要判断不同页面上的表格是否属于同一个表格，并将被跨页切断的单元格重新连接。传统 OCR 工具仅将像素转换为字符，缺乏理解文档布局的能力。像 MinerU 这样的文档解析工具专门设计用于结构理解，而多模态大模型则将视觉和语言理解融合在单一模型中。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.woshipm.com/share/6423312.html">PDF 跨 页 表 格 解析，我把 6 个主流方案挨个测了一遍 | 人人都是产品经理</a></li>
-<li><a href="https://github.com/opendatalab/MinerU/blob/master/README_zh-CN.md">MinerU /README_zh-CN.md at master · opendatalab/ MinerU · GitHub</a></li>
-<li><a href="https://mineru.net/">MinerU | 面向 Agent 和 RAG 的智能 文 档 解 析 平台</a></li>
-
-</ul>
-</details>
-
-**标签**: `#PDF解析`, `#跨页表格`, `#OCR`, `#多模态大模型`, `#产品经理`, `#技术选型`
+**标签**: `#Agent`, `#AI产品设计`, `#智能体循环`, `#产品经理`, `#验证标准`
 
 ---
 
 ## 热搜焦点 (Trending)
 
-<a id="item-2"></a>
-### [PlayStation 将于 2028 年停止实体游戏光盘](https://36kr.com/newsflashes/3877079726469121?f=rss) ⭐️ 9.0/10 [热搜]
+<a id="item-1"></a>
+### [北大博士量子团队获高瓴创投领投](https://36kr.com/p/3877814169530630?f=rss) ⭐️ 9.0/10 [热搜]
 
-PlayStation 于 7 月 1 日宣布，从 2028 年 1 月起，所有在 PlayStation 主机上发售的新游戏将仅以数字版形式推出，不再生产实体光盘版本。 这标志着游戏分发方式的重大转变，结束了 PlayStation 长达数十年的实体媒体时代，并可能加速整个行业向全数字游戏转型。 该变更仅适用于 2028 年 1 月之后发售的新游戏；此前已发售的光盘版游戏以及在截止日期前发售的游戏不受影响。
+纳开启元（北京）量子科技有限公司，由北京大学博士团队创立，已完成首轮数千万元融资，由高瓴创投领投，英诺、长石、飞图跟投。该公司声称是国内唯一实现纳开温区（10nK 以下）量子计算机工程化的企业。 此轮融资标志着中国中性原子量子计算路线的重要里程碑，该路线被视为实现可扩展通用量子计算机最有希望的路径之一。纳开量子能够将多种原子冷却至 10 纳开尔文以下并交付完整的量子模拟系统，使其在争夺实用量子优势的竞赛中占据关键位置。 公司的核心技术包括将铷、钾、铯、锂、钠、镱、锶、镝、铒等 9 种元素及其同位素冷却至 10nK 以下，并拥有动态晶格、脉冲晶格及超晶格等先进光晶格技术。纳开量子采用双轮驱动商业模式：通过交付专用量子模拟计算机获取营收，同时研发通用中性原子量子计算机。
 
-rss · 36氪 · 7月1日 12:49
+rss · 36氪 · 7月2日 01:16
 
-**背景**: PlayStation 此前已通过推出 PS5 数字版等无光驱主机逐步向数字分发转型。随着网速提升和数字商店的便利性增加，全球实体游戏销量持续下滑。这一公告正式确认了业界长期预期的转型，但很少有人想到会有一个具体的截止日期。
+**背景**: 中性原子量子计算机利用激光冷却和光镊或光晶格技术，将单个中性原子囚禁并排列成量子比特。与人为刻蚀、存在固有缺陷的超导量子比特不同，中性原子天然全同，具有高可扩展性。然而，中性原子系统目前的门保真度低于离子阱方案，运行时间也较短，纳开量子正致力于攻克这些短板。
 
-**标签**: `#PlayStation`, `#digital-only`, `#gaming`, `#physical media`, `#industry shift`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/中性原子量子计算机">中性原子量子计算机 - 维基百科，自由的百科全书</a></li>
+
+</ul>
+</details>
+
+**标签**: `#量子计算`, `#融资`, `#高瓴创投`, `#北大`, `#中性原子量子计算机`
+
+---
+
+<a id="item-8"></a>
+### [黄光裕 5 年败光 500 亿，痛失国美](https://www.huxiu.com/article/4871878.html?f=rss) ⭐️ 8.0/10 [热搜]
+
+一篇详细分析揭示了国美创始人黄光裕如何在五年内挥霍 500 亿元，最终失去对这家他一手创立的电器零售企业的控制权。 这一案例为企业家提供了警示，说明管理不善、战略失误以及在竞争激烈的市场中商业价值迅速流失的危险。 该分析涵盖了黄光裕 2021 年出狱后的回归、激进的扩张和重组努力，以及随后导致国美市值暴跌的财务崩溃。
+
+rss · 虎嗅 · 7月2日 01:57
+
+**背景**: 黄光裕曾是中国首富，也是领先的家电零售商国美的创始人。因经济犯罪服刑 14 年后，他于 2021 年出狱，带着雄心勃勃的计划试图重振公司，但面临来自京东、阿里巴巴等在线零售商的激烈竞争。
+
+**标签**: `#黄光裕`, `#国美`, `#商业失败`, `#企业家`, `#热搜`
 
 ---
 
 <a id="item-9"></a>
-### [美国海关新规迫使货运代理拒收电商货物](https://www.tmtpost.com/8049419.html) ⭐️ 8.0/10 [热搜]
+### [约四分之一青少年自伤，成人浑然不知](https://www.huxiu.com/article/4871962.html?f=rss) ⭐️ 8.0/10 [热搜]
 
-美国海关一项新规要求电商货物必须进行严格的电子数据匹配，导致货运代理拒绝接收高风险消费品，许多小卖家因此陷入困境。该规定威胁对不合规货物立即进行港口扣押，造成航运拥堵。 这项规定扰乱了跨境电子商务供应链，尤其影响了依赖货运代理进行低成本运输的小卖家。它可能通过提高合规成本和减少低价值消费品流入美国，重塑国际贸易格局。 该规定要求在货物清关前，产品描述、价值和原产地必须进行精确的电子数据匹配。货运代理为避免扣押责任，正在放弃整个消费品类别，使小卖家失去运输选择。
+一份报告显示，大约四分之一的青少年故意伤害自己，而身边的成人对此几乎毫无察觉。 这凸显了心理健康意识和干预方面的严重缺口，可能导致许多年轻人无法获得他们急需的支持。 报告指出，青少年自伤行为远比成人意识到的更为普遍，而缺乏觉察意味着许多案例未被发现和干预。
 
-rss · 钛媒体 · 7月1日 12:34
+rss · 虎嗅 · 7月2日 00:27
 
-**背景**: 美国海关和边境保护局（CBP）加强了对申报不实的电商货物的执法力度，这些货物常涉及低报价值或错误标签。新的电子数据匹配要求旨在打击欺诈并确保准确征收关税。货运代理作为中间人，若经手的货物被扣押将面临严厉处罚，因此他们拒绝高风险物品。鉴于跨境电子商务的快速增长（Temu 和 Amazon 等平台占据大量订单份额），这一趋势影响尤为显著。
+**背景**: 青少年自伤行为（如割伤或烧伤）通常是应对情绪困扰、抑郁或焦虑的一种方式。许多年轻人因羞耻或害怕惩罚而隐藏伤口，导致家长和老师难以察觉这一问题。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://diaztradelaw.com/services/customs-border-protection-issues/cbp-seizures-fines-penalties-and-forfeitures/">CBP Seizures (Fines, Penalties and Forfeitures) - Customs ...</a></li>
-<li><a href="https://www.descartes.com/ecommerce/news/temu-matches-amazon-in-cross-border-ecommerce-sales">Temu Matches Amazon in Cross-Border Ecommerce ... | Descartes</a></li>
+**标签**: `#adolescent mental health`, `#self-harm`, `#social awareness`, `#trending topic`
 
-</ul>
-</details>
+---
 
-**标签**: `#US customs`, `#e-commerce`, `#freight forwarders`, `#trade policy`, `#shipping gridlock`
+<a id="item-10"></a>
+### [作业帮失去了一代人的学习入口地位](https://www.huxiu.com/article/4871959.html?f=rss) ⭐️ 8.0/10 [热搜]
+
+虎嗅网的一篇分析指出，作业帮曾是中国在线教育领域的霸主，如今已失去作为一代学生主要学习入口的地位。文章强调了该平台在学习习惯转变和竞争加剧下的衰落。 这一衰落反映了中国学生获取教育资源方式的广泛社会和技术变迁，从集中式平台转向更碎片化、个性化的工具。它标志着一个单一应用主导在线学习市场的时代可能终结。 文章未提供具体的财务或用户数据，而是聚焦于定性趋势，如用户期望的变化和替代学习方式的兴起。它指出，作业帮未能适应新需求，如 AI 辅导和短视频学习，是其衰落的原因之一。
+
+rss · 虎嗅 · 7月2日 00:13
+
+**背景**: 作业帮于 2014 年上线，最初以拍照搜题功能解决作业问题而迅速走红。随后它扩展到直播辅导，并成为中国领先的在线教育平台之一，尤其在新冠疫情期间。然而，2021 年对教育科技行业的监管整顿，以及抖音等新竞争对手在教育内容领域的崛起，侵蚀了其用户基础。
+
+**标签**: `#作业帮`, `#online education`, `#learning platform`, `#decline`, `#social trend`
+
+---
+
+<a id="item-11"></a>
+### [美国 AI 自我设限，中国大模型迎来窗口期](https://www.huxiu.com/article/4871775.html?f=rss) ⭐️ 8.0/10 [热搜]
+
+一篇分析文章指出，美国 AI 行业正进入自我设限的‘计划经济’时代，这可能为中国大语言模型加速发展、实现追赶创造战略窗口期。 这一转变可能重塑全球 AI 竞争格局，在美国创新面临监管和出口管制逆风之际，为中国企业缩小基础模型能力差距提供机会。 文章用‘计划经济’一词描述美国 AI 日益增加的政府监管、先进芯片出口管制以及领先实验室的自愿安全承诺，这些因素共同减缓了开放创新。
+
+rss · 虎嗅 · 7月2日 00:00
+
+**背景**: 近年来，美国政府对中国实施了高端 AI 芯片的出口限制，同时 OpenAI、Google 等主要 AI 实验室承诺遵守安全准则。这些措施被视为美国自我限制 AI 发展速度。与此同时，中国大力投资本土 AI 模型，美国进展的任何放缓都可能为中国企业提供关键的追赶机会。
+
+**标签**: `#AI`, `#大模型`, `#中美竞争`, `#技术趋势`, `#行业分析`
 
 ---
 
 <a id="item-12"></a>
-### [核聚变初创爆发：AI 能源需求与政策催生投资狂潮](https://36kr.com/p/3877043321237504?f=rss) ⭐️ 8.0/10 [热搜]
+### [美国海关新规导致小型电商卖家陷入困境](https://www.tmtpost.com/8049419.html) ⭐️ 8.0/10 [热搜]
 
-2025 年至 2026 年，中国核聚变初创公司估值和投资急剧飙升，背后是国家政策支持以及人工智能对清洁电力的巨大需求。例如，2025 年 3 月成立的诺瓦聚变已融资 12 亿元，估值正冲向百亿。 这一投资狂潮表明，核聚变正从遥不可及的研究领域转变为具有战略意义的关键产业，有望重塑全球能源和人工智能基础设施。最终结果可能决定哪个国家在人工智能和清洁能源领域占据领先地位。 一项关键技术突破是麻省理工学院 2021 年开发的第二代高温超导磁体，使聚变反应堆体积缩小到国际热核聚变实验堆（ITER）的四十分之一。然而，商业聚变尚未得到验证，大多数初创公司计划在 2030 年代实现并网发电。
+美国海关一项要求严格电子数据匹配的新规迫使货运代理拒绝接收电商货物，导致航运拥堵，小型卖家陷入困境。 这一混乱局面威胁到依赖低成本运输的小型电商卖家的生存，并标志着海关执法全面收紧，可能重塑跨境电商物流格局。 该规定要求所有进口数据必须通过自动商业环境（ACE）系统提交，并进行精确的电子匹配，任何不匹配都可能导致货物在港口被立即扣押。
 
-rss · 36氪 · 7月1日 12:14
+rss · 钛媒体 · 7月1日 12:34
 
-**背景**: 核聚变是将原子核结合释放巨大能量，与核裂变（原子核分裂）不同。它使用海水中丰富的氘作为燃料，不产生长寿命放射性废物。像 ITER 这样的国际项目耗费数十年和数百亿美元，仍未实现净能量增益。近年来的私营企业则致力于更小、更快的反应堆。
+**背景**: 自动商业环境（ACE）是美国海关和边境保护局用于处理进口货物的数字系统。2025 年，ACE 成为所有申报的强制性系统，电子数据匹配要求也进一步收紧，以加强执法和减少欺诈。货运代理因担心匹配错误带来的责任，现在拒绝接收来自小型卖家的高风险消费品，这些卖家往往缺乏确保数据完全合规的资源。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://fusionnica.com/zh-cn/basics/energy-problem/">能源问题与 核 聚 变 | Fusionnica</a></li>
-<li><a href="https://www.bbc.com/zhongwen/simp/science-63968084">核 聚 变 研究取得突破 美国实验室首次实现净能量增益 - BBC News 中文</a></li>
+<li><a href="https://www.cbp.gov/trade/rulings/bulletin-decisions">Customs Bulletin and Decisions - U.S. Customs and Border ...</a></li>
+<li><a href="https://www.trilinkftz.com/global-trade-regulatory-compliance/us-customs-2025/">U.S. Customs Rules and Procedures 2025: Expert Guide for ...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#nuclear fusion`, `#investment`, `#AI`, `#energy`, `#trending`
-
----
-
-<a id="item-13"></a>
-### [Valar 与英伟达演示微型核反应堆供电 AI 数据中心](https://36kr.com/newsflashes/3877684640428034?f=rss) ⭐️ 8.0/10 [热搜]
-
-Valar Atomics 与英伟达在犹他州成功演示了首个由微型核反应堆供电的 AI 数据中心，该演示将 Valar 的高温气冷微型反应堆与英伟达的 Blackwell 芯片平台及 DSX 数据中心液冷系统相结合。 此次演示应对了 AI 算力激增带来的用水和能源挑战，有望实现可持续的大规模 AI 基础设施，并将用水量降至接近零。 该反应堆采用氦气而非水进行冷却，配合英伟达 DSX 数据中心的闭环液冷设计，将设施年用水量从传统的每兆瓦约 260 万加仑降至接近零。
-
-rss · 36氪 · 7月1日 23:04
-
-**背景**: AI 数据中心消耗大量电力和水用于冷却。传统数据中心采用耗水量大的冷却系统。微型核反应堆提供了一种紧凑、无碳的电源。Valar Atomics 专注于高温气冷反应堆，使用氦气作为冷却剂，从而消除了反应堆冷却过程中的用水需求。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://finance.sina.com.cn/stock/usstock/c/2026-07-02/doc-inifixkn2793138.shtml?cref=cj">Valar与 英 伟 达 合作建设节水核能 数 据 中 心 _新浪财经_新浪网</a></li>
-<li><a href="https://www.valaratomics.com/">The New Atomic Age | Valar Atomics</a></li>
-
-</ul>
-</details>
-
-**标签**: `#核能`, `#英伟达`, `#AI数据中心`, `#节水`, `#能源`
-
----
-
-<a id="item-14"></a>
-### [美联储主席沃什：美国通胀仍过高](https://36kr.com/newsflashes/3877683944517637?f=rss) ⭐️ 8.0/10 [热搜]
-
-7 月 1 日，美联储主席凯文·沃什在欧洲央行中央银行论坛上表示，当前美国通胀水平仍然过高，重申物价稳定是美联储的首要任务。他暗示将开辟新的政策路径，但未就利率决策给出具体指引。 这一表态表明通胀压力持续存在，美联储政策可能发生转变，进而影响全球金融市场和经济预期。投资者和政策制定者将关注新政策路径的进一步明确。 沃什宣布设立独立工作组，研究货币政策沟通、经济数据体系、生产率、通胀框架以及资产负债表政策等课题。他回避了 7 月会议是否加息的问题，强调不会对未来利率政策给出前瞻性指引。
-
-rss · 36氪 · 7月1日 23:04
-
-**背景**: 前瞻性指引是央行通过沟通未来政策意图来影响市场预期的货币政策工具。自 2008 年金融危机以来，美联储广泛使用了这一工具。资产负债表政策指美联储管理其资产持有量，从而影响利率和流动性。沃什的评论暗示可能从明确的前瞻性指引转向更依赖数据的方法。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.federalreserve.gov/econres/feds/files/2021033pap.pdf">The Emergence of Forward Guidance As a Monetary Policy Tool</a></li>
-<li><a href="https://www.federalreserve.gov/monetarypolicy/bst_recenttrends.htm">Federal Reserve Board - Recent balance sheet trends</a></li>
-
-</ul>
-</details>
-
-**标签**: `#Federal Reserve`, `#inflation`, `#monetary policy`, `#interest rates`, `#economic news`
-
----
-
-<a id="item-16"></a>
-### [赢得利润却错过时代：谁在付出代价？](https://www.huxiu.com/article/4871948.html?f=rss) ⭐️ 7.0/10 [热搜]
-
-虎嗅网的一篇分析文章探讨了那些虽然盈利却未能适应市场变化趋势的公司，最终失去了竞争力和时代相关性。 这一话题揭示了一个关键商业教训：短期盈利并不能保证长期生存，尤其是在科技和消费品等快速演变的行业。它与当前关于创新和颠覆的讨论产生共鸣，敦促领导者平衡利润与战略适应。 文章可能引用了诺基亚、柯达或百视达等知名案例，这些公司在巅峰时期盈利丰厚，但在数字化转型重塑市场时未能及时转型。分析聚焦于阻碍盈利公司拥抱变革的心理和组织障碍。
-
-rss · 虎嗅 · 7月1日 16:33
-
-**背景**: “赢得利润却错过时代”这一概念描述的是那些财务回报强劲，却未能识别或应对技术、消费者行为或商业模式根本性转变的公司。这类公司往往成为“创新者困境”的牺牲品，即在现有市场的成功使其对颠覆性威胁视而不见。这一模式在从胶片摄影到手机再到零售等多个行业都有体现。
-
-**标签**: `#business`, `#era`, `#profit`, `#adaptation`, `#innovation`
+**标签**: `#US customs`, `#e-commerce`, `#freight forwarders`, `#shipping gridlock`, `#trade regulation`, `#small sellers`
 
 ---
