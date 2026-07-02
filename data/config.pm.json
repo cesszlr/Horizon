@@ -153,12 +153,12 @@
         "chart_with_upwards_trend"
       ],
       "markdown": true,
-      "click": "https://pm.bao-horizon.pages.dev/#{date}/summary-#{language}",
+      "click": "https://bao-horizon.pages.dev/#{date}/summary-#{language}",
       "actions": [
         {
           "action": "view",
           "label": "🌐 网页版完整报告",
-          "url": "https://pm.bao-horizon.pages.dev/#{date}/summary-#{language}",
+          "url": "https://bao-horizon.pages.dev/#{date}/summary-#{language}",
           "clear": true
         }
       ]
