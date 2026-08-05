@@ -106,7 +106,7 @@
     "category_groups": {
       "ai": {
         "name": "AI 探索 (AI)",
-        "limit": 6,
+        "limit": 5,
         "categories": [
           "AI",
           "technology",
@@ -115,7 +115,7 @@
       },
       "product_manager": {
         "name": "产品专栏 (Product Management)",
-        "limit": 6,
+        "limit": 18,
         "categories": [
           "product_manager",
           "pm",
@@ -124,7 +124,7 @@
       },
       "trending": {
         "name": "热搜焦点 (Trending)",
-        "limit": 6,
+        "limit": 7,
         "categories": [
           "trending",
           "social_hotspot",
