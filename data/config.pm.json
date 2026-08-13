@@ -102,11 +102,11 @@
   "filtering": {
     "ai_score_threshold": 6.5,
     "time_window_hours": 24,
-    "max_items": 20,
+    "max_items": 30,
     "category_groups": {
       "ai": {
         "name": "AI 探索 (AI)",
-        "limit": 5,
+        "limit": 10,
         "categories": [
           "AI",
           "technology",
@@ -115,7 +115,7 @@
       },
       "product_manager": {
         "name": "产品专栏 (Product Management)",
-        "limit": 18,
+        "limit": 12,
         "categories": [
           "product_manager",
           "pm",
@@ -124,7 +124,7 @@
       },
       "trending": {
         "name": "热搜焦点 (Trending)",
-        "limit": 7,
+        "limit": 8,
         "categories": [
           "trending",
           "social_hotspot",
