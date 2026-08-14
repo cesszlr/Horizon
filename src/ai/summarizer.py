@@ -1,9 +1,9 @@
 """Daily summary generation — pure programmatic rendering."""
 
 import re
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
-from ..models import ContentItem
+from ..models import CategoryRule, ContentItem
 
 
 _CJK = r"[\u4e00-\u9fff\u3400-\u4dbf]"
@@ -21,11 +21,14 @@ LABELS = {
     "en": {
         "header": "Horizon Daily",
         "source": "Source",
+        "key_takeaways": "Key Takeaways",
+        "deep_dive": "Deep Dive",
         "background": "Background",
         "discussion": "Discussion",
         "references": "References",
         "tags": "Tags",
         "selected_items": "From {total} items, {selected} important content pieces were selected",
+        "webhook_selected_items": "Selected {selected} important items from {total} fetched items",
         "empty_analyzed": "Analyzed {total} items, but none met the importance threshold.",
         "empty_body": (
             "No significant developments today. This might indicate:\n"
@@ -38,22 +41,27 @@ LABELS = {
             "3. Checking if the AI model is working correctly\n"
         ),
         "category_sections": {
+            "ai": "AI & LLM",
             "technology": "Technology",
             "politics": "Politics & Current Affairs",
             "social_hotspot": "Social & Social Media Hotspots",
             "trending": "Trending Hot Topics",
             "product_manager": "Product Management",
+            "gaming": "Gaming & Esports",
             "other": "Other",
         },
     },
     "zh": {
         "header": "Horizon 每日速递",
         "source": "来源",
+        "key_takeaways": "核心要点速览",
+        "deep_dive": "深度内容详析",
         "background": "背景",
         "discussion": "社区讨论",
         "references": "参考链接",
         "tags": "标签",
         "selected_items": "从 {total} 条内容中筛选出 {selected} 条重要资讯。",
+        "webhook_selected_items": "从 {total} 条内容中筛选出 {selected} 条重要资讯。",
         "empty_analyzed": "已分析 {total} 条内容，但没有达到重要性阈值的条目。",
         "empty_body": (
             "今日暂无重要动态，可能原因：\n"
@@ -66,11 +74,13 @@ LABELS = {
             "3. 检查 AI 模型是否正常工作\n"
         ),
         "category_sections": {
+            "ai": "AI 与大模型 (AI & LLM)",
             "technology": "技术 (Technology)",
             "politics": "时政 (Politics)",
             "social_hotspot": "社会热点 (Social Hotspots)",
             "trending": "热搜 (Trending Hot Topics)",
             "product_manager": "产品经理 (Product Management)",
+            "gaming": "游戏 (Gaming)",
             "other": "其他 (Other)",
         },
     },
@@ -80,60 +90,49 @@ LABELS = {
 class DailySummarizer:
     """Generates daily Markdown summaries from pre-analyzed content items."""
 
-    def __init__(self):
-        pass
+    def __init__(self, categories: Optional[Dict[str, CategoryRule]] = None):
+        self.categories = categories or {}
 
     def _get_category_label(self, item: ContentItem, language: str) -> str:
         """Get a localized category label for the item."""
-        cat = item.ai_category
+        cat = item.ai_category or item.metadata.get("category")
         if not cat:
-            cat = item.metadata.get("category")
-            if not cat:
-                return ""
-            return str(cat)
+            return ""
+
+        cat_str = str(cat).lower()
+        if cat_str in self.categories:
+            rule = self.categories[cat_str]
+            if language == "zh" and rule.name:
+                # If rule.name is like "游戏资讯 (Gaming)", extract concise Chinese part if appropriate
+                return rule.name.split(" ")[0] if "(" in rule.name else rule.name
+            if language == "en" and rule.name_en:
+                return rule.name_en
+            return rule.name or cat_str
 
         mapping = {
             "zh": {
+                "ai": "AI",
                 "technology": "技术",
                 "politics": "时政",
                 "social_hotspot": "社会热点",
                 "trending": "热搜",
                 "product_manager": "产品经理",
+                "gaming": "游戏",
                 "other": "其他",
             },
             "en": {
+                "ai": "AI",
                 "technology": "Tech",
                 "politics": "Politics",
                 "social_hotspot": "Social",
                 "trending": "Trending",
                 "product_manager": "PM",
+                "gaming": "Gaming",
                 "other": "Other",
             }
         }
         lang_map = mapping.get(language, mapping["en"])
-        return lang_map.get(cat.lower(), cat)
-
-    def _normalize_category_key(self, item: ContentItem) -> str:
-        """Normalize category value to one of: technology, politics, social_hotspot, trending, product_manager, other."""
-        cat = item.ai_category
-        if not cat:
-            cat = item.metadata.get("category")
-        if not cat:
-            return "other"
-        
-        cat_lower = str(cat).lower()
-        if cat_lower in ("technology", "tech", "ai", "programming languages", "cloud native", "open source"):
-            return "technology"
-        elif cat_lower in ("politics", "politics / current affairs"):
-            return "politics"
-        elif cat_lower in ("social_hotspot", "social hot topics", "social network hot topics"):
-            return "social_hotspot"
-        elif cat_lower in ("trending", "hot search", "热搜"):
-            return "trending"
-        elif cat_lower in ("product_manager", "pm", "产品经理"):
-            return "product_manager"
-        
-        return "other"
+        return lang_map.get(cat_str, str(cat))
 
     def _group_items_by_category(
         self,
@@ -157,7 +156,7 @@ class DailySummarizer:
             cat = item.ai_category
             if not cat:
                 cat = item.metadata.get("category")
-            
+
             group_key = default_group
             if cat:
                 cat_str = str(cat).lower()
@@ -179,7 +178,7 @@ class DailySummarizer:
                         group_key = default_group
 
             grouped[group_key].append((i + 1, item))
-            
+
         return grouped
 
     def _get_group_display_name(
@@ -196,6 +195,10 @@ class DailySummarizer:
                 name = group.get("name")
             if name:
                 return name
+        if group_key in self.categories:
+            rule = self.categories[group_key]
+            if rule.name:
+                return rule.name
         return section_labels.get(group_key, group_key.capitalize())
 
     async def generate_summary(
@@ -255,6 +258,10 @@ class DailySummarizer:
                 "product_manager": {
                     "name": section_labels.get("product_manager", "Product Manager"),
                     "categories": ["product_manager", "pm", "产品经理"]
+                },
+                "gaming": {
+                    "name": section_labels.get("gaming", "Gaming"),
+                    "categories": ["gaming", "game", "游戏"]
                 }
             }
 
@@ -306,23 +313,19 @@ class DailySummarizer:
         category_groups: Dict[str, Any] | None = None,
         default_group: str = "other",
     ) -> str:
-        """Generate a compact overview for multi-message webhook delivery."""
+        """Generate a short overview TOC message for multi-message webhook delivery."""
         labels = LABELS.get(language, LABELS["en"])
+
         if not items:
             return self._generate_empty_summary(date, total_fetched, labels)
 
-        if language == "zh":
-            header = (
-                f"# {labels['header']} - {date}\n\n"
-                f"> 从 {total_fetched} 条内容中筛选出 {len(items)} 条重要资讯。\n\n"
-                "下面会按新闻逐条发送详情，你可以只看感兴趣的标题。\n\n"
-            )
-        else:
-            header = (
-                f"# {labels['header']} - {date}\n\n"
-                f"> Selected {len(items)} important items from {total_fetched} fetched items.\n\n"
-                "Details will be sent item by item so you can read only the topics you care about.\n\n"
-            )
+        sel_text = labels.get("webhook_selected_items", labels["selected_items"]).format(
+            total=total_fetched, selected=len(items)
+        )
+        header = (
+            f"**{labels['header']} • {date}**\n\n"
+            f"> {sel_text}\n"
+        )
 
         section_labels = labels.get("category_sections", {})
         if not category_groups:
@@ -346,6 +349,10 @@ class DailySummarizer:
                 "product_manager": {
                     "name": section_labels.get("product_manager", "Product Manager"),
                     "categories": ["product_manager", "pm", "产品经理"]
+                },
+                "gaming": {
+                    "name": section_labels.get("gaming", "Gaming"),
+                    "categories": ["gaming", "game", "游戏"]
                 }
             }
 
@@ -385,7 +392,7 @@ class DailySummarizer:
         return prefix + self._format_item(item, labels, language, index).rstrip("-\n ")
 
     def _format_item(self, item: ContentItem, labels: dict, language: str, index: int) -> str:
-        """Format a single ContentItem into Markdown."""
+        """Format a single ContentItem into Markdown with rich self-contained details."""
         _title = item.metadata.get(f"title_{language}") or item.title
         title = str(_title).replace("[", "(").replace("]", ")")
         url = str(item.url)
@@ -394,6 +401,11 @@ class DailySummarizer:
         cat_suffix = f" [{category}]" if category else ""
         meta = item.metadata
 
+        # Key Takeaways (3-5 bullet points)
+        takeaways = meta.get(f"key_takeaways_{language}") or meta.get("key_takeaways")
+        # Deep Dive narrative (self-contained explanation)
+        deep_dive = meta.get(f"deep_dive_{language}") or meta.get("deep_dive")
+        # Fallback summary
         summary = (
             meta.get(f"detailed_summary_{language}")
             or meta.get("detailed_summary")
@@ -409,11 +421,16 @@ class DailySummarizer:
 
         if language == "zh":
             title = _pangu(title)
-            summary = _pangu(summary)
-            background = _pangu(background)
-            discussion = _pangu(discussion)
+            if deep_dive:
+                deep_dive = _pangu(deep_dive)
+            if summary:
+                summary = _pangu(summary)
+            if background:
+                background = _pangu(background)
+            if discussion:
+                discussion = _pangu(discussion)
 
-        # Source line with parts joined by " · ", link appended at end
+        # Source line
         source_type = item.source_type.value
         source_parts = [source_type]
         if meta.get("subreddit"):
@@ -431,7 +448,7 @@ class DailySummarizer:
             else:
                 day = item.published_at.strftime("%d").lstrip("0")
                 source_parts.append(item.published_at.strftime(f"%b {day}, %H:%M"))
-        source_line = " \u00b7 ".join(source_parts)  # ·
+        source_line = " \u00b7 ".join(source_parts)
 
         discussion_url = meta.get("discussion_url")
         if discussion_url:
@@ -441,12 +458,27 @@ class DailySummarizer:
 
         lines = [
             f'<a id="item-{index}"></a>',
-            f"### [{title}]({url}) \u2b50\ufe0f {score}/10{cat_suffix}",  # ⭐️
+            f"### [{title}]({url}) \u2b50\ufe0f {score}/10{cat_suffix}",
             "",
-            summary,
-            "",
-            source_line,
         ]
+
+        # Render Key Takeaways if available
+        if takeaways and isinstance(takeaways, list) and len(takeaways) > 0:
+            lines.append(f"**{labels.get('key_takeaways', 'Key Takeaways')}**:")
+            for pt in takeaways:
+                pt_text = _pangu(str(pt).strip()) if language == "zh" else str(pt).strip()
+                lines.append(f"- {pt_text}")
+            lines.append("")
+
+        # Render Deep Dive or Summary
+        if deep_dive:
+            lines.append(f"**{labels.get('deep_dive', 'Deep Dive')}**:\n{deep_dive}")
+            lines.append("")
+        elif summary:
+            lines.append(summary)
+            lines.append("")
+
+        lines.append(source_line)
 
         if background:
             lines.append("")
@@ -479,5 +511,5 @@ class DailySummarizer:
         return (
             f"# {labels['header']} - {date}\n\n"
             f"> {labels['empty_analyzed'].format(total=total_fetched)}\n\n"
-            + labels["empty_body"]
+            f"{labels['empty_body']}\n"
         )

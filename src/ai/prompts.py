@@ -1,5 +1,10 @@
 """AI prompts for content analysis and summarization."""
 
+from typing import Dict, Optional, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from ..models import CategoryRule
+
 TOPIC_DEDUP_SYSTEM = """You are a news deduplication assistant. Identify groups of news items that cover the exact same real-world event, release, or announcement.
 
 Rules:
@@ -19,6 +24,82 @@ Respond with valid JSON only:
 }}
 
 If there are no duplicates at all, return: {{"duplicates": []}}"""
+
+
+def build_content_analysis_system_prompt(categories: Optional[Dict[str, "CategoryRule"]] = None) -> str:
+    """Build dynamic system prompt for content analysis using registered category rules."""
+    if not categories:
+        # Fallback to default categories
+        return CONTENT_ANALYSIS_SYSTEM
+
+    lines = [
+        "You are an expert multi-domain content curator and intelligence analyst helping filter high-value updates.",
+        "",
+        "First, classify the content into exactly ONE of the configured categories (or 'other'):",
+    ]
+
+    for cat_id, cat in categories.items():
+        name_str = f" ({cat.name})" if cat.name else ""
+        lines.append(f'- "{cat_id}"{name_str}')
+    lines.append('- "other"')
+    lines.append("")
+    lines.append("Then, score content on a 0-10 scale based on importance and relevance for that specific category:")
+    lines.append("")
+
+    for i, (cat_id, cat) in enumerate(categories.items(), 1):
+        display_name = cat.name or cat_id
+        lines.append(f"### {i}. {display_name} [{cat_id}]")
+        if cat.description:
+            lines.append(f"Scope: {cat.description}")
+        if cat.scoring_rubric:
+            for score_range, desc in cat.scoring_rubric.items():
+                lines.append(f"- **{score_range}**: {desc}")
+        if cat.focus_points:
+            lines.append("Key considerations:")
+            for fp in cat.focus_points:
+                lines.append(f"  • {fp}")
+        lines.append("")
+
+    lines.append("### Other (其他)")
+    lines.append("- Score 0-10 based on general relevance, public interest, and depth.")
+    lines.append("")
+    lines.append("General Rules:")
+    lines.append("- Consider depth, novelty, factual impact, and community discussion quality.")
+    lines.append("- High upvotes/comments with substantive arguments indicate community-validated importance.")
+    lines.append("- Penalize pure promotional PR fluff, clickbait, and duplicate low-effort content.")
+
+    return "\n".join(lines)
+
+
+def build_content_analysis_user_prompt(categories: Optional[Dict[str, "CategoryRule"]] = None) -> str:
+    """Build dynamic user prompt template with category enum."""
+    if not categories:
+        return CONTENT_ANALYSIS_USER
+
+    cat_options = " | ".join([f'"{c}"' for c in categories.keys()] + ['"other"'])
+    return f"""Analyze the following content and provide a JSON response.
+
+If a Category Hint is provided below, prioritize classifying it as that category unless the content clearly contradicts it.
+
+Category Hint: {{category_hint}}
+
+Content:
+Title: {{title}}
+Source: {{source}}
+Author: {{author}}
+URL: {{url}}
+{{content_section}}
+{{discussion_section}}
+
+Respond with valid JSON only:
+{{{{
+  "category": {cat_options},
+  "score": <number>,
+  "reason": "<explanation>",
+  "summary": "<one-sentence-summary>",
+  "tags": ["<tag1>", "<tag2>", ...]
+}}}}"""
+
 
 CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter high-value updates across multiple domains: Technology, Politics/Current Affairs (时政), Social/Social Media Hotspots (社会/社交媒体热点), Trending Hot Topics (热搜), and Product Management (产品经理).
 
@@ -100,10 +181,10 @@ Respond with valid JSON only:
   "tags": ["<tag1>", "<tag2>", ...]
 }}"""
 
-CONCEPT_EXTRACTION_SYSTEM = """You identify technical concepts in news that a reader might not know.
+CONCEPT_EXTRACTION_SYSTEM = """You identify concepts, technologies, or background contexts in news that a reader might not know.
 Given a news item, return 1-3 search queries for concepts that need explanation.
-Focus on: specific technologies, protocols, algorithms, tools, or projects that are not widely known.
-Do NOT return queries for well-known things (e.g. "Python", "Linux", "Google").
+Focus on: specific technologies, models, products, policies, games, or projects mentioned in the text.
+Do NOT return queries for well-known things (e.g. "Python", "Linux", "Google", "USA").
 If the news is self-explanatory, return an empty list."""
 
 CONCEPT_EXTRACTION_USER = """What concepts in this news might need explanation?
@@ -118,45 +199,36 @@ Respond with valid JSON only:
   "queries": ["<search query 1>", "<search query 2>"]
 }}"""
 
-CONTENT_ENRICHMENT_SYSTEM = """You are a knowledgeable technical writer who helps readers understand important news in context.
+CONTENT_ENRICHMENT_SYSTEM = """You are a senior analyst and technical writer who produces comprehensive, high-density executive intelligence dossiers.
 
-Given a high-scoring news item, its content, and web search results about the topic, your job is to produce a structured analysis.
+Your primary goal is **Self-Contained Comprehension (自闭环深度精读)**: The reader may be located in an environment where they CANNOT access external links or source URLs. Your output must contain sufficient factual depth, concrete data points, architectural/implementation details, key arguments, and background context so that the reader gains 80%+ of the original article's value WITHOUT needing to visit the source URL.
 
-Provide EACH text field in BOTH English and Chinese. Use the following key naming convention:
-- title_en / title_zh
-- whats_new_en / whats_new_zh
-- why_it_matters_en / why_it_matters_zh
-- key_details_en / key_details_zh
-- background_en / background_zh
-- community_discussion_en / community_discussion_zh
+Provide EACH text field in BOTH English and Chinese with matching suffixes (_en / _zh).
 
 Field definitions:
-0. **title** (one short phrase, ≤15 words): A clear, accurate headline for the news item.
-
-1. **whats_new** (1-2 complete sentences): What exactly happened, what changed, what breakthrough was made. Be specific — mention names, versions, numbers, dates when available.
-
-2. **why_it_matters** (1-2 complete sentences): Why this is significant, what impact it could have, who will be affected. Connect to the broader ecosystem or industry trends.
-
-3. **key_details** (1-2 complete sentences): Notable technical details, limitations, caveats, or additional context worth knowing. Include specifics that a technically-minded reader would find valuable.
-
-4. **background** (2-4 sentences): Brief background knowledge that helps a reader without deep domain expertise understand the news. Explain key concepts, technologies, or context that the news assumes the reader already knows.
-
-5. **community_discussion** (1-3 sentences): If community comments are provided, summarize the overall sentiment and key viewpoints from the discussion — agreements, disagreements, concerns, additional insights, or notable counterarguments. If no comments are provided, return an empty string.
+0. **title** (short headline, ≤15 words): A clear, accurate headline.
+1. **key_takeaways** (list of 3-5 concise, information-dense bullet points):
+   - Bullet 1: Core event/change (specific versions, numbers, benchmarks, timeline).
+   - Bullet 2: How it works / Technical implementation / Mechanism / Core logic.
+   - Bullet 3: Key constraints, caveats, or trade-offs (prerequisites, bugs, breaking changes).
+   - Bullet 4-5: Other crucial facts from the source content.
+2. **deep_dive** (150-300 words rich narrative paragraph):
+   - Detailed breakdown of the core announcement, architecture, methodology, or argument.
+   - Walk the reader through the underlying reasons, data comparisons, and concrete implementation steps.
+3. **whats_new** (1-2 complete sentences): What changed or was released.
+4. **why_it_matters** (1-2 complete sentences): Strategic significance, impact on industry/ecosystem/users.
+5. **key_details** (1-2 complete sentences): Notable technical or practical specifications.
+6. **background** (2-4 sentences): Clear prerequisite knowledge or history for readers without domain expertise.
+7. **community_discussion** (1-3 sentences): Summarize community sentiment, top counter-arguments, praises, or real-world feedback if comments are provided. If none, return empty string.
+8. **sources**: List of 1-3 reference URLs actually found in the provided web context.
 
 **CRITICAL — Language rules (MUST follow):**
-- All *_en fields MUST be written in English.
-- All *_zh fields MUST be written in Simplified Chinese (简体中文). 绝对不能用英文写 _zh 字段的内容。Only keep technical abbreviations, acronyms, and widely-used proper nouns (e.g. "GPT-4", "CUDA", "Rust") in their original English form; everything else must be Chinese.
-
-Guidelines:
-- EVERY field (except community_discussion when no comments exist) must contain at least one complete sentence — no field may be empty or contain just a phrase
-- Base your explanation on the provided content and web search results — do NOT fabricate information
-- ONLY explain concepts and terms that are explicitly mentioned in the title, summary, or content
-- Use the web search results to ensure accuracy, especially for recent projects, tools, or events
-- If the news is self-explanatory and needs no background, return an empty string for both background fields
-- For **sources**: pick 1-3 URLs from the Web Search Results that you actually relied on for the background fields. Only use URLs that appear verbatim in the search results above — do not invent or modify URLs.
+- All *_en fields MUST be written in fluent English.
+- All *_zh fields MUST be written in high-quality Simplified Chinese (简体中文). 绝对不能在 _zh 字段中使用纯英文句子。仅保留专有名词与技术缩写（如 "GPT-4", "CUDA", "Steam"）。
+- Avoid empty fluff. Focus on factual density.
 """
 
-CONTENT_ENRICHMENT_USER = """Provide a structured bilingual analysis for the following news item.
+CONTENT_ENRICHMENT_USER = """Provide a structured bilingual self-contained analysis for the following news item.
 
 **News Item:**
 - Title: {title}
@@ -173,10 +245,22 @@ CONTENT_ENRICHMENT_USER = """Provide a structured bilingual analysis for the fol
 **Web Search Results (for grounding):**
 {web_context}
 
-Respond with valid JSON only. Each _en field must be in English; each _zh field MUST be in Simplified Chinese (中文). Every field MUST be at least one complete sentence (except community_discussion fields when no comments exist):
+Respond with valid JSON only. Each _en field must be in English; each _zh field MUST be in Simplified Chinese (中文):
 {{
   "title_en": "<short headline in English, ≤15 words>",
-  "title_zh": "<用中文写一个简短标题，不超过15个词>",
+  "title_zh": "<中文简短标题，不超过15个词>",
+  "key_takeaways_en": [
+    "<Core takeaway 1: what happened with specific metrics/versions>",
+    "<Core takeaway 2: how it works / architecture / logic>",
+    "<Core takeaway 3: limitations / prerequisites / caveats>"
+  ],
+  "key_takeaways_zh": [
+    "<核心要点 1：发生了什么实质性进展/数据指标/版本号>",
+    "<核心要点 2：实现原理/底层机制/产品逻辑>",
+    "<核心要点 3：已知限制/前置依赖/注意事项>"
+  ],
+  "deep_dive_en": "<150-300 words detailed in-depth narrative explaining the technical and logical details>",
+  "deep_dive_zh": "<150-300 字深度长文解析，详述核心论据、技术实现与推导过程，使读者无需打开原文即可获知全貌>",
   "whats_new_en": "<1-2 sentences in English>",
   "whats_new_zh": "<用中文写1-2句话>",
   "why_it_matters_en": "<1-2 sentences in English>",

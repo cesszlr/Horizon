@@ -1,0 +1,67 @@
+{
+  "id": "pm",
+  "name": "PM & Trending",
+  "enabled": true,
+  "filtering": {
+    "ai_score_threshold": 6.5,
+    "time_window_hours": 24,
+    "max_items": 30,
+    "category_groups": {
+      "ai": {
+        "name": "AI 探索 (AI & LLM)",
+        "limit": 10,
+        "categories": [
+          "ai"
+        ]
+      },
+      "product_manager": {
+        "name": "产品专栏 (Product Management)",
+        "limit": 12,
+        "categories": [
+          "product_manager"
+        ]
+      },
+      "trending": {
+        "name": "热搜焦点 (Trending)",
+        "limit": 8,
+        "categories": [
+          "trending",
+          "politics"
+        ]
+      }
+    },
+    "default_group": "other",
+    "default_group_limit": 3
+  },
+  "output": {
+    "docs_dir": "docs/pm",
+    "cf_project_name": "bao-horizon"
+  },
+  "webhook": {
+    "enabled": true,
+    "url_env": "HORIZON_WEBHOOK_URL",
+    "delivery": "summary",
+    "platform": "generic",
+    "layout": "markdown",
+    "request_body": {
+      "topic": "${HORIZON_NTFY_TOPIC_PM}",
+      "title": "Horizon 每日速递 • #{date}",
+      "message": "📊 本日筛选出 **#{important_items}** / #{all_items} 条资讯，以下为精选目录：\n\n#{summary?limit=1500&split=---}\n\n👉 更多详情请点击下方按钮阅读网页版。",
+      "priority": 4,
+      "tags": [
+        "newspaper",
+        "chart_with_upwards_trend"
+      ],
+      "markdown": true,
+      "click": "https://bao-horizon.pages.dev/#{date}/summary-#{language}",
+      "actions": [
+        {
+          "action": "view",
+          "label": "🌐 网页版完整报告",
+          "url": "https://bao-horizon.pages.dev/#{date}/summary-#{language}",
+          "clear": true
+        }
+      ]
+    }
+  }
+}

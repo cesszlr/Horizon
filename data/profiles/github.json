@@ -1,0 +1,73 @@
+{
+  "id": "github",
+  "name": "Tech & News",
+  "enabled": true,
+  "filtering": {
+    "ai_score_threshold": 7.0,
+    "time_window_hours": 24,
+    "max_items": 25,
+    "category_groups": {
+      "ai": {
+        "name": "AI 探索 (AI & LLM)",
+        "limit": 8,
+        "categories": [
+          "ai"
+        ]
+      },
+      "tech": {
+        "name": "技术与工程 (Tech & Engineering)",
+        "limit": 6,
+        "categories": [
+          "technology"
+        ]
+      },
+      "politics": {
+        "name": "时政与宏观 (Politics & Macro)",
+        "limit": 5,
+        "categories": [
+          "politics"
+        ]
+      },
+      "social": {
+        "name": "社会热点 (Trending)",
+        "limit": 5,
+        "categories": [
+          "trending"
+        ]
+      }
+    },
+    "default_group": "other",
+    "default_group_limit": 3
+  },
+  "output": {
+    "docs_dir": "docs/github",
+    "cf_project_name": "cesszlr-horizon"
+  },
+  "webhook": {
+    "enabled": true,
+    "url_env": "HORIZON_WEBHOOK_URL",
+    "delivery": "summary",
+    "platform": "generic",
+    "layout": "markdown",
+    "request_body": {
+      "topic": "${HORIZON_NTFY_TOPIC}",
+      "title": "Horizon 每日速递 • #{date}",
+      "message": "📊 本日筛选出 **#{important_items}** / #{all_items} 条资讯，以下为精选目录：\n\n#{summary?limit=1500&split=---}\n\n👉 更多详情请点击下方按钮阅读网页版。",
+      "priority": 4,
+      "tags": [
+        "newspaper",
+        "chart_with_upwards_trend"
+      ],
+      "markdown": true,
+      "click": "https://cesszlr-horizon.pages.dev/#{date}/summary-#{language}",
+      "actions": [
+        {
+          "action": "view",
+          "label": "🌐 网页版完整报告",
+          "url": "https://cesszlr-horizon.pages.dev/#{date}/summary-#{language}",
+          "clear": true
+        }
+      ]
+    }
+  }
+}

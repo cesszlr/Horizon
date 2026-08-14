@@ -37,6 +37,15 @@ def main():
 
     parser = argparse.ArgumentParser(description="Horizon - AI-Driven Information Aggregation System")
     parser.add_argument("--hours", type=int, help="Force fetch from last N hours")
+    parser.add_argument("--profile", type=str, help="Run for a specific profile ID only")
+    parser.add_argument(
+        "--no-notify",
+        "--no-webhook",
+        "--dry-run",
+        dest="no_notify",
+        action="store_true",
+        help="Run without sending notifications (no ntfy/webhook/email)",
+    )
     args = parser.parse_args()
 
     try:
@@ -52,6 +61,7 @@ def main():
         # Load configuration
         try:
             config = storage.load_config()
+            console.print(f"[dim]📁 Configuration loaded: [bold]{storage.loaded_config_path}[/bold][/dim]\n")
         except FileNotFoundError:
             console.print("[bold red]❌ Configuration file not found![/bold red]\n")
             data_dir_path = data_dir if isinstance(data_dir, Path) else Path(data_dir)
@@ -74,7 +84,13 @@ def main():
 
         # Create and run orchestrator
         orchestrator = HorizonOrchestrator(config, storage)
-        asyncio.run(orchestrator.run(force_hours=args.hours))
+        asyncio.run(
+            orchestrator.run(
+                force_hours=args.hours,
+                target_profile_id=args.profile,
+                no_notify=args.no_notify,
+            )
+        )
 
     except KeyboardInterrupt:
         console.print("\n[yellow]⚠️  Interrupted by user[/yellow]")

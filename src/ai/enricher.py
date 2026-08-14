@@ -3,6 +3,7 @@
 For items that pass the score threshold, this module:
 1. Searches the web for relevant context (via DuckDuckGo)
 2. Feeds search results + item content to AI to generate grounded background knowledge
+3. Caches enrichment results across profiles to avoid duplicate AI calls and token usage
 """
 
 import asyncio
@@ -10,10 +11,11 @@ import json
 import re
 import sys
 import os
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from tenacity import retry, stop_after_attempt, wait_exponential
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 from ddgs import DDGS
+import httpx
 
 from .client import AIClient
 from .prompts import (
@@ -27,8 +29,10 @@ from ..models import ContentItem
 class ContentEnricher:
     """Enriches high-scoring content items with background knowledge."""
 
-    def __init__(self, ai_client: AIClient):
+    def __init__(self, ai_client: AIClient, cache: Optional[Dict[str, Dict[str, Any]]] = None):
         self.client = ai_client
+        # Shared or instance-level cache mapping item.id -> enriched metadata dict
+        self.cache: Dict[str, Dict[str, Any]] = cache if cache is not None else {}
 
     def _get_concurrency(self) -> int:
         """Return the configured enrichment concurrency, clamped to 1 or above."""
@@ -129,21 +133,40 @@ class ContentEnricher:
         except Exception:
             return []
 
+    async def _fetch_full_text_fallback(self, url: str) -> str:
+        """Fetch minimal clean webpage text if content is too short."""
+        try:
+            async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
+                headers = {"User-Agent": "Mozilla/5.0 (compatible; HorizonBot/2.0)"}
+                resp = await client.get(url, headers=headers)
+                if resp.status_code == 200:
+                    text = resp.text
+                    # Strip script, style, and html tags
+                    text = re.sub(r"<(script|style).*?</\1>", " ", text, flags=re.DOTALL | re.IGNORECASE)
+                    text = re.sub(r"<[^>]+>", " ", text)
+                    text = re.sub(r"\s+", " ", text).strip()
+                    return text[:3000]
+        except Exception:
+            pass
+        return ""
+
     @retry(
-        stop=stop_after_attempt(3),
-        wait=wait_exponential(min=2, max=10)
+        stop=stop_after_attempt(5),
+        wait=wait_exponential(multiplier=1.5, min=2, max=30)
     )
     async def _enrich_item(self, item: ContentItem) -> None:
         """Enrich a single item with background knowledge.
 
-        Steps:
-        1. Ask AI which concepts in the news need explanation
-        2. Search the web for those concepts
-        3. Ask AI to generate background based on search results
-
         Args:
             item: Content item to enrich (modified in-place via metadata)
         """
+        # Check cache first (for cross-profile reuse)
+        if item.id in self.cache:
+            cached_meta = self.cache[item.id]
+            for k, v in cached_meta.items():
+                item.metadata[k] = v
+            return
+
         # Extract content text and comments separately
         content_text = ""
         comments_text = ""
@@ -154,6 +177,12 @@ class ContentEnricher:
                 comments_text = comments_part.strip()[:2000]
             else:
                 content_text = item.content[:4000]
+
+        # If content is too brief, attempt light web fetch
+        if len(content_text.strip()) < 150:
+            full_text = await self._fetch_full_text_fallback(str(item.url))
+            if full_text:
+                content_text = full_text
 
         # Step 1: AI identifies concepts to explain
         queries = await self._extract_concepts(item, content_text)
@@ -193,48 +222,102 @@ class ContentEnricher:
         # Parse JSON response with robust fallback
         result = self._parse_json_response(response)
         if result is None:
-            # Gracefully degrade: fall back to a lightweight translation
-            # instead of dropping the item untranslated.
             print(f"Warning: could not parse enrichment response for {item.id}, falling back to translation")
             await self._translate_item(item)
             return
 
-        # Combine structured sub-fields into per-language detailed_summary
-        for lang in ("en", "zh"):
-            if result.get(f"title_{lang}"):
-                val = result[f"title_{lang}"]
-                item.metadata[f"title_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
+        def _get_str_val(val: Any) -> str:
+            if val is None:
+                return ""
+            if isinstance(val, str):
+                return val.strip()
+            if isinstance(val, dict):
+                return str(val.get("text") or val.get("content") or val.get("value") or "").strip()
+            if isinstance(val, list):
+                return " ".join(str(x) for x in val if x).strip()
+            return str(val).strip()
 
+        def _get_list_val(val: Any) -> List[str]:
+            if val is None:
+                return []
+            if isinstance(val, list):
+                return [str(x).strip() for x in val if str(x).strip()]
+            if isinstance(val, str):
+                lines = [re.sub(r"^[-*•\d.]+\s*", "", line).strip() for line in val.split("\n") if line.strip()]
+                return [line for line in lines if line]
+            return [str(val).strip()]
+
+        # Combine structured sub-fields into per-language metadata
+        for lang in ("en", "zh"):
+            # Title
+            t_val = _get_str_val(result.get(f"title_{lang}") or (result.get("title") if lang == "zh" else ""))
+            if t_val:
+                item.metadata[f"title_{lang}"] = t_val
+
+            # Key Takeaways (3-5 bullet points)
+            raw_takeaways = result.get(f"key_takeaways_{lang}") or result.get(f"takeaways_{lang}") or result.get("key_takeaways")
+            takeaways = _get_list_val(raw_takeaways)
+            if takeaways:
+                item.metadata[f"key_takeaways_{lang}"] = takeaways
+
+            # Deep Dive narrative (self-contained analysis)
+            raw_deep_dive = result.get(f"deep_dive_{lang}") or result.get("deep_dive")
+            deep_dive = _get_str_val(raw_deep_dive)
+            if deep_dive:
+                item.metadata[f"deep_dive_{lang}"] = deep_dive
+
+            # Sub-components / summary
             parts = []
             for field in ("whats_new", "why_it_matters", "key_details"):
-                text = result.get(f"{field}_{lang}", "").strip()
+                text = _get_str_val(result.get(f"{field}_{lang}") or result.get(field))
                 if text:
                     parts.append(text)
             if parts:
                 item.metadata[f"detailed_summary_{lang}"] = " ".join(parts)
+            elif result.get(f"detailed_summary_{lang}") or result.get("detailed_summary"):
+                item.metadata[f"detailed_summary_{lang}"] = _get_str_val(result.get(f"detailed_summary_{lang}") or result.get("detailed_summary"))
 
-            if result.get(f"background_{lang}"):
-                val = result[f"background_{lang}"]
-                item.metadata[f"background_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
+            # Background
+            bg = _get_str_val(result.get(f"background_{lang}") or result.get("background"))
+            if bg:
+                item.metadata[f"background_{lang}"] = bg
 
-            if result.get(f"community_discussion_{lang}"):
-                val = result[f"community_discussion_{lang}"]
-                item.metadata[f"community_discussion_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
+            # Community discussion
+            cd = _get_str_val(result.get(f"community_discussion_{lang}") or result.get("community_discussion"))
+            if cd:
+                item.metadata[f"community_discussion_{lang}"] = cd
 
-        # Store citation sources — only URLs that actually came from our search results
-        if result.get("sources") and available_urls:
-            valid = [
-                {"url": u, "title": available_urls[u]}
-                for u in result["sources"]
-                if u in available_urls
-            ]
+        # Store citation sources
+        raw_sources = result.get("sources")
+        if raw_sources and available_urls:
+            sources_list = raw_sources if isinstance(raw_sources, list) else [raw_sources]
+            valid = []
+            for u in sources_list:
+                url_str = str(u.get("url") if isinstance(u, dict) else u).strip()
+                if url_str in available_urls:
+                    valid.append({"url": url_str, "title": available_urls[url_str]})
             if valid:
                 item.metadata["sources"] = valid
 
         # Backward-compatible fallback fields (English as default)
-        item.metadata["detailed_summary"] = item.metadata.get("detailed_summary_en", "")
-        item.metadata["background"] = item.metadata.get("background_en", "")
-        item.metadata["community_discussion"] = item.metadata.get("community_discussion_en", "")
+        item.metadata["detailed_summary"] = item.metadata.get("detailed_summary_en", "") or item.metadata.get("detailed_summary_zh", "")
+        item.metadata["background"] = item.metadata.get("background_en", "") or item.metadata.get("background_zh", "")
+        item.metadata["community_discussion"] = item.metadata.get("community_discussion_en", "") or item.metadata.get("community_discussion_zh", "")
+
+        # Save to enrichment cache
+        cache_entry = {}
+        for k in (
+            "title_en", "title_zh",
+            "key_takeaways_en", "key_takeaways_zh",
+            "deep_dive_en", "deep_dive_zh",
+            "detailed_summary_en", "detailed_summary_zh",
+            "background_en", "background_zh",
+            "community_discussion_en", "community_discussion_zh",
+            "sources", "detailed_summary", "background", "community_discussion",
+        ):
+            if k in item.metadata:
+                cache_entry[k] = item.metadata[k]
+        self.cache[item.id] = cache_entry
 
     async def _translate_item(self, item: ContentItem) -> None:
         """Lightweight translation fallback: when full enrichment fails, at least

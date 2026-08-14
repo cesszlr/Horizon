@@ -1,9 +1,8 @@
-name: Daily Horizon Summary
+name: Horizon Multi-Profile Daily Summary
 
 on:
-  # schedule:
-    # - cron: '30 8 * * *'  # Runs every day at 8:30 AM
-    #   timezone: 'Asia/Shanghai'
+  schedule:
+    - cron: '30 0 * * *'  # Runs every day at 8:30 AM Beijing Time (00:30 UTC)
   workflow_dispatch:      # Allow manual trigger
 
 jobs:
@@ -27,61 +26,84 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Prepare GitHub Actions config
-        run: cp data/config.github.json data/config.json
-
-      - name: Run Horizon
-        env:
-          # Map secrets to environment variables expected by config.json
-          # Modify these based on your data/config.github.json provider settings
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          HORIZON_AI_BASE_URL: ${{ secrets.HORIZON_AI_BASE_URL }}
-          HORIZON_NTFY_TOPIC: ${{ secrets.HORIZON_NTFY_TOPIC }}
-          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
-        run: uv run horizon
-
       - name: Set current date as environment variable
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - name: Deploy to GitHub Pages
+      - name: Run Horizon Multi-Profile Pipeline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          HORIZON_AI_BASE_URL: ${{ secrets.HORIZON_AI_BASE_URL }}
+          HORIZON_NTFY_TOPIC: ${{ secrets.HORIZON_NTFY_TOPIC }}
+          HORIZON_NTFY_TOPIC_PM: ${{ secrets.HORIZON_NTFY_TOPIC_PM }}
+          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
+        run: uv run horizon
+
+      - name: Set up Ruby for Jekyll build
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      # --- Profile 1: Tech & News (cesszlr-horizon) ---
+      - name: Deploy Tech Summary to GitHub Pages Branch (gh-pages)
+        if: hashFiles('docs/github/**') != '' || hashFiles('docs/**') != ''
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          keep_files: true  # Keep existing summaries on gh-pages branch
-          commit_message: "📝 Daily Summary: ${{ env.DATE }}"
+          publish_dir: ./docs/github
+          keep_files: true
+          commit_message: "📝 Tech Daily Summary: ${{ env.DATE }}"
           publish_branch: gh-pages
           enable_jekyll: true
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v6
-        with:
-          ref: gh-pages
-          path: built-site-src
-
-      - name: Create Gemfile
+      - name: Build Tech Jekyll site
+        if: hashFiles('docs/github/**') != ''
         run: |
-          cd built-site-src
+          mkdir -p dist-html-github
+          cd docs/github
           echo 'source "https://rubygems.org"' > Gemfile
           echo 'gem "jekyll", "~> 4.3"' >> Gemfile
           echo 'gem "jekyll-theme-cayman"' >> Gemfile
           echo 'gem "jekyll-feed"' >> Gemfile
+          bundle install
+          bundle exec jekyll build --baseurl "" --destination ../../dist-html-github
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-          bundler-cache: true  # 开启缓存，下一次运行只需几秒钟
-          working-directory: built-site-src
-
-      - name: Build Jekyll site
-        run: |
-          cd built-site-src
-          bundle exec jekyll build --baseurl "" --destination ../dist-html
-      
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy Tech site to Cloudflare Pages (cesszlr-horizon)
+        if: hashFiles('dist-html-github/**') != ''
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist-html --project-name=cesszlr-horizon
+          command: pages deploy dist-html-github --project-name=cesszlr-horizon
+
+      # --- Profile 2: PM & Trending (bao-horizon) ---
+      - name: Deploy PM Summary to GitHub Pages Branch (gh-pages-pm)
+        if: hashFiles('docs/pm/**') != ''
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/pm
+          keep_files: true
+          commit_message: "📝 PM Daily Summary: ${{ env.DATE }}"
+          publish_branch: gh-pages-pm
+          enable_jekyll: true
+
+      - name: Build PM Jekyll site
+        if: hashFiles('docs/pm/**') != ''
+        run: |
+          mkdir -p dist-html-pm
+          cd docs/pm
+          echo 'source "https://rubygems.org"' > Gemfile
+          echo 'gem "jekyll", "~> 4.3"' >> Gemfile
+          echo 'gem "jekyll-theme-cayman"' >> Gemfile
+          echo 'gem "jekyll-feed"' >> Gemfile
+          bundle install
+          bundle exec jekyll build --baseurl "" --destination ../../dist-html-pm
+
+      - name: Deploy PM site to Cloudflare Pages (bao-horizon)
+        if: hashFiles('dist-html-pm/**') != ''
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist-html-pm --project-name=bao-horizon

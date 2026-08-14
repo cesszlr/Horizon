@@ -8,9 +8,14 @@ from tenacity import retry, stop_after_attempt, wait_exponential
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
 
 from .client import AIClient
-from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER
+from .prompts import (
+    CONTENT_ANALYSIS_SYSTEM,
+    CONTENT_ANALYSIS_USER,
+    build_content_analysis_system_prompt,
+    build_content_analysis_user_prompt,
+)
 from .utils import parse_json_response
-from ..models import ContentItem
+from ..models import CategoryRule, ContentItem
 
 DEFAULT_THROTTLE_SEC = 0.0
 
@@ -18,8 +23,15 @@ DEFAULT_THROTTLE_SEC = 0.0
 class ContentAnalyzer:
     """Analyzes content items using AI to determine importance."""
 
-    def __init__(self, ai_client: AIClient):
+    def __init__(
+        self,
+        ai_client: AIClient,
+        categories: Optional[dict[str, CategoryRule]] = None,
+    ):
         self.client = ai_client
+        self.categories = categories
+        self.system_prompt = build_content_analysis_system_prompt(categories)
+        self.user_prompt_template = build_content_analysis_user_prompt(categories)
 
     @staticmethod
     def _parse_json_response(response: str) -> Optional[dict]:
@@ -77,8 +89,8 @@ class ContentAnalyzer:
         return analyzed_items
 
     @retry(
-        stop=stop_after_attempt(3),
-        wait=wait_exponential(min=2, max=10)
+        stop=stop_after_attempt(5),
+        wait=wait_exponential(multiplier=1.5, min=2, max=30)
     )
     async def _analyze_item(self, item: ContentItem) -> None:
         """Analyze a single content item.
@@ -132,19 +144,19 @@ class ContentAnalyzer:
 
         # Generate user prompt
         category_hint = item.metadata.get("category") or ""
-        user_prompt = CONTENT_ANALYSIS_USER.format(
+        user_prompt = self.user_prompt_template.format(
             category_hint=category_hint,
             title=item.title,
             source=f"{item.source_type.value}",
             author=item.author or "Unknown",
             url=str(item.url),
             content_section=content_section,
-            discussion_section=discussion_section
+            discussion_section=discussion_section,
         )
 
         # Get AI completion
         response = await self.client.complete(
-            system=CONTENT_ANALYSIS_SYSTEM,
+            system=self.system_prompt,
             user=user_prompt,
         )
 

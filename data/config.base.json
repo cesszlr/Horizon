@@ -1,0 +1,161 @@
+{
+  "version": "2.0",
+  "ai": {
+    "provider": "openai",
+    "provider_chain": null,
+    "model": "THUDM/GLM-Z1-9B-0414",
+    "base_url": "${HORIZON_AI_BASE_URL}",
+    "api_key_env": "OPENAI_API_KEY",
+    "temperature": 0.3,
+    "max_tokens": 8192,
+    "throttle_sec": 0.2,
+    "analysis_concurrency": 3,
+    "enrichment_concurrency": 3,
+    "languages": [
+      "zh"
+    ]
+  },
+  "sources": {
+    "hackernews": {
+      "enabled": true,
+      "fetch_top_stories": 30,
+      "min_score": 100
+    },
+    "telegram": {
+      "enabled": true,
+      "channels": [
+        {
+          "channel": "zaihuapd",
+          "enabled": true,
+          "fetch_limit": 20
+        }
+      ]
+    },
+    "rss": [
+      {
+        "name": "量子位",
+        "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
+        "enabled": true
+      },
+      {
+        "name": "新智元",
+        "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
+        "enabled": true
+      },
+      {
+        "name": "机器之心",
+        "url": "https://supsub.net/feed/public/58f382c9/rss",
+        "enabled": true,
+        "category": "ai"
+      },
+      {
+        "name": "OpenAI Blog",
+        "url": "https://openai.com/blog/rss.xml",
+        "enabled": true,
+        "category": "ai"
+      },
+      {
+        "name": "雷峰网",
+        "url": "https://plink.anyfeeder.com/leiphone",
+        "enabled": true
+      },
+      {
+        "name": "V2EX programmer",
+        "url": "https://www.v2ex.com/feed/programmer.xml",
+        "enabled": true,
+        "category": "technology"
+      },
+      {
+        "name": "Go Blog",
+        "url": "https://go.dev/blog/feed.atom",
+        "enabled": true,
+        "category": "technology"
+      },
+      {
+        "name": "The Economist",
+        "url": "https://www.economist.com/latest/rss.xml",
+        "enabled": true
+      },
+      {
+        "name": "Buzzing China",
+        "url": "https://china.buzzing.cc/feed.xml",
+        "enabled": true,
+        "category": "politics"
+      },
+      {
+        "name": "Buzzing News",
+        "url": "https://news.buzzing.cc/feed.xml",
+        "enabled": true,
+        "category": "politics"
+      },
+      {
+        "name": "DoNews",
+        "url": "https://rss.donews.com/rss/rss.xml",
+        "enabled": true,
+        "category": "social_hotspot"
+      },
+      {
+        "name": "人人都是产品经理",
+        "url": "https://www.woshipm.com/feed",
+        "enabled": true,
+        "category": "product_manager"
+      },
+      {
+        "name": "人人都是产品经理日榜",
+        "url": "https://plink.anyfeeder.com/woshipm/popular",
+        "enabled": true,
+        "category": "product_manager"
+      },
+      {
+        "name": "42章经",
+        "url": "https://wechat2rss.xlab.app/feed/31436fcc3bba8c2c2a9337a163afcb3b5a57a0a0.xml",
+        "enabled": true,
+        "category": "product_manager"
+      },
+      {
+        "name": "小众软件",
+        "url": "https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml",
+        "enabled": true,
+        "category": "product_manager"
+      },
+      {
+        "name": "微博热搜",
+        "url": "https://rsshub.cesszlr.online/weibo/search/hot",
+        "enabled": true,
+        "category": "trending"
+      },
+      {
+        "name": "知乎日榜",
+        "url": "https://plink.anyfeeder.com/zhihu/daily",
+        "enabled": true,
+        "category": "trending"
+      },
+      {
+        "name": "虎嗅",
+        "url": "https://plink.anyfeeder.com/huxiu",
+        "enabled": true
+      },
+      {
+        "name": "钛媒体",
+        "url": "https://www.tmtpost.com/rss.xml",
+        "enabled": true
+      },
+      {
+        "name": "36氪热榜",
+        "url": "https://rsshub.cesszlr.online/36kr/hot-list",
+        "enabled": true
+      }
+    ],
+    "reddit": {
+      "enabled": false,
+      "subreddits": [],
+      "users": [],
+      "fetch_comments": 10
+    },
+    "twitter": null,
+    "openbb": null,
+    "ossinsight": {
+      "enabled": false
+    }
+  }
+}

@@ -381,12 +381,44 @@ class FilteringConfig(BaseModel):
     default_group_limit: Optional[int] = Field(default=None, gt=0)
 
 
+class CategoryRule(BaseModel):
+    """Configurable category scoring rule."""
+
+    id: str
+    name: str
+    name_en: Optional[str] = None
+    description: str = ""
+    scoring_rubric: Dict[str, str] = Field(default_factory=dict)
+    focus_points: List[str] = Field(default_factory=list)
+
+
+class ProfileOutputConfig(BaseModel):
+    """Output configuration for a profile."""
+
+    docs_dir: str = "docs"
+    cf_project_name: Optional[str] = None
+
+
+class ProfileConfig(BaseModel):
+    """Configuration for a specific user profile."""
+
+    id: str
+    name: str
+    enabled: bool = True
+    filtering: FilteringConfig = Field(default_factory=FilteringConfig)
+    output: ProfileOutputConfig = Field(default_factory=ProfileOutputConfig)
+    webhook: Optional[WebhookConfig] = None
+    email: Optional[EmailConfig] = None
+
+
 class Config(BaseModel):
     """Main configuration model."""
 
     version: str = "1.0"
     ai: AIConfig
-    sources: SourcesConfig
-    filtering: FilteringConfig
+    sources: SourcesConfig = Field(default_factory=SourcesConfig)
+    filtering: FilteringConfig = Field(default_factory=FilteringConfig)
     email: Optional[EmailConfig] = None
     webhook: Optional[WebhookConfig] = None
+    categories: Dict[str, CategoryRule] = Field(default_factory=dict)
+    profiles: Dict[str, ProfileConfig] = Field(default_factory=dict)
