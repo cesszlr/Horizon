@@ -57,23 +57,30 @@ jobs:
           publish_branch: gh-pages
           enable_jekyll: true
 
+      - name: Checkout gh-pages branch
+        if: hashFiles('docs/github/**') != ''
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: built-site-src-github
+
       - name: Build Tech Jekyll site
         if: hashFiles('docs/github/**') != ''
         run: |
           mkdir -p dist-html-github
-          cd docs/github
+          cd built-site-src-github
           echo 'source "https://rubygems.org"' > Gemfile
           echo 'gem "jekyll", "~> 4.3"' >> Gemfile
           echo 'gem "jekyll-theme-cayman"' >> Gemfile
           echo 'gem "jekyll-feed"' >> Gemfile
           bundle install
-          bundle exec jekyll build --baseurl "" --destination ../../dist-html-github
+          bundle exec jekyll build --baseurl "" --destination ../dist-html-github
 
       - name: Deploy Tech site to Cloudflare Pages (cesszlr-horizon)
         if: hashFiles('dist-html-github/**') != ''
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CLRE_API_TOKEN || secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist-html-github --project-name=cesszlr-horizon
 
@@ -89,22 +96,29 @@ jobs:
           publish_branch: gh-pages-pm
           enable_jekyll: true
 
+      - name: Checkout gh-pages-pm branch
+        if: hashFiles('docs/pm/**') != ''
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages-pm
+          path: built-site-src-pm
+
       - name: Build PM Jekyll site
         if: hashFiles('docs/pm/**') != ''
         run: |
           mkdir -p dist-html-pm
-          cd docs/pm
+          cd built-site-src-pm
           echo 'source "https://rubygems.org"' > Gemfile
           echo 'gem "jekyll", "~> 4.3"' >> Gemfile
           echo 'gem "jekyll-theme-cayman"' >> Gemfile
           echo 'gem "jekyll-feed"' >> Gemfile
           bundle install
-          bundle exec jekyll build --baseurl "" --destination ../../dist-html-pm
+          bundle exec jekyll build --baseurl "" --destination ../dist-html-pm
 
       - name: Deploy PM site to Cloudflare Pages (bao-horizon)
         if: hashFiles('dist-html-pm/**') != ''
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CLRE_API_TOKEN || secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist-html-pm --project-name=bao-horizon
