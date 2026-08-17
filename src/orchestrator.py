@@ -137,7 +137,7 @@ class HorizonOrchestrator:
             analyzed_items = await self._analyze_content(merged_items)
             self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
 
-            today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            today = datetime.now().astimezone().strftime("%Y-%m-%d")
 
             # 5. Process either multi-profile pipeline or classic single-profile pipeline
             if active_profiles:
@@ -179,7 +179,7 @@ class HorizonOrchestrator:
             self.console.print(f"[bold red]❌ Error: {e}[/bold red]")
             if self.webhook_notifier:
                 await self.webhook_notifier.send_failure(
-                    date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                    date=datetime.now().astimezone().strftime("%Y-%m-%d"),
                     error_message=str(e),
                 )
             raise
@@ -435,7 +435,12 @@ class HorizonOrchestrator:
     ) -> List[ContentItem]:
         """Fetch content from all configured sources."""
         src_cfg = sources or self.config.sources
-        async with httpx.AsyncClient(timeout=30.0) as client:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/rss+xml,application/atom+xml,application/json;q=0.8,*/*;q=0.7",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+        }
+        async with httpx.AsyncClient(timeout=30.0, headers=headers, follow_redirects=True) as client:
             tasks = []
 
             # GitHub sources

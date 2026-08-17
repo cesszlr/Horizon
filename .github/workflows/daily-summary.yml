@@ -1,9 +1,10 @@
 name: Horizon Multi-Profile Daily Summary
 
 on:
-  schedule:
-    - cron: '30 0 * * *'  # Runs every day at 8:30 AM Beijing Time (00:30 UTC)
   workflow_dispatch:      # Allow manual trigger
+
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   daily-summary:

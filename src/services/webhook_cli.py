@@ -88,7 +88,7 @@ async def _run_test(
     webhook_config, lang: str, dry_run: bool, delivery_override: str | None = None
 ) -> None:
     """Execute the webhook test."""
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = datetime.now().astimezone().strftime("%Y-%m-%d")
     items = _make_test_items()
     summarizer = DailySummarizer()
     summary = await summarizer.generate_summary(items, today, len(items), language=lang)
