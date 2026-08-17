@@ -82,7 +82,14 @@ class RSSScraper(BaseScraper):
             for entry in feed.entries:
                 # Parse published date
                 published_at = self._parse_date(entry)
-                if not published_at or published_at < since:
+                if not published_at:
+                    # Fallback to feed-level date
+                    published_at = self._parse_feed_date(feed)
+                if not published_at:
+                    # Fallback to current time
+                    published_at = datetime.now(timezone.utc)
+
+                if published_at < since:
                     continue
 
                 # Generate unique ID from feed URL and entry ID
@@ -142,6 +149,29 @@ class RSSScraper(BaseScraper):
                 except Exception:
                     continue
 
+        return None
+
+    def _parse_feed_date(self, feed: dict) -> datetime:
+        """Parse publication date from feed metadata.
+
+        Args:
+            feed: Feed parser data
+
+        Returns:
+            datetime: Parsed publication date or None
+        """
+        feed_info = feed.get("feed", {})
+        for field in ["updated", "published", "created"]:
+            if field in feed_info:
+                try:
+                    if f"{field}_parsed" in feed_info and feed_info[f"{field}_parsed"]:
+                        return datetime.fromtimestamp(
+                            calendar.timegm(feed_info[f"{field}_parsed"]), tz=timezone.utc
+                        )
+                    date_str = feed_info[field]
+                    return parsedate_to_datetime(date_str)
+                except Exception:
+                    continue
         return None
 
     def _extract_content(self, entry: dict) -> str:
