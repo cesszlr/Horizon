@@ -203,32 +203,30 @@ CONTENT_ENRICHMENT_SYSTEM = """You are a senior analyst and technical writer who
 
 Your primary goal is **Self-Contained Comprehension (自闭环深度精读)**: The reader may be located in an environment where they CANNOT access external links or source URLs. Your output must contain sufficient factual depth, concrete data points, architectural/implementation details, key arguments, and background context so that the reader gains 80%+ of the original article's value WITHOUT needing to visit the source URL.
 
-Provide EACH text field in BOTH English and Chinese with matching suffixes (_en / _zh).
+Provide EACH text field in Simplified Chinese (简体中文). 绝对不能输出纯英文句子。仅保留专有名词与技术缩写（如 "GPT-4", "CUDA", "Steam"）。
 
 Field definitions:
-0. **title** (short headline, ≤15 words): A clear, accurate headline.
-1. **key_takeaways** (list of 3-5 concise, information-dense bullet points):
+0. **title_zh** (short headline, ≤15 words): A clear, accurate headline in Chinese.
+1. **key_takeaways_zh** (list of 3-5 concise, information-dense bullet points):
    - Bullet 1: Core event/change (specific versions, numbers, benchmarks, timeline).
    - Bullet 2: How it works / Technical implementation / Mechanism / Core logic.
    - Bullet 3: Key constraints, caveats, or trade-offs (prerequisites, bugs, breaking changes).
    - Bullet 4-5: Other crucial facts from the source content.
-2. **deep_dive** (150-300 words rich narrative paragraph):
+2. **deep_dive_zh** (150-300 words rich narrative paragraph):
    - Detailed breakdown of the core announcement, architecture, methodology, or argument.
    - Walk the reader through the underlying reasons, data comparisons, and concrete implementation steps.
-3. **whats_new** (1-2 complete sentences): What changed or was released.
-4. **why_it_matters** (1-2 complete sentences): Strategic significance, impact on industry/ecosystem/users.
-5. **key_details** (1-2 complete sentences): Notable technical or practical specifications.
-6. **background** (2-4 sentences): Clear prerequisite knowledge or history for readers without domain expertise.
-7. **community_discussion** (1-3 sentences): Summarize community sentiment, top counter-arguments, praises, or real-world feedback if comments are provided. If none, return empty string.
+3. **whats_new_zh** (1-2 complete sentences): What changed or was released.
+4. **why_it_matters_zh** (1-2 complete sentences): Strategic significance, impact on industry/ecosystem/users.
+5. **key_details_zh** (1-2 complete sentences): Notable technical or practical specifications.
+6. **background_zh** (2-4 sentences): Clear prerequisite knowledge or history for readers without domain expertise.
+7. **community_discussion_zh** (1-3 sentences): Summarize community sentiment, top counter-arguments, praises, or real-world feedback if comments are provided. If none, return empty string.
 8. **sources**: List of 1-3 reference URLs actually found in the provided web context.
 
-**CRITICAL — Language rules (MUST follow):**
-- All *_en fields MUST be written in fluent English.
-- All *_zh fields MUST be written in high-quality Simplified Chinese (简体中文). 绝对不能在 _zh 字段中使用纯英文句子。仅保留专有名词与技术缩写（如 "GPT-4", "CUDA", "Steam"）。
+**CRITICAL Rules:**
 - Avoid empty fluff. Focus on factual density.
 """
 
-CONTENT_ENRICHMENT_USER = """Provide a structured bilingual self-contained analysis for the following news item.
+CONTENT_ENRICHMENT_USER = """Provide a structured self-contained analysis in Simplified Chinese (中文) for the following news item.
 
 **News Item:**
 - Title: {title}
@@ -245,31 +243,19 @@ CONTENT_ENRICHMENT_USER = """Provide a structured bilingual self-contained analy
 **Web Search Results (for grounding):**
 {web_context}
 
-Respond with valid JSON only. Each _en field must be in English; each _zh field MUST be in Simplified Chinese (中文):
+Respond with valid JSON only. Each field MUST be in Simplified Chinese (中文):
 {{
-  "title_en": "<short headline in English, ≤15 words>",
   "title_zh": "<中文简短标题，不超过15个词>",
-  "key_takeaways_en": [
-    "<Core takeaway 1: what happened with specific metrics/versions>",
-    "<Core takeaway 2: how it works / architecture / logic>",
-    "<Core takeaway 3: limitations / prerequisites / caveats>"
-  ],
   "key_takeaways_zh": [
     "<核心要点 1：发生了什么实质性进展/数据指标/版本号>",
     "<核心要点 2：实现原理/底层机制/产品逻辑>",
     "<核心要点 3：已知限制/前置依赖/注意事项>"
   ],
-  "deep_dive_en": "<150-300 words detailed in-depth narrative explaining the technical and logical details>",
   "deep_dive_zh": "<150-300 字深度长文解析，详述核心论据、技术实现与推导过程，使读者无需打开原文即可获知全貌>",
-  "whats_new_en": "<1-2 sentences in English>",
   "whats_new_zh": "<用中文写1-2句话>",
-  "why_it_matters_en": "<1-2 sentences in English>",
   "why_it_matters_zh": "<用中文写1-2句话>",
-  "key_details_en": "<1-2 sentences in English>",
   "key_details_zh": "<用中文写1-2句话>",
-  "background_en": "<2-4 sentences in English, or empty string>",
   "background_zh": "<用中文写2-4句话，或空字符串>",
-  "community_discussion_en": "<1-3 sentences in English, or empty string>",
   "community_discussion_zh": "<用中文写1-3句话，或空字符串>",
   "sources": ["<url from search results>", "..."]
 }}"""

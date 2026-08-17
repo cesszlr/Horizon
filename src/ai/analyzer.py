@@ -164,6 +164,9 @@ class ContentAnalyzer:
         result = self._parse_json_response(response)
         if result is None:
             print(f"Warning: could not parse analysis response for {item.id}, using defaults")
+            print("--- FAILED RESPONSE DATA START ---")
+            print(response)
+            print("--- FAILED RESPONSE DATA END ---")
             item.ai_category = None
             item.ai_score = 0.0
             item.ai_reason = "Analysis response parse failed"

@@ -223,6 +223,9 @@ class ContentEnricher:
         result = self._parse_json_response(response)
         if result is None:
             print(f"Warning: could not parse enrichment response for {item.id}, falling back to translation")
+            print("--- FAILED RESPONSE DATA START ---")
+            print(response)
+            print("--- FAILED RESPONSE DATA END ---")
             await self._translate_item(item)
             return
 

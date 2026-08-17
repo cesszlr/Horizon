@@ -9,9 +9,13 @@ def _clean_reasoning_and_comments(text: str) -> str:
     """Strip reasoning/thought blocks and comments produced by models like GLM-Z1, DeepSeek-R1, QwQ."""
     # 1. Remove <think>...</think> or <thought>...</thought>
     text = re.sub(r"<(think|thought)>[\s\S]*?</\1>", "", text, flags=re.IGNORECASE)
-    # 2. If think tag is unclosed at the start
-    if "<think>" in text.lower() and "</think>" not in text.lower():
-        text = text.split("<think>", 1)[0]
+    # 2. If think/thought tag is unclosed, keep the suffix containing the JSON
+    has_think_unclosed = "<think>" in text.lower() and "</think>" not in text.lower()
+    has_thought_unclosed = "<thought>" in text.lower() and "</thought>" not in text.lower()
+    if has_think_unclosed or has_thought_unclosed:
+        parts = re.split(r"<(?:think|thought)>", text, maxsplit=1, flags=re.IGNORECASE)
+        if len(parts) > 1:
+            text = parts[1]
     # 3. Remove markdown comments // ...
     text = re.sub(r"^[ \t]*//.*$", "", text, flags=re.MULTILINE)
     return text.strip()
@@ -24,6 +28,97 @@ def _repair_json_string(text: str) -> str:
     # Replace Chinese quotes with standard quotes
     text = text.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
     return text
+
+
+def _repair_truncated_json_v1(text: str) -> str:
+    """Repair by just closing any open strings, brackets, and braces."""
+    text = text.strip()
+    if not text:
+        return text
+
+    in_string = False
+    escape = False
+    stack = []
+    
+    for i, char in enumerate(text):
+        if escape:
+            escape = False
+            continue
+        if char == '\\':
+            escape = True
+            continue
+        if char == '"':
+            in_string = not in_string
+            continue
+        if not in_string:
+            if char == '{':
+                stack.append('{')
+            elif char == '[':
+                stack.append('[')
+            elif char == '}':
+                if stack and stack[-1] == '{':
+                    stack.pop()
+            elif char == ']':
+                if stack and stack[-1] == '[':
+                    stack.pop()
+
+    repaired = text
+    if in_string:
+        repaired += '"'
+    
+    while stack:
+        top = stack.pop()
+        if top == '{':
+            repaired += '}'
+        elif top == '[':
+            repaired += ']'
+            
+    return repaired
+
+
+def _strip_incomplete_tail(text: str) -> str:
+    text = text.strip()
+    # 1. Strip trailing key and colon: e.g. , "key":
+    text = re.sub(r',\s*"[^"]*"\s*:\s*$', '', text)
+    # 2. Strip trailing unclosed key: e.g. , "key
+    text = re.sub(r',\s*"[^"]*$', '', text)
+    # 3. Strip trailing comma: e.g. ,
+    text = re.sub(r',\s*$', '', text)
+    
+    # Also handle the case where it's the first key (no leading comma):
+    # e.g., {"key" : or {"key
+    text = re.sub(r'\{\s*"[^"]*"\s*:\s*$', '{', text)
+    text = re.sub(r'\{\s*"[^"]*$', '{', text)
+    
+    return text.strip()
+
+
+def _repair_truncated_json_v2(text: str) -> str:
+    """Repair by stripping incomplete trailing keys first, then closing open brackets."""
+    text = _strip_incomplete_tail(text)
+    return _repair_truncated_json_v1(text)
+
+
+def _repair_json_and_load(text: str) -> Optional[Dict[str, Any]]:
+    # Strategy A: Try simple repair first (keep all list items/values)
+    rep1 = _repair_truncated_json_v1(text)
+    try:
+        res = json.loads(rep1)
+        if isinstance(res, dict):
+            return res
+    except Exception:
+        pass
+
+    # Strategy B: If simple repair fails, strip trailing incomplete structures
+    rep2 = _repair_truncated_json_v2(text)
+    try:
+        res = json.loads(rep2)
+        if isinstance(res, dict):
+            return res
+    except Exception:
+        pass
+
+    return None
 
 
 def parse_json_response(response: Any) -> Optional[Dict[str, Any]]:
@@ -104,5 +199,13 @@ def parse_json_response(response: Any) -> Optional[Dict[str, Any]]:
                     return res
             except (json.JSONDecodeError, ValueError):
                 pass
+
+    # Strategy 5: Truncated JSON Repair
+    first_brace = text.find("{")
+    if first_brace != -1:
+        candidate = text[first_brace:]
+        res = _repair_json_and_load(candidate)
+        if res is not None:
+            return res
 
     return None

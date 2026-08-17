@@ -130,3 +130,59 @@ def test_enricher_handles_complex_and_nested_model_outputs():
         assert item.metadata["community_discussion_zh"] == "网友普遍赞同"
 
     asyncio.run(_test())
+
+
+def test_parse_json_response_with_unclosed_tags_and_truncation():
+    # 1. Unclosed think tag
+    response_unclosed_think = """
+    <think>
+    Thinking process starts here...
+    And it doesn't close with a tag.
+    {
+      "title_zh": "未闭合think标签",
+      "key_takeaways_zh": ["要点一"]
+    }
+    """
+    parsed = parse_json_response(response_unclosed_think)
+    assert parsed is not None
+    assert parsed["title_zh"] == "未闭合think标签"
+    assert parsed["key_takeaways_zh"] == ["要点一"]
+
+    # 2. Unclosed thought tag
+    response_unclosed_thought = """
+    <thought>
+    Thinking...
+    {
+      "title_zh": "未闭合thought标签",
+      "key_takeaways_zh": ["要点二"]
+    }
+    """
+    parsed = parse_json_response(response_unclosed_thought)
+    assert parsed is not None
+    assert parsed["title_zh"] == "未闭合thought标签"
+    assert parsed["key_takeaways_zh"] == ["要点二"]
+
+    # 3. Truncated JSON inside a string
+    response_truncated_str = """
+    <think>Thinking...</think>
+    {
+      "title_zh": "截断的JSON标题",
+      "deep_dive_zh": "由于输出长度限制，这段长文本被截断到这里
+    """
+    parsed = parse_json_response(response_truncated_str)
+    assert parsed is not None
+    assert parsed["title_zh"] == "截断的JSON标题"
+    assert parsed["deep_dive_zh"] == "由于输出长度限制，这段长文本被截断到这里"
+
+    # 4. Truncated JSON at a key name
+    response_truncated_key = """
+    <think>Thinking...</think>
+    {
+      "title_zh": "截断在键名",
+      "key_de
+    """
+    parsed = parse_json_response(response_truncated_key)
+    assert parsed is not None
+    assert parsed["title_zh"] == "截断在键名"
+    assert "key_de" not in parsed
+
