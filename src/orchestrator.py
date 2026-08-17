@@ -566,7 +566,8 @@ class HorizonOrchestrator:
 
         return merged
 
-    async def merge_topic_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
+    async def _merge_topic_duplicates_batch(self, items: List[ContentItem]) -> List[ContentItem]:
+        """Perform semantic deduplication on a single batch of items."""
         if len(items) <= 1:
             return items
 
@@ -588,12 +589,12 @@ class HorizonOrchestrator:
             )
             result = parse_json_response(response)
             if result is None:
-                self.console.print("[yellow]  dedup: could not parse AI response, skipping[/yellow]")
+                self.console.print("[yellow]  dedup: could not parse AI response, skipping batch[/yellow]")
                 return items
 
             duplicate_groups = result.get("duplicates", [])
         except Exception as e:
-            self.console.print(f"[yellow]  dedup: AI call failed ({e}), skipping[/yellow]")
+            self.console.print(f"[yellow]  dedup: AI call failed ({e}), skipping batch[/yellow]")
             return items
 
         if not duplicate_groups:
@@ -624,6 +625,36 @@ class HorizonOrchestrator:
                 drop_indices.add(dup_idx)
 
         return [item for i, item in enumerate(items) if i not in drop_indices]
+
+    async def merge_topic_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
+        if len(items) <= 1:
+            return items
+
+        # 1. Group by category to avoid cross-category confusion
+        by_category = defaultdict(list)
+        for item in items:
+            cat = item.ai_category or "other"
+            by_category[cat].append(item)
+
+        deduped_all = []
+        for cat, cat_items in by_category.items():
+            if len(cat_items) <= 1:
+                deduped_all.extend(cat_items)
+                continue
+
+            # 2. Sort alphabetically by title to group similar titles next to each other
+            cat_items.sort(key=lambda x: x.title or "")
+
+            # 3. Chunk into smaller batches (max 30 items) to prevent LLM context confusion
+            chunk_size = 30
+            for i in range(0, len(cat_items), chunk_size):
+                chunk = cat_items[i:i + chunk_size]
+                deduped_chunk = await self._merge_topic_duplicates_batch(chunk)
+                deduped_all.extend(deduped_chunk)
+
+        # 4. Re-sort by score descending to restore original priority
+        deduped_all.sort(key=lambda x: x.ai_score or 0, reverse=True)
+        return deduped_all
 
     def apply_balanced_digest(
         self,

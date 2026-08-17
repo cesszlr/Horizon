@@ -188,3 +188,72 @@ def test_run_applies_balanced_digest_before_enrichment(tmp_path, monkeypatch) ->
     asyncio.run(orchestrator.run())
 
     assert enriched_ids == ["ai"]
+
+
+def test_merge_topic_duplicates_chunking(monkeypatch) -> None:
+    # Setup orchestrator with dummy config
+    config = Config(
+        db_path=":memory:",
+        profiles={},
+        sources=SourcesConfig(),
+        ai=AIConfig(provider="openai", model="gpt-4", api_key_env="TEST_API_KEY", languages=[]),
+    )
+    storage = SimpleNamespace()
+    orchestrator = HorizonOrchestrator(config, storage)
+
+    # Create test items with different categories and titles
+    items = []
+    # 35 items in category 'tech' (to trigger chunking of size 30)
+    for i in range(35):
+        item = make_item(f"tech-{i}", 9.0 - i * 0.1, "tech")
+        item.title = f"Title-{35-i:02d}"
+        item.ai_category = "tech"
+        items.append(item)
+
+    # 5 items in category 'politics'
+    for i in range(5):
+        item = make_item(f"pol-{i}", 8.0 - i * 0.1, "politics")
+        item.title = f"PolTitle-{5-i:02d}"
+        item.ai_category = "politics"
+        items.append(item)
+
+    # Mock _merge_topic_duplicates_batch
+    batches_passed = []
+
+    async def mock_batch_dedup(batch_items):  # type: ignore[no-untyped-def]
+        batches_passed.append(batch_items)
+        return batch_items
+
+    monkeypatch.setattr(orchestrator, "_merge_topic_duplicates_batch", mock_batch_dedup)
+
+    # Run deduplication
+    result = asyncio.run(orchestrator.merge_topic_duplicates(items))
+
+    # We expect 3 batches:
+    # Batch 1: 'politics' category (5 items, sorted alphabetically by title)
+    # Batch 2: 'tech' category chunk 1 (30 items, sorted alphabetically by title)
+    # Batch 3: 'tech' category chunk 2 (5 items, sorted alphabetically by title)
+    assert len(batches_passed) == 3
+
+    # Check politics batch
+    pol_batch = [b for b in batches_passed if b[0].ai_category == "politics"][0]
+    assert len(pol_batch) == 5
+    # Titles should be sorted: PolTitle-01, PolTitle-02, ... PolTitle-05
+    assert [x.title for x in pol_batch] == [f"PolTitle-{i:02d}" for i in range(1, 6)]
+
+    # Check tech batches
+    tech_batches = [b for b in batches_passed if b[0].ai_category == "tech"]
+    assert len(tech_batches) == 2
+    # Chunk 1 should have 30 items
+    assert len(tech_batches[0]) == 30
+    # Chunk 2 should have 5 items
+    assert len(tech_batches[1]) == 5
+
+    # Check that they are sorted alphabetically by title
+    all_tech_titles = [x.title for x in tech_batches[0]] + [x.title for x in tech_batches[1]]
+    assert all_tech_titles == [f"Title-{i:02d}" for i in range(1, 36)]
+
+    # Check that the final returned list is sorted by score descending (restored priority)
+    # tech-0 has 9.0, tech-1 has 8.9... pol-0 has 8.0...
+    assert [x.id for x in result[:3]] == ["tech-0", "tech-1", "tech-2"]
+

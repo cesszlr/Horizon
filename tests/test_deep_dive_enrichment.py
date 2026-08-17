@@ -186,3 +186,48 @@ def test_parse_json_response_with_unclosed_tags_and_truncation():
     assert parsed["title_zh"] == "截断在键名"
     assert "key_de" not in parsed
 
+
+def test_parse_json_response_with_missing_commas_and_stray_brackets():
+    # 1. Missing comma after string field
+    response_missing_comma = """
+    {
+      "title_zh": "测试标题"
+      "whats_new_zh": "新内容"
+    }
+    """
+    parsed = parse_json_response(response_missing_comma)
+    assert parsed is not None
+    assert parsed["title_zh"] == "测试标题"
+    assert parsed["whats_new_zh"] == "新内容"
+
+    # 2. Stray bracket between fields
+    response_stray_bracket = """
+    {
+      "title_zh": "测试标题",
+      "deep_dive_zh": "这是一个长文章分析。"
+      ],
+      "whats_new_zh": "新内容"
+    }
+    """
+    parsed = parse_json_response(response_stray_bracket)
+    assert parsed is not None
+    assert parsed["title_zh"] == "测试标题"
+    assert parsed["deep_dive_zh"] == "这是一个长文章分析。"
+    assert parsed["whats_new_zh"] == "新内容"
+
+
+def test_parse_json_response_with_unescaped_quotes():
+    # Unescaped double quotes inside value string
+    response_unescaped_quotes = """
+    {
+      "title_zh": "中美科技战冲击",
+      "deep_dive_zh": "和阿里云"飞天"平台构建自主生态。"
+    }
+    """
+    parsed = parse_json_response(response_unescaped_quotes)
+    assert parsed is not None
+    assert parsed["title_zh"] == "中美科技战冲击"
+    assert parsed["deep_dive_zh"] == '和阿里云"飞天"平台构建自主生态。'
+
+
+

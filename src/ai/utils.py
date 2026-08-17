@@ -121,6 +121,96 @@ def _repair_json_and_load(text: str) -> Optional[Dict[str, Any]]:
     return None
 
 
+def _fix_unescaped_quotes_in_values(text: str) -> str:
+    """Escape any unescaped double quotes inside string values of JSON fields."""
+    lines = text.splitlines()
+    fixed_lines = []
+    
+    for line in lines:
+        # Match lines like "key": "value" or "key": "value",
+        # prefix: "key": "
+        # value: the string content of the value
+        # suffix: ", or "
+        match = re.match(r'^(\s*"[A-Za-z0-9_]+"\s*:\s*")([\s\S]*?)("\s*,?\s*)$', line)
+        if match:
+            prefix, value, suffix = match.groups()
+            # Escape any unescaped double quotes (quotes not preceded by a backslash)
+            fixed_value = re.sub(r'(?<!\\)"', r'\"', value)
+            line = prefix + fixed_value + suffix
+        fixed_lines.append(line)
+        
+    return '\n'.join(fixed_lines)
+
+
+def fix_json_structure(text: str) -> str:
+    """Repair missing commas and stray brackets in model-generated JSON text."""
+    # 1. First, fix any unescaped double quotes in string values
+    text = _fix_unescaped_quotes_in_values(text)
+    
+    lines = text.splitlines()
+    cleaned_lines = []
+    
+    bracket_depth = 0
+    in_string = False
+    escape = False
+    
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            cleaned_lines.append(line)
+            continue
+            
+        # Check if this line is a stray closing bracket (e.g., only ']' or '],')
+        if re.match(r'^\]\s*,?\s*$', stripped) and bracket_depth == 0:
+            continue
+            
+        # Update bracket depth by scanning the line character by character
+        for char in stripped:
+            if escape:
+                escape = False
+                continue
+            if char == '\\':
+                escape = True
+                continue
+            if char == '"':
+                in_string = not in_string
+                continue
+            if not in_string:
+                if char == '[':
+                    bracket_depth += 1
+                elif char == ']':
+                    bracket_depth = max(0, bracket_depth - 1)
+                    
+        cleaned_lines.append(line)
+        
+    # Fix missing commas between fields
+    final_lines = []
+    for i, line in enumerate(cleaned_lines):
+        stripped = line.strip()
+        if not stripped:
+            final_lines.append(line)
+            continue
+            
+        # Check if the NEXT non-empty line starts a new key-value pair
+        has_next_key = False
+        for next_line in cleaned_lines[i+1:]:
+            next_stripped = next_line.strip()
+            if next_stripped:
+                if re.match(r'^"[A-Za-z0-9_]+"\s*:', next_stripped):
+                    has_next_key = True
+                break
+                
+        if has_next_key:
+            # If the current line doesn't end with a comma, or opening bracket/brace, add a comma
+            last_char = stripped[-1]
+            if last_char not in (',', '[', '{'):
+                line = line.rstrip() + ','
+                    
+        final_lines.append(line)
+        
+    return '\n'.join(final_lines)
+
+
 def parse_json_response(response: Any) -> Optional[Dict[str, Any]]:
     """Try multiple robust strategies to extract a JSON object from an AI response.
 
@@ -133,6 +223,7 @@ def parse_json_response(response: Any) -> Optional[Dict[str, Any]]:
 
     text = str(response).strip()
     text = _clean_reasoning_and_comments(text)
+    text = fix_json_structure(text)
 
     # Strategy 1: Direct JSON parsing
     try:
