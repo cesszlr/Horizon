@@ -3,7 +3,7 @@
   "ai": {
     "provider": "openai",
     "provider_chain": null,
-    "model": "THUDM/GLM-Z1-9B-0414",
+    "model": "Qwen/Qwen3.5-4B",
     "base_url": "${HORIZON_AI_BASE_URL}",
     "api_key_env": "OPENAI_API_KEY",
     "temperature": 0.3,
