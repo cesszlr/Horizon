@@ -203,6 +203,32 @@ class TestOpenAIClientComplete:
         call_kwargs = mock_create.call_args[1]
         assert call_kwargs.get("response_format") == {"type": "json_object"}
 
+    def test_enable_thinking_false_passed_in_extra_body(self, monkeypatch):
+        monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+        config = _make_config(
+            provider=AIProvider.OPENAI,
+            api_key_env="OPENAI_API_KEY",
+        )
+        config.enable_thinking = False
+        config.thinking_budget = 2048
+        client = OpenAIClient(config)
+
+        mock_response = MagicMock()
+        mock_response.choices = [MagicMock()]
+        mock_response.choices[0].message.content = "ok"
+
+        with patch.object(
+            client.client.chat.completions, "create", new_callable=AsyncMock
+        ) as mock_create:
+            mock_create.return_value = mock_response
+            asyncio.run(client.complete(system="test", user="hello"))
+
+        call_kwargs = mock_create.call_args[1]
+        assert call_kwargs.get("extra_body") == {
+            "enable_thinking": False,
+            "thinking_budget": 2048,
+        }
+
 
 class TestTemperatureFallback:
     """Retry-without-temperature path for models that deprecated temperature.

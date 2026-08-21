@@ -89,6 +89,8 @@ def _normalize_ollama_base_url(base_url: str) -> str:
 class AIClient(ABC):
     """Abstract base class for AI clients."""
 
+    last_debug_info: Dict[str, Any] = {}
+
     @abstractmethod
     async def complete(
         self,
@@ -284,14 +286,50 @@ class OpenAIClient(AIClient):
                 )
             else:
                 raise
+
+        status_code = getattr(response, "status_code", 200)
+        request_id = getattr(response, "_request_id", None) or getattr(response, "id", None)
+
         usage = getattr(response, "usage", None)
-        if usage is not None:
+        raw_prompt = getattr(usage, "prompt_tokens", 0) if usage is not None else 0
+        raw_completion = getattr(usage, "completion_tokens", 0) if usage is not None else 0
+        prompt_tokens = raw_prompt if isinstance(raw_prompt, int) else 0
+        completion_tokens = raw_completion if isinstance(raw_completion, int) else 0
+
+        if usage is not None and (isinstance(raw_prompt, int) or isinstance(raw_completion, int)):
             record_usage(
                 self.provider,
-                input_tokens=getattr(usage, "prompt_tokens", 0),
-                output_tokens=getattr(usage, "completion_tokens", 0),
+                input_tokens=prompt_tokens,
+                output_tokens=completion_tokens,
             )
-        return response.choices[0].message.content
+
+        choice = response.choices[0] if getattr(response, "choices", None) else None
+        finish_reason = getattr(choice, "finish_reason", None) if choice else None
+        message = getattr(choice, "message", None) if choice else None
+        content = getattr(message, "content", None) if message else None
+        reasoning = (
+            getattr(message, "reasoning_content", None)
+            or getattr(message, "reasoning", None)
+            if message
+            else None
+        )
+
+        self.last_debug_info = {
+            "status_code": status_code,
+            "finish_reason": finish_reason,
+            "prompt_tokens": prompt_tokens,
+            "completion_tokens": completion_tokens,
+            "has_reasoning_content": bool(reasoning),
+            "reasoning_content_len": len(reasoning) if reasoning else 0,
+            "content_len": len(content) if content else 0,
+            "request_id": request_id,
+        }
+
+        # Fallback to reasoning content if content is empty but reasoning is present
+        if (not content or not content.strip()) and reasoning and reasoning.strip():
+            content = reasoning
+
+        return content or ""
 
     async def _do_request(
         self,
@@ -314,6 +352,15 @@ class OpenAIClient(AIClient):
             request_kwargs["temperature"] = temperature
         if self.provider not in self._NO_RESPONSE_FORMAT:
             request_kwargs["response_format"] = {"type": "json_object"}
+
+        extra_body = dict(self.config.extra_body or {})
+        if self.config.enable_thinking is not None:
+            extra_body["enable_thinking"] = self.config.enable_thinking
+        if self.config.thinking_budget is not None:
+            extra_body["thinking_budget"] = self.config.thinking_budget
+        if extra_body:
+            request_kwargs["extra_body"] = extra_body
+
         return await self.client.chat.completions.create(**request_kwargs)
 
     @staticmethod
@@ -630,6 +677,9 @@ def _create_chained_client(config: AIConfig) -> ChainedAIClient:
             temperature=config.temperature,
             max_tokens=config.max_tokens,
             languages=config.languages,
+            enable_thinking=config.enable_thinking,
+            thinking_budget=config.thinking_budget,
+            extra_body=config.extra_body,
         )
         chain_configs.append(cfg)
 

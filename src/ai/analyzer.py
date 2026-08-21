@@ -154,16 +154,34 @@ class ContentAnalyzer:
             discussion_section=discussion_section,
         )
 
+        provider_name = getattr(getattr(self.client, "config", None), "provider", "unknown")
+        provider_str = provider_name.value if hasattr(provider_name, "value") else str(provider_name)
+        model_str = getattr(getattr(self.client, "config", None), "model", "unknown")
+
         # Get AI completion
-        response = await self.client.complete(
-            system=self.system_prompt,
-            user=user_prompt,
-        )
+        try:
+            response = await self.client.complete(
+                system=self.system_prompt,
+                user=user_prompt,
+            )
+        except Exception as e:
+            print(f"Error calling AI complete for {item.id} (provider: {provider_str}, model: {model_str}): {e}")
+            raise
 
         # Parse JSON response with robust fallback
         result = self._parse_json_response(response)
         if result is None:
+            debug_info = getattr(self.client, "last_debug_info", {})
             print(f"Warning: could not parse analysis response for {item.id}, using defaults")
+            print(f"Request Info - Provider: {provider_str}, Model: {model_str}")
+            if debug_info.get("status_code"):
+                print(f"HTTP Info - Status: {debug_info.get('status_code')}, Request-ID: {debug_info.get('request_id') or 'N/A'}")
+            if debug_info.get("finish_reason"):
+                print(f"Model Info - Finish Reason: {debug_info.get('finish_reason')}, Tokens: prompt={debug_info.get('prompt_tokens')}, completion={debug_info.get('completion_tokens')}")
+            if debug_info.get("has_reasoning_content"):
+                print(f"Reasoning Info - Reasoning Content Len: {debug_info.get('reasoning_content_len')}")
+            print(f"Prompt Info - System prompt len: {len(self.system_prompt)}, User prompt len: {len(user_prompt)}")
+            print(f"Response Info - Type: {type(response)}, Len: {len(str(response)) if response else 0}")
             print("--- FAILED RESPONSE DATA START ---")
             print(response)
             print("--- FAILED RESPONSE DATA END ---")

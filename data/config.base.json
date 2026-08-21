@@ -3,14 +3,16 @@
   "ai": {
     "provider": "openai",
     "provider_chain": null,
-    "model": "THUDM/GLM-Z1-9B-0414",
+    "model": "Qwen/Qwen3.5-4B",
     "base_url": "${HORIZON_AI_BASE_URL}",
     "api_key_env": "OPENAI_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
+    "context_window": 131072,
+    "enable_thinking": false,
     "throttle_sec": 0.2,
-    "analysis_concurrency": 5,
-    "enrichment_concurrency": 5,
+    "analysis_concurrency": 3,
+    "enrichment_concurrency": 2,
     "languages": [
       "zh"
     ]

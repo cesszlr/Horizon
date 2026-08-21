@@ -109,6 +109,10 @@ class AIConfig(BaseModel):
     analysis_concurrency: int = 1
     enrichment_concurrency: int = 1
     languages: List[str] = Field(default_factory=lambda: ["en"])
+    context_window: int = 131072  # 128K context window
+    enable_thinking: Optional[bool] = None
+    thinking_budget: Optional[int] = None
+    extra_body: Optional[Dict[str, Any]] = None
     # Azure OpenAI specific; required when provider == AZURE
     azure_endpoint_env: Optional[str] = None
     api_version: Optional[str] = None
